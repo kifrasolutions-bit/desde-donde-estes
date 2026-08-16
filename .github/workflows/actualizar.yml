@@ -1,4 +1,7 @@
-name: Reconstruir, revisar enlaces y publicar
+name: Reconstruir y revisar enlaces
+
+# Pages está configurado para publicar solo desde la rama main, así que aquí
+# no hay que desplegar nada: basta con que el commit quede en main.
 
 on:
   schedule:
@@ -75,23 +78,3 @@ jobs:
                 "```"
               ].join("\n")
             });
-
-  publicar:
-    needs: actualizar
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: "."
-      - id: deployment
-        uses: actions/deploy-pages@v4
