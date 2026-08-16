@@ -30,6 +30,7 @@ FLUJO_ORDEN = [
     "Olla comunitaria de vendedores", "FC Barcelona", "Óscar Conde",
     "Andres Solomon", "Andrés Solomón", "Starlink", "Taliana Vargas",
     "Los Primos Barbershop", "El Mono Bandido", "Colombia Florece", "Puntos Colombia",
+    "Tiendas Ara · las vueltas",
     "Pastor Wilmer", "Fonda The Ranch AXM",
     "Only Home",
     "Colchones Happy Sleep",
