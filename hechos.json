@@ -1,7 +1,7 @@
 {
  "_regla": "Cada hecho lleva fuente enlazada y cita textual que lo sostiene. Ver directives/reglas-editoriales.md. Nada entra sin verificar.",
  "verificado_el": "2026-08-16",
- "total": 426,
+ "total": 427,
  "hechos": [
   {
    "quien": "Blessd",
@@ -6817,6 +6817,22 @@
    "fuente_nombre": "Publicación de los organizadores",
    "cita": "centro de acopio y distribución de ayudas",
    "confianza": "media",
+   "dominio": "empresas-co"
+  },
+  {
+   "quien": "Tiendas Ara · las vueltas",
+   "tipo": "empresa",
+   "origen": "mixto",
+   "pais": null,
+   "que_hizo": "Habilitó en sus cajas la donación de las vueltas y multiplica por tres lo que el cliente suelte: pone dos pesos por cada peso donado.",
+   "cifra": "dos pesos por cada peso",
+   "cuando": "2026-08-15",
+   "categoria": "dinero",
+   "zona": "Todo el país",
+   "fuente_url": "https://www.instagram.com/p/DcEKmrgkWml/",
+   "fuente_nombre": "Publicación de la propia cadena",
+   "cita": "ara aportará dos pesos más por cada peso que dones",
+   "confianza": "alta",
    "dominio": "empresas-co"
   }
  ],
