@@ -1,0 +1,39 @@
+name: Armar el sitio desde las partes
+
+on:
+  push:
+    paths: ["_partes/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unir las partes en index.html
+        run: |
+          set -e
+          n=$(ls _partes 2>/dev/null | wc -l)
+          echo "partes encontradas: $n"
+          if [ "$n" -lt 4 ]; then
+            echo "Todavia no estan las 4 partes. No se arma nada."
+            exit 0
+          fi
+          cat _partes/q1.txt _partes/q2.txt _partes/q3.txt _partes/q4.txt > index.html
+          cp index.html sitio.html
+          rm -rf _partes
+          ls -la index.html
+      - name: Guardar
+        run: |
+          git config user.name "actualizador"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "Sitio armado desde las partes"
+            git push
+          fi
