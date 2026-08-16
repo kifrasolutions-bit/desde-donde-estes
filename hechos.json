@@ -1,7 +1,7 @@
 {
  "_regla": "Cada hecho lleva fuente enlazada y cita textual que lo sostiene. Ver directives/reglas-editoriales.md. Nada entra sin verificar.",
  "verificado_el": "2026-08-16",
- "total": 413,
+ "total": 415,
  "hechos": [
   {
    "quien": "Blessd",
@@ -6610,6 +6610,38 @@
    "cita": "Con tu aporte podemos multiplicar la ayuda a esta emergencia",
    "confianza": "alta",
    "dominio": "empresas-intl"
+  },
+  {
+   "quien": "Colchones Happy Sleep",
+   "tipo": "empresa",
+   "origen": "colombia",
+   "pais": null,
+   "que_hizo": "Fábrica de colchones de Armenia que puso a la venta una colchoneta con almohada para que cualquiera la compre y la empresa la entregue directamente en el centro de acopio de Expofuturo, en Pereira. Quien compra no recibe nada.",
+   "cifra": "$134.200 por colchoneta y almohada",
+   "cuando": "2026-08-16",
+   "categoria": "albergue",
+   "zona": "Pereira",
+   "fuente_url": "https://www.happysleep.com.co/",
+   "fuente_nombre": "Pieza de la propia empresa, teléfono coincidente con su página oficial",
+   "cita": "Ponemos a disposición soluciones de descanso para quienes quieren apoyar a las familias que hoy lo necesitan",
+   "confianza": "media",
+   "dominio": "empresas-co"
+  },
+  {
+   "quien": "Fundación Arturo Calle · contrapartida",
+   "tipo": "empresa",
+   "origen": "colombia",
+   "pais": null,
+   "que_hizo": "Abrió una campaña donde la Fundación y el Grupo Empresarial duplican cada peso donado por el público, aparte del aporte que la familia ya había anunciado para reconstrucción.",
+   "cifra": "meta de $2.000 millones",
+   "cuando": "2026-08-14",
+   "categoria": "dinero",
+   "zona": "Zonas afectadas por el terremoto",
+   "fuente_url": "https://www.instagram.com/fundacionarturocalle/",
+   "fuente_nombre": "Canales propios de la Fundación",
+   "cita": "por cada peso donado, la Fundación y el Grupo Empresarial Arturo Calle aportan otro tanto",
+   "confianza": "media",
+   "dominio": "empresas-co"
   }
  ],
  "descartados": [
