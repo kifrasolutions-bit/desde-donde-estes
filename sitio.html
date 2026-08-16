@@ -715,19 +715,21 @@
         f.title=item[lang]||item.es||'Instagram';
         marco.innerHTML=''; marco.appendChild(f);
       }
-      // La tira es horizontal: el observador mira dentro de ella, asi solo
-      // carga el reel visible y el siguiente. Los demas no le piden nada a Meta.
+      w.appendChild(el('p','cap',esc(item[lang]||item.es||'')));
+      var a=el('a','abrir',esc(T[lang].reelopen)+' →');
+      a.href=url;a.target='_blank';a.rel='noopener';
+      w.appendChild(a);
+      box.appendChild(w);
+      // El observador se monta DESPUES de meter la tarjeta en la tira. Si se
+      // monta antes, la tarjeta todavia no es hija de la raiz y el observador
+      // no dispara nunca: ese error dejo la tira sin cargar un solo video.
+      // La raiz es la tira, asi solo carga el reel visible y el vecino.
       if('IntersectionObserver' in window){
         var io=new IntersectionObserver(function(es){
           es.forEach(function(e){if(e.isIntersecting){io.disconnect();cargar()}});
         },{root:box,rootMargin:'0px 320px'});
         io.observe(w);
       } else { cargar(); }
-      w.appendChild(el('p','cap',esc(item[lang]||item.es||'')));
-      var a=el('a','abrir',esc(T[lang].reelopen)+' →');
-      a.href=url;a.target='_blank';a.rel='noopener';
-      w.appendChild(a);
-      box.appendChild(w);
     });
     tiraControles();
   }
