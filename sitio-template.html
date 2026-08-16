@@ -137,6 +137,32 @@
   .ficha .pie a{color:var(--tinta-2)}
   .masbox{padding-top:18px}
 
+  /* mapa */
+  .mapa-wrap{margin-top:26px;border:1px solid var(--linea);background:var(--papel-2);position:relative;overflow:hidden}
+  .mapa-wrap svg{display:block;width:100%;height:clamp(300px,52vh,560px);touch-action:none;cursor:grab}
+  .mapa-wrap svg.arrastrando{cursor:grabbing}
+  .m-tierra{fill:var(--papel);stroke:var(--linea-2);stroke-width:.4;vector-effect:non-scaling-stroke}
+  .m-arco{fill:none;stroke:var(--azul);stroke-width:1;opacity:.28;vector-effect:non-scaling-stroke}
+  .m-arco.on{stroke:var(--rojo);opacity:.95;stroke-width:1.6}
+  .m-arco.off{opacity:.05}
+  .m-pt{fill:var(--azul);cursor:pointer}
+  .m-pt.on{fill:var(--rojo)}
+  .m-pt.destino{fill:var(--amarillo-hondo)}
+  .m-eti{font-size:9px;fill:var(--tinta-2);pointer-events:none;paint-order:stroke;stroke:var(--papel-2);stroke-width:2.5px}
+  .m-ctrl{position:absolute;right:10px;bottom:10px;display:flex;gap:6px}
+  .m-ctrl button{width:34px;height:34px;border:1px solid var(--linea-2);background:var(--papel);color:var(--tinta);font-size:16px;line-height:1;cursor:pointer}
+  .m-ctrl button:hover{background:var(--papel-2)}
+  .m-pie{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:13px;color:var(--tinta-2)}
+  .m-panel{border-top:1px solid var(--linea);margin-top:14px;padding-top:14px;display:none}
+  .m-panel.abierto{display:block}
+  .m-panel h4{margin:0 0 3px;font-family:var(--serif);font-size:20px;font-weight:400}
+  .m-panel .cuantos{font-size:13px;color:var(--tinta-2);margin:0 0 12px}
+  .m-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;max-height:300px;overflow-y:auto}
+  .m-item{border-left:2px solid var(--linea-2);padding-left:11px}
+  .m-item b{display:block;font-weight:500;font-size:14.5px}
+  .m-item p{margin:3px 0 0;font-size:13.5px;line-height:1.5;color:var(--tinta-2)}
+  .m-item a{font-size:12.5px}
+  @media(max-width:700px){.m-lista{max-height:240px}}
   /* reels */
   .reels-cab{margin-top:52px;padding-top:20px;border-top:1px solid var(--linea);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .reels-cab h3{margin:0;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:400;line-height:1.15}
@@ -370,6 +396,20 @@
   <div class="cifras" id="cifras"></div>
 </div></section>
 
+<section class="mapa" id="mapa"><div class="wrap">
+  <div class="enc ancho"><h2 data-i="h_map"></h2><p data-i="s_map"></p></div>
+  <div class="mapa-wrap">
+    <svg id="svgmapa" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Mapa de los lugares desde donde está saliendo la ayuda hacia Colombia"></svg>
+    <div class="m-ctrl">
+      <button id="m-menos" type="button" aria-label="Alejar">&#8722;</button>
+      <button id="m-mas" type="button" aria-label="Acercar">+</button>
+      <button id="m-reset" type="button" aria-label="Ver todo">&#9633;</button>
+    </div>
+  </div>
+  <div class="m-pie"><span data-i="m_ayuda"></span><span id="m-cuenta"></span></div>
+  <div class="m-panel" id="m-panel"></div>
+</div></section>
+
 <section class="cadena" id="cadena"><div class="wrap">
   <div class="enc ancho"><h2 data-i="h_cad"></h2><p data-i="s_cad"></p></div>
   <div class="filtros" id="filtros"></div>
@@ -455,10 +495,12 @@
 </div></footer>
 
 <script id="HECHOS" type="application/json">__HECHOS__</script>
+<script id="HECHOS_MAPA" type="application/json">__HECHOS_MAPA__</script>
 <script id="REELS" type="application/json">__REELS__</script>
 <script>
 (function(){
   var H = JSON.parse(document.getElementById('HECHOS').textContent);
+  var H_MAPA = JSON.parse(document.getElementById('HECHOS_MAPA').textContent);
   var R = JSON.parse(document.getElementById('REELS').textContent);
   var CORREO = "desdedondeestes@outlook.com";
   var VERIFICADO = "2026-08-15";
@@ -481,7 +523,7 @@
     posib:'Hoy hay <b>un mundo de formas de ayudar</b> a quienes más lo necesitan. Aquí están reunidas <b>algunas</b>, para que encuentres la tuya. Faltan muchas, y por eso esto se sigue construyendo entre todos.',
     cta1:'Encontrar mi forma de ayudar →', cta2:'Ver quiénes se están uniendo',
     e_llev:'Lo que llevamos entre todos', h_llev:'Así es como vamos',
-    e_cad:'Quiénes somos "todos"', h_cad:'Quiénes se están uniendo',
+    h_map:'De dónde viene', s_map:'Cada línea es un hecho verificado, con su fuente. Todas del mismo grosor: aquí no hay ayudas grandes y pequeñas. Arrastra, acércate y toca un punto.',\n    m_ayuda:'Arrastra para mover · rueda o pellizca para acercar · toca un punto', m_todos:'Ver todo el mapa',\n    m_hechos:'hechos', m_desde:'Desde', m_uno:'hecho',\n    e_cad:'Quiénes somos "todos"', h_cad:'Quiénes se están uniendo',
     s_cad:'Un país del Golfo y una barbería de Boston. No hay orden por tamaño, a propósito, y cada tarjeta lleva la fuente que la respalda.',
     f_todos:'Todos', f_col:'Desde Colombia', f_ext:'Desde el exterior', f_gente:'Personas y comunidades',
     mas:'Ver más', menos:'Ver menos',
@@ -523,7 +565,7 @@
     posib:'There is <b>a whole world of ways to help</b> the people who need it most. <b>Some</b> of them are gathered here, so you can find yours. Many are missing, which is why this keeps being built by all of us.',
     cta1:'Find my way to help →', cta2:'See who is stepping up',
     e_llev:'What we have done together', h_llev:'This is how far we have come',
-    e_cad:'Who "everyone" actually is', h_cad:'Who is stepping up',
+    h_map:'Where it comes from', s_map:'Every line is a verified fact, with its source. All the same weight: there are no big and small kinds of help here. Drag, zoom in and tap a point.',\n    m_ayuda:'Drag to move · scroll or pinch to zoom · tap a point', m_todos:'See the whole map',\n    m_hechos:'facts', m_desde:'From', m_uno:'fact',\n    e_cad:'Who "everyone" actually is', h_cad:'Who is stepping up',
     s_cad:'A Gulf state and a barbershop in Boston. Nothing is ordered by size, on purpose, and every card carries the source that backs it.',
     f_todos:'All', f_col:'From Colombia', f_ext:'From abroad', f_gente:'People and communities',
     mas:'Show more', menos:'Show less',
@@ -802,6 +844,223 @@
     window.addEventListener('resize',pinta);
     pinta();
   }
+
+
+  // ---------------------------------------------------------------- el mapa
+  // Cada linea es un hecho verificado saliendo de donde esta quien ayuda y
+  // cayendo en Colombia. Todas del mismo grosor a proposito: si el grosor
+  // dependiera del monto, el mapa seria un ranking de paises ricos y eso
+  // choca con la regla de no ordenar por tamano.
+  // El contorno de los continentes se baja de world-atlas (Natural Earth,
+  // dominio publico) y se decodifica aqui mismo, sin libreria. Si no carga,
+  // el mapa se dibuja igual: se pierden las costas, no los datos.
+  var MAPA = (function(){
+    var svg=$('#svgmapa'); if(!svg) return {};
+    var NS='http://www.w3.org/2000/svg';
+    var W=1000, H=460, LAT0=84, LAT1=-56;           // se recorta la Antartida
+    var DEST=[4.71,-74.07];                          // Bogota, donde cae todo
+    var VB={x:0,y:0,w:W,h:H};
+    var sel=null, dibujado=false;
+
+    function proy(lat,lon){
+      return [ (lon+180)/360*W, (LAT0-lat)/(LAT0-LAT1)*H ];
+    }
+    function nodo(n,cls){ var e=document.createElementNS(NS,n); if(cls)e.setAttribute('class',cls); return e; }
+    function vb(){ svg.setAttribute('viewBox', VB.x+' '+VB.y+' '+VB.w+' '+VB.h); etiquetas(); }
+
+    var porLugar={};
+    (H_MAPA||[]).forEach(function(x){
+      if(!x.origen_xy) return;
+      var k=x.origen_lugar;
+      if(!porLugar[k]) porLugar[k]={lugar:k, pais:x.origen_pais, xy:x.origen_xy, hechos:[]};
+      porLugar[k].hechos.push(x);
+    });
+    var lugares=Object.keys(porLugar).map(function(k){return porLugar[k]});
+
+    var gTierra=nodo('g'), gArcos=nodo('g'), gPtos=nodo('g'), gEti=nodo('g');
+    svg.appendChild(gTierra); svg.appendChild(gArcos); svg.appendChild(gPtos); svg.appendChild(gEti);
+
+    var destino=proy(DEST[0],DEST[1]);
+    lugares.forEach(function(L){
+      var a=proy(L.xy[0],L.xy[1]);
+      if(Math.abs(a[0]-destino[0])<1 && Math.abs(a[1]-destino[1])<1) return;
+      var mx=(a[0]+destino[0])/2, my=(a[1]+destino[1])/2;
+      var dx=destino[0]-a[0], dy=destino[1]-a[1];
+      var len=Math.sqrt(dx*dx+dy*dy)||1;
+      var cx=mx - dy*0.16, cy=my + dx*0.16;
+      var pth=nodo('path','m-arco');
+      pth.setAttribute('d','M'+a[0].toFixed(1)+','+a[1].toFixed(1)+' Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+destino[0].toFixed(1)+','+destino[1].toFixed(1));
+      gArcos.appendChild(pth); L.arco=pth;
+    });
+
+    lugares.forEach(function(L){
+      var a=proy(L.xy[0],L.xy[1]);
+      var c=nodo('circle','m-pt');
+      c.setAttribute('cx',a[0].toFixed(1)); c.setAttribute('cy',a[1].toFixed(1));
+      c.setAttribute('r', Math.min(2+Math.sqrt(L.hechos.length)*0.9, 7).toFixed(1));
+      c.addEventListener('click',function(e){e.stopPropagation();elegir(L)});
+      gPtos.appendChild(c); L.punto=c; L.xyp=a;
+    });
+    var d=nodo('circle','m-pt destino');
+    d.setAttribute('cx',destino[0]); d.setAttribute('cy',destino[1]); d.setAttribute('r','5');
+    gPtos.appendChild(d);
+
+    function etiquetas(){
+      gEti.innerHTML='';
+      var z=W/VB.w;
+      if(z<1.6) return;
+      lugares.forEach(function(L){
+        if(z<3.2 && L.hechos.length<3) return;
+        var x=L.xyp[0], y=L.xyp[1];
+        if(x<VB.x||x>VB.x+VB.w||y<VB.y||y>VB.y+VB.h) return;
+        var e=nodo('text','m-eti');
+        e.setAttribute('x',(x+6/z).toFixed(1)); e.setAttribute('y',(y+3/z).toFixed(1));
+        e.setAttribute('font-size',(9/z).toFixed(2));
+        e.textContent=L.lugar;
+        gEti.appendChild(e);
+      });
+    }
+
+    function elegir(L){
+      sel=L;
+      lugares.forEach(function(o){
+        if(o.arco) o.arco.setAttribute('class','m-arco'+(o===L?' on':' off'));
+        if(o.punto) o.punto.setAttribute('class','m-pt'+(o===L?' on':''));
+      });
+      var pan=$('#m-panel');
+      pan.innerHTML='';
+      pan.appendChild(el('h4',null,esc(L.lugar+(L.pais!==L.lugar?', '+L.pais:''))));
+      pan.appendChild(el('p','cuantos', L.hechos.length+' '+(L.hechos.length===1?T[lang].m_uno:T[lang].m_hechos)));
+      var ul=el('div','m-lista');
+      L.hechos.forEach(function(x){
+        var it=el('div','m-item');
+        it.appendChild(el('b',null,esc(x.quien)));
+        it.appendChild(el('p',null,esc(x.que_hizo)));
+        var a=el('a',null,esc(x.fuente_nombre));
+        a.href=x.fuente_url; a.target='_blank'; a.rel='noopener';
+        it.appendChild(a);
+        ul.appendChild(it);
+      });
+      pan.appendChild(ul);
+      pan.classList.add('abierto');
+      acercar(L.xyp[0], L.xyp[1], 4);
+    }
+    function limpiar(){
+      sel=null;
+      lugares.forEach(function(o){
+        if(o.arco) o.arco.setAttribute('class','m-arco');
+        if(o.punto) o.punto.setAttribute('class','m-pt');
+      });
+      $('#m-panel').classList.remove('abierto');
+    }
+    svg.addEventListener('click',limpiar);
+
+    function acercar(cx,cy,z){
+      VB.w=W/z; VB.h=H/z;
+      VB.x=Math.max(0,Math.min(W-VB.w, cx-VB.w/2));
+      VB.y=Math.max(0,Math.min(H-VB.h, cy-VB.h/2));
+      vb();
+    }
+    function zoom(f){
+      var cx=VB.x+VB.w/2, cy=VB.y+VB.h/2;
+      acercar(cx,cy,Math.max(1, Math.min(18, (W/VB.w)*f)));
+    }
+    $('#m-mas').onclick=function(){zoom(1.6)};
+    $('#m-menos').onclick=function(){zoom(1/1.6)};
+    $('#m-reset').onclick=function(){VB={x:0,y:0,w:W,h:H};vb();limpiar()};
+
+    svg.addEventListener('wheel',function(e){
+      e.preventDefault();
+      var r=svg.getBoundingClientRect();
+      var px=VB.x+(e.clientX-r.left)/r.width*VB.w, py=VB.y+(e.clientY-r.top)/r.height*VB.h;
+      var z=Math.max(1,Math.min(18,(W/VB.w)*(e.deltaY<0?1.2:1/1.2)));
+      VB.w=W/z; VB.h=H/z;
+      VB.x=Math.max(0,Math.min(W-VB.w, px-(e.clientX-r.left)/r.width*VB.w));
+      VB.y=Math.max(0,Math.min(H-VB.h, py-(e.clientY-r.top)/r.height*VB.h));
+      vb();
+    },{passive:false});
+
+    var arr=null;
+    svg.addEventListener('pointerdown',function(e){
+      arr={x:e.clientX,y:e.clientY,vx:VB.x,vy:VB.y}; svg.classList.add('arrastrando'); svg.setPointerCapture(e.pointerId);
+    });
+    svg.addEventListener('pointermove',function(e){
+      if(!arr) return;
+      var r=svg.getBoundingClientRect();
+      VB.x=Math.max(0,Math.min(W-VB.w, arr.vx-(e.clientX-arr.x)/r.width*VB.w));
+      VB.y=Math.max(0,Math.min(H-VB.h, arr.vy-(e.clientY-arr.y)/r.height*VB.h));
+      vb();
+    });
+    ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+      svg.addEventListener(ev,function(){arr=null;svg.classList.remove('arrastrando')});
+    });
+
+    // Los arcos se trazan al entrar en pantalla, una sola vez, y no se traza
+    // nada si el sistema pide menos animacion.
+    function animar(){
+      if(dibujado) return; dibujado=true;
+      var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(quieto) return;
+      var arcos=[].slice.call(gArcos.children);
+      arcos.forEach(function(a){
+        var L=a.getTotalLength?a.getTotalLength():0;
+        if(!L) return;
+        a.style.strokeDasharray=L; a.style.strokeDashoffset=L;
+        a.style.transition='stroke-dashoffset .9s ease-out';
+      });
+      arcos.forEach(function(a,i){ setTimeout(function(){ a.style.strokeDashoffset=0; }, 40*i); });
+    }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); animar(); } });
+      },{rootMargin:'120px'});
+      io.observe(svg);
+    } else { dibujado=true; }
+
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(function(r){return r.json()})
+      .then(function(topo){
+        var obj=topo.objects.countries, tr=topo.transform, arcs=topo.arcs;
+        function decodifica(ai){
+          var neg=ai<0, idx=neg?~ai:ai, a=arcs[idx], x=0,y=0, pts=[];
+          for(var i=0;i<a.length;i++){
+            x+=a[i][0]; y+=a[i][1];
+            pts.push([x*tr.scale[0]+tr.translate[0], y*tr.scale[1]+tr.translate[1]]);
+          }
+          return neg?pts.slice().reverse():pts;
+        }
+        function anillo(ids){
+          var pts=[];
+          ids.forEach(function(ai){ var s=decodifica(ai); pts=pts.concat(pts.length?s.slice(1):s); });
+          return pts;
+        }
+        var dPath=[];
+        obj.geometries.forEach(function(g){
+          var polys = g.type==='Polygon'?[g.arcs]:g.arcs;
+          polys.forEach(function(poly){
+            poly.forEach(function(ids){
+              var pts=anillo(ids), s='';
+              for(var i=0;i<pts.length;i++){
+                var q=proy(pts[i][1], pts[i][0]);
+                s += (i?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1);
+              }
+              if(s) dPath.push(s+'Z');
+            });
+          });
+        });
+        var tierra=nodo('path','m-tierra');
+        tierra.setAttribute('d', dPath.join(' '));
+        gTierra.appendChild(tierra);
+      })
+      .catch(function(){ });
+
+    var cuenta=$('#m-cuenta');
+    if(cuenta){
+      var nH=lugares.reduce(function(s,L){return s+L.hechos.length},0);
+      cuenta.textContent = nH+' '+T[lang].m_hechos+' · '+lugares.length+' '+(lang==='es'?'lugares':'places');
+    }
+    return {limpiar:limpiar};
+  })();
 
   function pintaHoy(){
     var pasos=$('#pasos');pasos.innerHTML='';
