@@ -63,24 +63,24 @@
     {
      "n": "Gobernación del Chocó",
      "n_en": "Chocó regional government",
-     "d": "Cuenta oficial del departamento donde estuvo el epicentro. Banco de Bogotá, ahorros 578818429, NIT 891.680.010-3.",
-     "d_en": "Official account of the department where the epicentre was. Banco de Bogotá savings 578818429, tax ID 891.680.010-3.",
+     "d": "Cuenta oficial del departamento donde estuvo el epicentro. Banco de Bogotá, ahorros 578818429, NIT 891.680.010-3. No hay página de donación: se transfiere a esa cuenta.",
+     "d_en": "Official account of the department where the epicentre was. Banco de Bogotá savings 578818429, tax ID 891.680.010-3. There is no donation page: you transfer to that account.",
      "tag": "col",
      "url": "https://www.elcolombiano.com/colombia/donde-donar-choco-centros-acopio-cuentas-oficiales-terremoto-colombia-KB39837058",
-     "a": "Ver los datos de la cuenta →",
-     "a_en": "See the account details →",
-     "f": "El Colombiano"
+     "a": "Leer la nota con los datos →",
+     "a_en": "Read the article with the details →",
+     "f": "El Colombiano · los datos de la cuenta están en la nota"
     },
     {
      "n": "ProPacífico · Colombia Unida",
      "n_en": "ProPacífico · Colombia Unida",
-     "d": "Administra los fondos de la alianza del sector privado con la Alcaldía de Cali y la Gobernación del Valle. Acepta pagos nacionales e internacionales.",
-     "d_en": "Manages the funds of the private sector alliance with the Cali and Valle governments. Accepts national and international payments.",
+     "d": "Administra los fondos de la alianza del sector privado con la Alcaldía de Cali y la Gobernación del Valle. No tienen página propia de donación: se transfiere a la cuenta corriente del Banco de Occidente 001-5157-58, a nombre de la Fundación para el Desarrollo Integral del Pacífico, NIT 890.304.900. Llave Bre-B 0092882326. Aceptan pagos nacionales e internacionales por PSE y tarjeta.",
+     "d_en": "Manages the funds of the private sector alliance with the Cali and Valle governments. They have no donation page of their own: you transfer to Banco de Occidente current account 001-5157-58, in the name of Fundación para el Desarrollo Integral del Pacífico, tax ID 890.304.900. Bre-B key 0092882326. They accept national and international payments by PSE and card.",
      "tag": "mundo",
      "url": "https://www.elpais.com.co/cali/propacifico-activa-campana-de-solidaridad-para-atender-a-damnificados-por-el-terremoto-1129.html",
-     "a": "Ver cómo aportar →",
-     "a_en": "See how to give →",
-     "f": "Occidente + El País de Cali"
+     "a": "Leer la nota con los datos →",
+     "a_en": "Read the article with the details →",
+     "f": "El País de Cali · los datos de la cuenta están en la nota, no en un sitio propio"
     }
    ]
   },
@@ -113,13 +113,13 @@
     {
      "n": "Ingenieros y arquitectos en Cali",
      "n_en": "Engineers and architects in Cali",
-     "d": "La Secretaría de Gestión del Riesgo convoca ingenieros civiles, estructurales y arquitectos para evaluar edificaciones. Punto de encuentro: Cruz Roja Seccional Valle, Cra. 38 Bis #5-91.",
-     "d_en": "Cali's risk management office is calling for civil and structural engineers and architects to assess buildings. Meeting point: Red Cross Valle branch, Cra. 38 Bis #5-91.",
+     "d": "La Secretaría de Gestión del Riesgo convoca ingenieros civiles, estructurales y arquitectos para evaluar edificaciones. No hay formulario ni inscripción en línea: hay que presentarse en el punto, la Cruz Roja Seccional Valle, Cra. 38 Bis #5-91 en Cali, donde hay personal de la Secretaría durante el día.",
+     "d_en": "Cali's risk management office is calling for civil and structural engineers and architects to assess buildings. There is no online form or sign-up: you show up at the meeting point, the Red Cross Valle branch at Cra. 38 Bis #5-91 in Cali, where staff are on site during the day.",
      "tag": "col",
      "url": "https://www.elpais.com.co/cali/alcaldia-de-cali-busca-voluntarios-para-apoyar-en-la-evaluacion-de-viviendas-afectadas-por-el-sismo-asi-puede-participar-1122.html",
-     "a": "Ver la convocatoria →",
-     "a_en": "See the call →",
-     "f": "El País de Cali · confirmar vigencia"
+     "a": "Leer la convocatoria →",
+     "a_en": "Read the call →",
+     "f": "El País de Cali · confirmar que siga vigente antes de ir"
     }
    ]
   },
@@ -200,6 +200,17 @@
      "f": "Revisado en el navegador el 16 de agosto de 2026"
     },
     {
+     "n": "Dónde Puedo Ayudar · directorio por categoría",
+     "n_en": "Dónde Puedo Ayudar · directory by category",
+     "d": "Directorio ciudadano hecho por LuupLab. Reúne 16 sitios y 9 organizaciones verificadas, ordenados por categoría (dinero, alimentos y kits, refugio, salud, voluntariado, mascotas, reconstrucción e información) y por zona: Valle, Risaralda, Quindío, Caldas, Chocó, Buenaventura y zonas rurales. No recibe ni intermedia dinero, y sí dice quién lo opera.",
+     "d_en": "A citizen-built directory by LuupLab. It gathers 16 sites and 9 verified organisations, sorted by category (money, food and kits, shelter, health, volunteering, pets, rebuilding and information) and by area: Valle, Risaralda, Quindío, Caldas, Chocó, Buenaventura and rural zones. It takes no money and it does say who runs it.",
+     "tag": "mundo",
+     "url": "https://dondepuedoayudar.com/",
+     "a": "Ver el directorio →",
+     "a_en": "Open the directory →",
+     "f": "Revisado el 16 de agosto de 2026"
+    },
+    {
      "n": "Mapa vivo de acopio en Bogotá",
      "n_en": "Bogotá's live collection map",
      "d": "La Alcaldía mantiene un mapa interactivo con los puntos habilitados, horarios y qué necesita cada uno. Se actualiza a diario. Úsalo antes que cualquier lista fija, incluida esta.",
@@ -213,12 +224,12 @@
     {
      "n": "ProPacífico recoge donde estés",
      "n_en": "ProPacífico will collect from you",
-     "d": "Piden sobre todo medicamentos e insumos médicos para Chocó, Tuluá y Quibdó. Carrera 4 # 22-07 en Cali, y si los llamas recogen la donación en tu ubicación.",
-     "d_en": "They mainly need medicines and medical supplies for Chocó, Tuluá and Quibdó. Carrera 4 # 22-07 in Cali, and if you call they will collect from you.",
+     "d": "Piden sobre todo medicamentos e insumos médicos para Chocó, Tuluá y Quibdó. Bodega en Carrera 4 # 22-07, barrio San Nicolás, Cali. Si los llamas recogen la donación donde estés: 324 566 6775 (Steven González) o 312 833 8340 (Lorena Tabares).",
+     "d_en": "They mainly need medicines and medical supplies for Chocó, Tuluá and Quibdó. Warehouse at Carrera 4 # 22-07, San Nicolás, Cali. Call and they will collect from wherever you are: +57 324 566 6775 (Steven González) or +57 312 833 8340 (Lorena Tabares).",
      "tag": "col",
      "url": "https://www.elpais.com.co/cali/propacifico-activa-campana-de-solidaridad-para-atender-a-damnificados-por-el-terremoto-1129.html",
-     "a": "324 566 6775 · 312 833 8340 →",
-     "a_en": "+57 324 566 6775 · +57 312 833 8340 →",
+     "a": "Leer la nota →",
+     "a_en": "Read the article →",
      "f": "El País de Cali"
     },
     {
@@ -228,8 +239,8 @@
      "d_en": "Sealed water, blankets, easy-open tinned food, nappies, gauze. No perishables, no opened medication, no worn-out clothing. What does not help takes up storage and transport that is needed.",
      "tag": "col",
      "url": "https://www.infobae.com/colombia/2026/08/14/cruz-roja-aclaro-que-donaciones-necesitan-las-victimas-del-terremoto-y-que-no-kits-de-habitat/",
-     "a": "Ver la lista completa →",
-     "a_en": "See the full list →",
+     "a": "Leer la nota de la Cruz Roja →",
+     "a_en": "Read the Red Cross article →",
      "f": "Cruz Roja Colombiana vía Infobae"
     },
     {
@@ -239,8 +250,8 @@
      "d_en": "Dry and wet food, litter, carriers, collars, leads, gauze and antiseptics. Carrera 37 # 24-67, August 13 to 17, 10 a.m. to 6 p.m. Run by Bogotá's animal welfare institute.",
      "tag": "col",
      "url": "https://www.infobae.com/colombia/2026/08/13/corferias-habilito-centro-de-acopio-para-ayudar-a-mascotas-damnificadas-por-el-sismo-asi-puede-donar-desde-bogota/",
-     "a": "Ver horarios y lista →",
-     "a_en": "See hours and list →",
+     "a": "Leer la nota con horarios →",
+     "a_en": "Read the article with the hours →",
      "f": "Infobae"
     }
    ]
@@ -268,8 +279,8 @@
      "d_en": "Footage from another country is already circulating as if it were this earthquake: we found it in the hashtag itself, with commenters pointing out it was from Chile. Before sharing, check whether the account belongs to whoever did the thing. If you cannot say who filmed it and when, do not send it.",
      "tag": "mundo",
      "siempre": true,
-     "a": "Verificado el 15 de agosto",
-     "a_en": "Verified on August 15",
+     "a": "Verificado por nosotros el 15 de agosto",
+     "a_en": "Checked by us on August 15",
      "f": "Hallazgo propio, documentado en transparencia"
     },
     {
@@ -292,12 +303,12 @@
     {
      "n": "Arte por Colombia",
      "n_en": "Arte por Colombia",
-     "d": "24 galerías y más de 130 artistas venden obra por catálogo digital y el 100% del valor va a Cruz Roja, Presentes, Manos Visibles y Una Garra por Colombia. Las galerías y los artistas asumen todos los costos. En sus primeros días superó los $260 millones.",
-     "d_en": "24 galleries and over 130 artists selling work through a digital catalogue; 100% of the price goes to the Red Cross, Presentes, Manos Visibles and Una Garra por Colombia. Galleries and artists cover every cost. It passed about US$83,000 in its first days.",
+     "d": "24 galerías y más de 130 artistas venden obra por catálogo digital y el 100% del valor va a Cruz Roja, Presentes, Manos Visibles y Una Garra por Colombia. Las galerías y los artistas asumen todos los costos. La venta va por un catálogo digital: el enlace al catálogo está dentro de la nota. En sus primeros días superó los $260 millones.",
+     "d_en": "24 galleries and over 130 artists selling work through a digital catalogue; 100% of the price goes to the Red Cross, Presentes, Manos Visibles and Una Garra por Colombia. Galleries and artists cover every cost. Sales run through a digital catalogue; the link to it is inside the article. It passed about US$83,000 in its first days.",
      "tag": "mundo",
      "url": "https://www.periodicoarteria.com/arte-por-colombia-galer%C3%ADas-y-artistas-apoyo-terremoto",
-     "a": "Ver cómo comprar →",
-     "a_en": "See how to buy →",
+     "a": "Leer la nota y abrir el catálogo →",
+     "a_en": "Read the article and open the catalogue →",
      "f": "Periódico Arteria + El Tiempo"
     },
     {
@@ -411,14 +422,13 @@
    "f": "El Tiempo"
   },
   {
-   "n": "Si aparecen perfiles pidiendo dinero en tu nombre",
-   "n_en": "If fake profiles ask for money in your name",
-   "d": "La familia Saavedra, tras perder a varios de los suyos, advirtió públicamente que había perfiles falsos haciéndose pasar por familiares. Si te pasa, publícalo desde tus propias cuentas y señala cuál es tu único canal autorizado. Eso es lo que permite a los demás distinguir.",
-   "d_en": "The Saavedra family, after losing several of their own, publicly warned that fake profiles were impersonating relatives. If it happens to you, post it from your own accounts and state which is your only authorised channel. That is what lets everyone else tell the difference.",
-   "url": "https://www.publimetro.co/noticias/2026/08/14/familiares-de-las-trillizas-envian-importante-alerta-en-medio-de-su-dolor-por-el-terremoto/",
-   "a": "Leer la alerta →",
-   "a_en": "Read the alert →",
-   "f": "Publimetro"
+   "n": "Si alguien pide dinero haciéndose pasar por ti",
+   "n_en": "If someone asks for money pretending to be you",
+   "d": "Pasa después de cada emergencia: aparecen perfiles falsos usando el nombre o la foto de una familia afectada para recibir donaciones. Si te ocurre, publícalo desde tus propias cuentas y di cuál es tu único canal autorizado. Eso es lo que le permite a los demás distinguir. Y si te llega una colecta a nombre de alguien, contrástala con la cuenta de esa persona antes de mandar nada.",
+   "d_en": "It happens after every emergency: fake profiles use an affected family's name or photo to collect donations. If it happens to you, post it from your own accounts and say which is your only authorised channel. That is what lets everyone else tell the difference. And if a fundraiser reaches you in someone's name, check it against that person's own account before sending anything.",
+   "a": "",
+   "a_en": "",
+   "f": "Recomendación nuestra, no una noticia"
   }
  ],
  "conciertos": [
@@ -595,10 +605,6 @@
    "https://www.elespectador.com/revista-vea/musica-y-conciertos/estos-son-los-conciertos-solidarios-con-las-victimas-del-terremoto-lugares-dias-y-artistas/"
   ],
   [
-   "Publimetro · Alerta de la familia Saavedra",
-   "https://www.publimetro.co/noticias/2026/08/14/familiares-de-las-trillizas-envian-importante-alerta-en-medio-de-su-dolor-por-el-terremoto/"
-  ],
-  [
    "Give.org · Donar con seguridad",
    "https://give.org/news/colombia-earthquake-relief"
   ],
@@ -606,5 +612,7 @@
    "Alcaldía de Bogotá · Centros de acopio",
    "https://bogota.gov.co/mi-ciudad/hacienda/centros-de-acopio-para-donaciones-por-terremoto-en-bogota-2026"
   ]
- ]
+ ],
+ "casos": [],
+ "_casos_como_usar": "Casos personales (GoFundMe, Vaki y similares). Regla F: no verificamos la campana, verificamos que el enlace sea el que la propia persona o familia publico en su cuenta. Cada entrada: {n, d, url, a, f, cuenta} donde 'cuenta' es el perfil publico desde el que la familia lo publico. Si no hay ese perfil, no entra."
 }
