@@ -136,8 +136,17 @@
   .masbox{padding-top:18px}
 
   /* reels */
-  .reels{margin-top:48px;display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,32px)}
-  .reel{flex:1 1 220px;max-width:320px}
+  .reels-cab{margin-top:52px;padding-top:20px;border-top:1px solid var(--linea);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .reels-cab h3{margin:0;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:400;line-height:1.15}
+  .reels-cab p{margin:6px 0 0;font-size:14.5px;color:var(--tinta-2);max-width:52ch}
+  .reels-nav{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .reels-nav .cuenta{font-size:13px;color:var(--tinta-2);min-width:46px;text-align:right}
+  .reels-nav button{width:40px;height:40px;border:1px solid var(--linea-2);background:transparent;color:var(--tinta);font-size:15px;line-height:1;cursor:pointer}
+  .reels-nav button:hover:not([disabled]){background:var(--papel-2)}
+  .reels-nav button[disabled]{opacity:.3;cursor:default}
+  .reels{margin-top:22px;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin}
+  .reel{flex:0 0 300px;scroll-snap-align:start}
+  @media(max-width:700px){.reel{flex:0 0 78vw}.reels-nav{display:none}}
   .reel .marco{position:relative;width:100%;aspect-ratio:4/5;background:var(--papel-2);border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;overflow:hidden}
   .reel .marco iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .reel .esperando{font-size:13px;color:var(--tinta-2);padding:16px;text-align:center}
@@ -359,6 +368,14 @@
   <div class="filtros" id="filtros"></div>
   <div class="rejilla" id="flujo"></div>
   <div class="masbox"><button class="btn claro" id="masbtn"></button></div>
+  <div class="reels-cab">
+    <div><h3 data-i="h_reel"></h3><p data-i="s_reel"></p></div>
+    <div class="reels-nav">
+      <span class="cuenta" id="reelcuenta"></span>
+      <button id="reelizq" type="button" aria-label="Anterior">&#8592;</button>
+      <button id="reelder" type="button" aria-label="Siguiente">&#8594;</button>
+    </div>
+  </div>
   <div class="reels" id="reels"></div>
 </div></section>
 
@@ -486,6 +503,7 @@
     f3:'Proyecto ciudadano independiente. Escríbenos a <a href="mailto:'+CORREO+'">'+CORREO+'</a> si quieres sumar una forma de ayudar, corregir un dato o pedir que retiremos algo.',
     f_src:'Fuentes principales', pasado:'Ya pasó', desde:'Desde',
     reelplay:'Ver el reel', reelsub:'Cargando desde Instagram', reelopen:'Abrir en Instagram',
+    h_reel:'Míralo en video', s_reel:'Publicado por quien hizo la cosa, no por quien la comparte. Se cargan desde Instagram, uno a la vez. Deslízalos.',
     stale:'Estos datos se verificaron el {d}, hace {n} días. Las cifras oficiales cambian rápido: confirma en la fuente antes de transferir.',
     fresco:'Datos verificados el {d}. Cada cifra enlaza a su fuente.'
    },
@@ -527,6 +545,7 @@
     f3:'Independent citizen project. Write to <a href="mailto:'+CORREO+'">'+CORREO+'</a> to add a way of helping, correct a figure, or ask us to take something down.',
     f_src:'Main sources', pasado:'Already happened', desde:'From',
     reelplay:'Play the reel', reelsub:'Loading from Instagram', reelopen:'Open on Instagram',
+    h_reel:'See it on video', s_reel:'Posted by whoever did the thing, not by whoever shared it. They load from Instagram, one at a time. Swipe across.',
     stale:'This data was verified on {d}, {n} days ago. Official figures change fast: check the source before transferring.',
     fresco:'Verified on {d}. Every figure links to its source.'
    }
@@ -696,10 +715,12 @@
         f.title=item[lang]||item.es||'Instagram';
         marco.innerHTML=''; marco.appendChild(f);
       }
+      // La tira es horizontal: el observador mira dentro de ella, asi solo
+      // carga el reel visible y el siguiente. Los demas no le piden nada a Meta.
       if('IntersectionObserver' in window){
         var io=new IntersectionObserver(function(es){
           es.forEach(function(e){if(e.isIntersecting){io.disconnect();cargar()}});
-        },{rootMargin:'300px'});
+        },{root:box,rootMargin:'0px 320px'});
         io.observe(w);
       } else { cargar(); }
       w.appendChild(el('p','cap',esc(item[lang]||item.es||'')));
@@ -708,6 +729,28 @@
       w.appendChild(a);
       box.appendChild(w);
     });
+    tiraControles();
+  }
+
+  // Flechas y contador de la tira. En movil se pasa con el dedo y las flechas
+  // se ocultan por CSS, pero el contador se sigue actualizando.
+  function tiraControles(){
+    var box=$('#reels'), izq=$('#reelizq'), der=$('#reelder'), cta=$('#reelcuenta');
+    if(!box||!izq||!der) return;
+    var total=box.children.length;
+    if(!total){ var cab=document.querySelector('.reels-cab'); if(cab) cab.style.display='none'; return; }
+    function paso(){ var uno=box.children[0]; return uno ? uno.getBoundingClientRect().width+18 : 300; }
+    function pinta(){
+      var i=Math.round(box.scrollLeft/paso())+1;
+      cta.textContent=Math.min(Math.max(i,1),total)+' / '+total;
+      izq.disabled = box.scrollLeft<=2;
+      der.disabled = box.scrollLeft>=box.scrollWidth-box.clientWidth-2;
+    }
+    izq.onclick=function(){box.scrollBy({left:-paso(),behavior:'smooth'})};
+    der.onclick=function(){box.scrollBy({left:paso(),behavior:'smooth'})};
+    box.addEventListener('scroll',pinta,{passive:true});
+    window.addEventListener('resize',pinta);
+    pinta();
   }
 
   function pintaHoy(){
