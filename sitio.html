@@ -75,6 +75,8 @@
   .sw.lang button[aria-pressed="true"]{border-bottom-color:var(--amarillo)}
   .sw.loc button[aria-pressed="true"]{border-bottom-color:var(--azul)}
   .sw .sep{color:var(--linea-2)}
+  .afe-link{font-size:14px;color:var(--tinta-2);text-decoration:underline;text-underline-offset:4px;margin-right:16px;white-space:nowrap}
+  .afe-link:hover{color:var(--tinta)}
   .cta{font-size:14.5px;padding:7px 15px;background:var(--amarillo);color:var(--tinta);text-decoration:none;white-space:nowrap}
   .cta:hover{color:var(--tinta)}
 
@@ -289,6 +291,7 @@
     .sw{gap:6px}
     .sw.loc{order:3}
     .cta{order:4;font-size:13.5px;margin-left:auto}
+    .afe-link{order:3;font-size:13px;margin-right:10px}
     .filtros{gap:14px}
     .filtros button{padding:6px 0 8px}
     .barra .wrap{gap:10px 14px}
@@ -314,6 +317,7 @@
   <div class="sw loc" role="group">
     <button data-modo="co" aria-pressed="true"></button><span class="sep">·</span><button data-modo="intl" aria-pressed="false"></button>
   </div>
+  <a class="afe-link" href="#afectado" data-i="cta_afe"></a>
   <a class="cta" href="#dar" data-i="cta"></a>
 </div></header>
 
@@ -469,7 +473,7 @@
 
   var T = {
    es:{
-    m_co:'Estoy en Colombia', m_intl:'Estoy fuera', cta:'Quiero ayudar',
+    m_co:'Estoy en Colombia', m_intl:'Estoy fuera', cta:'Quiero ayudar', cta_afe:'Si te afectó',
     mk1:'Desde', mk2:'Donde', mk3:'Estés',
     kicker:'10 de agosto de 2026 · San José del Palmar, Chocó',
     gracias:'En situaciones como esta, las máscaras y las diferencias desaparecen. Solo queda algo mucho más poderoso: <b>la solidaridad, el amor por el prójimo y las ganas de ayudar.</b>',
@@ -511,7 +515,7 @@
     fresco:'Datos verificados el {d}. Cada cifra enlaza a su fuente.'
    },
    en:{
-    m_co:"I'm in Colombia", m_intl:"I'm abroad", cta:'I want to help',
+    m_co:"I'm in Colombia", m_intl:"I'm abroad", cta:'I want to help', cta_afe:'If it hit you',
     mk1:'From', mk2:'Wherever', mk3:'You Are',
     kicker:'August 10, 2026 · San José del Palmar, Chocó',
     gracias:'In moments like this, the masks and the differences fall away. What is left is something far more powerful: <b>solidarity, love for one another, and the will to help.</b>',
@@ -660,9 +664,31 @@
     return true;
   }
 
+  // La cadena se baraja en cada visita. Con mas de setenta entradas, un orden
+  // fijo condenaba a las mismas seis a ser las unicas que alguien ve. Pero
+  // barajar a secas rompe la regla de variedad de la directiva: pueden caer
+  // juntas tres multinacionales y la seccion se lee como un ranking. Por eso
+  // despues de barajar se reacomoda para que dos vecinas no compartan tipo ni
+  // origen. Se baraja una sola vez por carga, no en cada repintado, para que
+  // cambiar de idioma o de filtro no reordene todo bajo el dedo de quien lee.
+  var ORDEN = (function(){
+    var a=H.slice(), i, j, tmp;
+    for(i=a.length-1;i>0;i--){ j=Math.floor(Math.random()*(i+1)); tmp=a[i]; a[i]=a[j]; a[j]=tmp; }
+    for(i=1;i<a.length;i++){
+      if(a[i].tipo===a[i-1].tipo || a[i].origen===a[i-1].origen){
+        for(j=i+1;j<a.length;j++){
+          if(a[j].tipo!==a[i-1].tipo && a[j].origen!==a[i-1].origen){
+            tmp=a[i]; a[i]=a[j]; a[j]=tmp; break;
+          }
+        }
+      }
+    }
+    return a;
+  })();
+
   function pintaFlujo(){
     var g=$('#flujo');g.innerHTML='';
-    var lista=H.filter(pasaFiltro);
+    var lista=ORDEN.filter(pasaFiltro);
     if(modo==='intl'){
       lista=lista.slice().sort(function(a,b){
         var A=a.origen==='exterior'?0:1,B=b.origen==='exterior'?0:1;return A-B;});
