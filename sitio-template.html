@@ -113,9 +113,6 @@
   .filtros button[aria-pressed="true"]{color:var(--tinta);border-bottom-color:var(--amarillo)}
   .rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(274px,1fr));gap:16px}
   .ficha{position:relative;border:1px solid var(--linea);background:var(--tarjeta);padding:22px 20px 14px;display:flex;flex-direction:column;gap:9px}
-  .ficha .cruz{position:absolute;color:var(--linea-2);font-size:11px;line-height:1}
-  .ficha .c1{top:4px;left:5px} .ficha .c2{top:4px;right:5px}
-  .ficha .c3{bottom:4px;left:5px} .ficha .c4{bottom:4px;right:5px}
   .ficha h3{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;line-height:1.45}
   .ficha .cifra{margin:0;font-family:var(--serif);font-size:22px;line-height:1.26}
   .ficha .que{margin:0;font-size:15px;line-height:1.5;color:var(--tinta-2);flex:1}
@@ -207,9 +204,10 @@
   .barra-med i{display:block}
   .barra-med i:nth-child(1){width:5%;background:var(--amarillo)}
   .barra-med i:nth-child(2){width:95%;background:var(--papel)}
-  .leyenda{display:flex;justify-content:space-between;gap:16px;margin-top:10px;font-size:13px;color:var(--tinta-2);line-height:1.45}
-  .leyenda span:nth-child(1){max-width:20ch}
-  .leyenda span:nth-child(2){max-width:24ch;text-align:right}
+  .leyenda{display:flex;flex-direction:column;gap:8px;margin-top:12px;font-size:13.5px;color:var(--tinta-2);line-height:1.5}
+  .leyenda span{max-width:52ch}
+  .leyenda span:nth-child(1){border-left:3px solid var(--amarillo);padding-left:10px}
+  .leyenda span:nth-child(2){border-left:3px solid var(--linea-2);padding-left:10px}
   .medidor .expl{flex:1.3 1 340px;margin:0;font-size:17.5px;line-height:1.62}
 
   /* conciertos */
@@ -443,7 +441,7 @@
     firma:'Gracias a todos los que están aportando, ayudando y acompañando de cualquier manera.',
     posib:'Hoy hay <b>un mundo de formas de ayudar</b> a quienes más lo necesitan. Aquí están reunidas <b>algunas</b>, para que encuentres la tuya. Faltan muchas, y por eso esto se sigue construyendo entre todos.',
     cta1:'Encontrar mi forma de ayudar →', cta2:'Ver quiénes se están uniendo',
-    e_llev:'Lo que llevamos entre todos', h_llev:'Esto no lo hizo nadie solo',
+    e_llev:'Lo que llevamos entre todos', h_llev:'Así es como vamos',
     e_cad:'Quiénes somos "todos"', h_cad:'Un país del Golfo y una barbería de Boston',
     s_cad:'No hay orden por tamaño. A propósito. Cada tarjeta lleva la fuente que la respalda.',
     f_todos:'Todos', f_col:'Desde Colombia', f_ext:'Desde el exterior', f_gente:'Personas y comunidades',
@@ -460,11 +458,11 @@
     fases:['Rescate','Atención humanitaria','Reconstrucción'],
     e_dar:'Encuentra tu forma', h_dar:'¿Qué puedes dar?',
     s_dar:'No todo se ayuda con plata. Toca lo que tengas y se despliegan las opciones verificadas.',
-    e_afe:'Si el terremoto te afectó', h_afe:'Esto es para ti, no para quien ayuda',
-    s_afe:'Servicios gratuitos verificados para quienes perdieron algo. Ninguno cobra.',
+    e_afe:'Si el terremoto te afectó', h_afe:'Si el terremoto te afectó a ti o a los tuyos',
+    s_afe:'Esta sección es para las personas afectadas, no para quien quiere ayudar. Servicios gratuitos verificados. Ninguno cobra.',
     e_bre:'Lo que falta', h_bre:'Lo donado es histórico. Y no alcanza.',
     s_bre:'Las dos cosas son ciertas al mismo tiempo, y por eso esto no puede parar cuando se vayan las cámaras.',
-    expl:'<b>Y está bien que no alcance.</b> La donación privada representa cerca del 5% del financiamiento proyectado de la reconstrucción. El resto sale del presupuesto público y de la cooperación internacional. Lo privado no es lo que más pesa: <b>es lo que llega primero</b>, mientras lo demás se tramita.',
+    expl:'<b>Y está bien que no alcance.</b> La donación privada representa cerca del 5% del financiamiento proyectado de la reconstrucción. El resto sale del presupuesto público y de la cooperación internacional. La cifra de $20 billones es una <b>estimación inicial</b> hecha a pocos días del sismo, y el propio medio que la publica advierte que se irá ajustando cuando se conozcan los daños reales. Lo privado no es lo que más pesa: <b>es lo que llega primero</b>, mientras lo demás se tramita.',
     e_con:'Lo que todavía puedes alcanzar', h_con:'Conciertos que aún no pasan',
     s_con:'Casi todo lo demás en esta página ya ocurrió. Esto no.',
     e_tra:'Cómo se hizo esto', h_tra:'Lo que puedes revisar y lo que no pudimos verificar',
@@ -484,7 +482,7 @@
     firma:'Thank you to everyone who is giving, helping and standing alongside, in whatever way they can.',
     posib:'There is <b>a whole world of ways to help</b> the people who need it most. <b>Some</b> of them are gathered here, so you can find yours. Many are missing, which is why this keeps being built by all of us.',
     cta1:'Find my way to help →', cta2:'See who is stepping up',
-    e_llev:'What we have done together', h_llev:'No one did this alone',
+    e_llev:'What we have done together', h_llev:'This is how far we have come',
     e_cad:'Who "everyone" actually is', h_cad:'A Gulf state and a barbershop in Boston',
     s_cad:'Nothing is ordered by size. On purpose. Every card carries the source that backs it.',
     f_todos:'All', f_col:'From Colombia', f_ext:'From abroad', f_gente:'People and communities',
@@ -501,11 +499,11 @@
     fases:['Rescue','Humanitarian relief','Reconstruction'],
     e_dar:'Find your way in', h_dar:'What can you give?',
     s_dar:'Not everything is helped with money. Tap what you have and the verified options open up.',
-    e_afe:'If the earthquake affected you', h_afe:'This part is for you, not for the helpers',
-    s_afe:'Verified free services for people who lost something. None of them charge.',
+    e_afe:'If the earthquake affected you', h_afe:'If the earthquake hit you or your family',
+    s_afe:'This section is for the people affected, not for those who want to help. Verified free services. None of them charge.',
     e_bre:'What is still missing', h_bre:'What has been given is historic. And it is not enough.',
     s_bre:'Both things are true at once, and that is exactly why this cannot stop when the cameras leave.',
-    expl:'<b>And it is fine that it is not enough.</b> Private donations are expected to cover around 5% of the financing for reconstruction. The rest comes from the public budget and international cooperation. Private giving is not the biggest share: <b>it is the share that arrives first</b>, while everything else is still being processed.',
+    expl:'<b>And it is fine that it is not enough.</b> Private donations are expected to cover around 5% of the financing for reconstruction. The rest comes from the public budget and international cooperation. The COP $20 trillion figure is an <b>initial estimate</b> made days after the quake, and the outlet that published it warns it will be adjusted as the real damage becomes known. Private giving is not the biggest share: <b>it is the share that arrives first</b>, while everything else is still being processed.',
     e_con:'What you can still catch', h_con:'Concerts that have not happened yet',
     s_con:'Almost everything else on this page already happened. These have not.',
     e_tra:'How this was made', h_tra:'What you can check, and what we could not verify',
@@ -560,7 +558,6 @@
   function el(tag,cls,html){var n=document.createElement(tag);if(cls)n.className=cls;if(html!=null)n.innerHTML=html;return n}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function L(o,k){return lang==='en'&&o[k+'_en']?o[k+'_en']:(lang==='en'&&o[k+'En']?o[k+'En']:o[k])}
-  function cruces(n){['c1','c2','c3','c4'].forEach(function(c){n.appendChild(el('span','cruz '+c,'+'))});return n}
 
   function fdate(iso){
     var d=new Date(iso+'T12:00:00');
@@ -606,8 +603,8 @@
       box.appendChild(d);
     });
     $('#s_llev').textContent = lang==='es'
-      ? 'Cifras de lo que ya se hizo. Cada una enlaza a su fuente.'
-      : 'Figures for what has already been done. Each one links to its source.';
+      ? 'Lo que ya se hizo, con corte al 15 de agosto. Cada cifra enlaza a su fuente.'
+      : 'What has been done so far, as of August 15. Each figure links to its source.';
   }
 
   function pintaFiltros(){
@@ -634,7 +631,7 @@
         var A=a.origen==='exterior'?0:1,B=b.origen==='exterior'?0:1;return A-B;});
     }
     lista.slice(0,tope).forEach(function(x,i){
-      var c=cruces(el('div','ficha'));
+      var c=el('div','ficha');
       c.appendChild(el('h3',null,esc(x.quien)));
       if(x.cifra){
         var cf=el('p','cifra',esc(x.cifra));
@@ -712,7 +709,7 @@
     $('#avance').style.width='50%';
     var p=$('#perdida');p.innerHTML='';
     CTX.forEach(function(x){
-      var d=cruces(el('div','pf'));
+      var d=el('div','pf');
       d.appendChild(el('span','n',x[0]));
       d.appendChild(el('span','t',esc(lang==='es'?x[1]:x[2])));
       d.appendChild(el('span','s','UNGRD · 15 ago'));
@@ -792,7 +789,7 @@
     var hoy=new Date();
     CONCIERTOS.forEach(function(k){
       var paso = k.iso ? (new Date(k.iso+'T23:59:00') < hoy) : false;
-      var c=cruces(el('article','co'+(paso?' pasado':'')));
+      var c=el('article','co'+(paso?' pasado':''));
       c.appendChild(el('span','fch',esc(L(k,'f'))));
       c.appendChild(el('h3',null,esc(k.nm)));
       c.appendChild(el('span','lug',esc(L(k,'lug'))));
@@ -856,13 +853,18 @@
     $('#b-es').setAttribute('aria-pressed',lang==='es'?'true':'false');
     $('#b-en').setAttribute('aria-pressed',lang==='en'?'true':'false');
     document.title = lang==='es' ? 'Desde Donde Estés · Terremoto Colombia 2026' : 'From Wherever You Are · Colombia Earthquake 2026';
+    // Las dos cifras del medidor van enlazadas a su fuente, como cualquier
+    // otro dato del sitio: la del ANDI a El Heraldo, y la de la reconstruccion
+    // a La Republica, que publica la estimacion inicial de BTG Pactual.
     var ley=$('#leyenda');ley.innerHTML='';
+    var U_ANDI='https://www.elheraldo.co/economia/2026/08/14/las-donaciones-de-los-empresarios-de-colombia-superaron-cifra-historica-de-200-mil-millones/';
+    var U_REC='https://www.larepublica.co/especiales/catastrofe-nacional/la-reconstruccion-por-el-terremoto-costaria-us-6-350-millones-lo-que-equivale-a-1-del-pib-4457501';
     ley.appendChild(el('span',null,lang==='es'
-      ? '$201.637 millones donados por empresas colombianas vía ANDI'
-      : 'about US$64 million given by Colombian businesses through ANDI'));
+      ? '$201.637 millones donados por empresas colombianas vía ANDI · <a href="'+U_ANDI+'" target="_blank" rel="noopener">El Heraldo, 14 ago</a>'
+      : 'about US$64 million given by Colombian businesses through ANDI · <a href="'+U_ANDI+'" target="_blank" rel="noopener">El Heraldo, Aug 14</a>'));
     ley.appendChild(el('span',null,lang==='es'
-      ? '$20 billones: costo estimado de la reconstrucción · BTG Pactual'
-      : 'about US$6.4 billion: estimated cost of rebuilding · BTG Pactual'));
+      ? '$20 billones (US$6.350 millones, cerca del 1% del PIB): estimación inicial del costo de la reconstrucción hecha por BTG Pactual · <a href="'+U_REC+'" target="_blank" rel="noopener">La República, 13 ago</a>'
+      : 'COP $20 trillion (US$6.35 billion, about 1% of GDP): BTG Pactual’s initial estimate of the cost of rebuilding · <a href="'+U_REC+'" target="_blank" rel="noopener">La República, Aug 13</a>'));
     frescura();pintaCifras();pintaFiltros();pintaFlujo();pintaReels();
     pintaHoy();pintaEjes();pintaPanel();pintaRecursos();pintaConciertos();pintaTransp();
   }
@@ -882,11 +884,19 @@
   // dato del dispositivo: sin cookies, sin IP, sin terceros. Si no se puede
   // saber, se asume "fuera de Colombia", que es la version que funciona
   // desde cualquier parte.
+  var enColombia=false;
   try{
     var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');
-    if(tz.indexOf('Bogota')===-1) modo='intl';
-  }catch(e){ modo='intl'; }
-  if((navigator.language||'').slice(0,2)!=='es') lang='en';
+    enColombia = tz.indexOf('Bogota')!==-1;
+  }catch(e){ enColombia=false; }
+  modo = enColombia ? 'co' : 'intl';
+
+  // El idioma arranca en espanol siempre, salvo un caso: que el navegador no
+  // este en espanol Y ademas la zona horaria no sea la de Colombia. Muchos
+  // colombianos tienen el telefono en ingles, y a alguien en Colombia el sitio
+  // tiene que abrirle en espanol asi su celular este en otro idioma.
+  var idiomaNavegador=(navigator.language||'').slice(0,2).toLowerCase();
+  if(!enColombia && idiomaNavegador && idiomaNavegador!=='es') lang='en';
 
   aplica();aplicaModo();
 })();

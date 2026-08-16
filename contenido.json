@@ -423,30 +423,6 @@
  ],
  "conciertos": [
   {
-   "iso": "2026-08-15",
-   "f": "Sáb 15 ago · Medellín",
-   "f_en": "Sat Aug 15 · Medellín",
-   "nm": "Colombia, Medellín te quiere",
-   "lug": "Centro de Eventos La Macarena",
-   "lug_en": "Centro de Eventos La Macarena",
-   "art": "Luis Alfonso, Kapo, Pipe Bueno, Jhonny Rivera y 25 más",
-   "art_en": "Luis Alfonso, Kapo, Pipe Bueno, Jhonny Rivera and 25 more",
-   "precio": "Todo lo recaudado en boletería",
-   "precio_en": "All ticket revenue"
-  },
-  {
-   "iso": "2026-08-16",
-   "f": "Dom 16 ago · Miami",
-   "f_en": "Sun Aug 16 · Miami",
-   "nm": "Unidos por los nuestros",
-   "lug": "Kaseya Center",
-   "lug_en": "Kaseya Center",
-   "art": "Marc Anthony, Chayanne, Ricardo Montaner, Feid, Silvestre Dangond y 17 más",
-   "art_en": "Marc Anthony, Chayanne, Ricardo Montaner, Feid, Silvestre Dangond and 17 more",
-   "precio": "Formato teletón · Colombia y Venezuela",
-   "precio_en": "Telethon format · Colombia and Venezuela"
-  },
-  {
    "iso": "2026-08-18",
    "f": "Mar 18 ago · Envigado",
    "f_en": "Tue Aug 18 · Envigado",
