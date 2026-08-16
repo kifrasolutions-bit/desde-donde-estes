@@ -1048,7 +1048,11 @@
       vb();
     }
     function zoom(f){
+      // Al acercar con el boton se va hacia Colombia, no hacia el centro de la
+      // pantalla, que al principio es medio Atlantico vacio. Al alejar si se
+      // respeta donde esta mirando la persona.
       var cx=VB.x+VB.w/2, cy=VB.y+VB.h/2;
+      if(f>1 && !sel){ cx=cx+(destino[0]-cx)*0.55; cy=cy+(destino[1]-cy)*0.55; }
       acercar(cx,cy,Math.max(1, Math.min(TOPE, (W/VB.w)*f)));
     }
     $('#m-mas').onclick=function(){zoom(1.6)};
