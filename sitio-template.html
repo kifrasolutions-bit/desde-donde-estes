@@ -203,6 +203,9 @@
   .op h3{font-family:var(--serif);font-size:21px;line-height:1.2}
   .op .d{margin:0;font-size:15.5px;line-height:1.55;color:var(--tinta-2);flex:1}
   .op .a{align-self:flex-start;font-size:15px;color:var(--tinta);text-decoration-color:var(--amarillo);text-decoration-thickness:2px}
+  .op .marcas{margin:12px 0 0;font-size:13.5px;line-height:1.9;color:var(--tinta-2);width:100%}
+  .op .marcas a{color:var(--tinta);text-decoration:underline;text-underline-offset:3px}
+  .op .marcas a:hover{background:var(--papel-2)}
   .op .f{font-size:12.5px;color:var(--tinta-2);padding-top:9px;border-top:1px solid var(--linea);width:100%}
 
   /* afectados */
@@ -844,6 +847,19 @@
         });
       }
       c.appendChild(a);
+      // Una tarjeta puede llevar varias marcas detras, como las campanas
+      // colectivas. Se listan con su propio enlace: si la gente les compra,
+      // la campana recoge mas. El texto se escapa como todo lo demas.
+      if(o.marcas && o.marcas.length){
+        var fila=el('p','marcas');
+        o.marcas.forEach(function(m,i){
+          if(i) fila.appendChild(document.createTextNode('  ·  '));
+          var ml=el('a',null,esc(m.n));
+          ml.href=m.url; ml.target='_blank'; ml.rel='noopener';
+          fila.appendChild(ml);
+        });
+        c.appendChild(fila);
+      }
       c.appendChild(el('span','f',esc(o.f)));
       p.appendChild(c);
     });
