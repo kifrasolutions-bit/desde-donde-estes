@@ -720,18 +720,34 @@
       a.href=url;a.target='_blank';a.rel='noopener';
       w.appendChild(a);
       box.appendChild(w);
-      // El observador se monta DESPUES de meter la tarjeta en la tira. Si se
-      // monta antes, la tarjeta todavia no es hija de la raiz y el observador
-      // no dispara nunca: ese error dejo la tira sin cargar un solo video.
-      // La raiz es la tira, asi solo carga el reel visible y el vecino.
-      if('IntersectionObserver' in window){
-        var io=new IntersectionObserver(function(es){
-          es.forEach(function(e){if(e.isIntersecting){io.disconnect();cargar()}});
-        },{root:box,rootMargin:'0px 320px'});
-        io.observe(w);
-      } else { cargar(); }
+      // Dos filtros antes de pedirle un video a Meta, en este orden:
+      // 1. que el visitante haya bajado hasta la seccion (se arma abajo);
+      // 2. que la tarjeta este a la vista dentro de la tira, que es horizontal.
+      // El observador se monta DESPUES de insertar la tarjeta: si se monta
+      // antes, todavia no es hija de la raiz y no dispara nunca. Ese error
+      // dejo la tira sin cargar un solo video la primera vez.
+      w._cargar = cargar;
     });
+    armaCargaPerezosa(box);
     tiraControles();
+  }
+
+  // Nadie le pide nada a Instagram hasta que la seccion entra en pantalla.
+  // Solo entonces se vigila la tira por dentro, para cargar el reel visible y
+  // su vecino y ninguno mas.
+  function armaCargaPerezosa(box){
+    var hijos=[].slice.call(box.children);
+    if(!('IntersectionObserver' in window)){ hijos.forEach(function(w){w._cargar()}); return; }
+    function vigilaDentro(){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting && e.target._cargar){ io.unobserve(e.target); e.target._cargar(); } });
+      },{root:box,rootMargin:'0px 320px'});
+      hijos.forEach(function(w){io.observe(w)});
+    }
+    var puerta=new IntersectionObserver(function(es){
+      if(es.some(function(e){return e.isIntersecting})){ puerta.disconnect(); vigilaDentro(); }
+    },{rootMargin:'200px'});
+    puerta.observe(box);
   }
 
   // Flechas y contador de la tira. En movil se pasa con el dedo y las flechas
@@ -748,8 +764,11 @@
       izq.disabled = box.scrollLeft<=2;
       der.disabled = box.scrollLeft>=box.scrollWidth-box.clientWidth-2;
     }
-    izq.onclick=function(){box.scrollBy({left:-paso(),behavior:'smooth'})};
-    der.onclick=function(){box.scrollBy({left:paso(),behavior:'smooth'})};
+    // El contador se repinta tambien despues de cada flecha, sin depender solo
+    // del evento de desplazamiento, que con desplazamiento suave llega tarde.
+    function mueve(d){ box.scrollBy({left:d*paso(),behavior:'smooth'}); setTimeout(pinta,450); setTimeout(pinta,900); }
+    izq.onclick=function(){mueve(-1)};
+    der.onclick=function(){mueve(1)};
     box.addEventListener('scroll',pinta,{passive:true});
     window.addEventListener('resize',pinta);
     pinta();
