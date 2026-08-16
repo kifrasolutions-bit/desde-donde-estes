@@ -81,6 +81,20 @@ def main():
     total = base.get("total", len(hechos))
     fuentes = len({h.get("fuente_url") for h in hechos if h.get("fuente_url")})
 
+    # El mapa junta los hechos con ubicaciones.json, que dice de donde sale
+    # cada uno. Ese archivo se edita a mano y manda: si un hecho no esta ahi,
+    # no dibuja punto. Asi la base de hechos no carga datos derivados.
+    ub = leer("ubicaciones.json", {"coordenadas": {}, "origen": {}})
+    coords, origenes = ub.get("coordenadas", {}), ub.get("origen", {})
+
+    def ubicado(h):
+        par = origenes.get(h["quien"])
+        if not par:
+            return None
+        lugar, pais = par[0], par[1]
+        xy = coords.get(lugar)
+        return None if not xy else (lugar, pais, xy)
+
     flujo = armar_flujo(hechos)
     if not flujo:
         raise SystemExit("El flujo salio vacio. Revisa hechos.json y FLUJO_ORDEN.")
@@ -94,6 +108,23 @@ def main():
     tpl = (A / "sitio-template.html").read_text(encoding="utf-8")
     reemplazos = [
         ("__HECHOS__", j(flujo)),
+        # El mapa usa TODOS los hechos ubicados, no solo los del flujo curado:
+        # la gracia es que se vean los 415, no 62. Del hecho se manda solo lo
+        # que el panel necesita, con el texto recortado, para no duplicar la
+        # base entera dentro de la pagina.
+        ("__HECHOS_MAPA__", j([
+            {
+                "quien": h["quien"],
+                "que_hizo": (h["que_hizo"][:170].rsplit(" ", 1)[0] + "\u2026")
+                            if len(h["que_hizo"]) > 175 else h["que_hizo"],
+                "fuente_url": h["fuente_url"],
+                "fuente_nombre": h["fuente_nombre"],
+                "origen_lugar": u[0],
+                "origen_pais": u[1],
+                "origen_xy": u[2],
+            }
+            for h, u in ((h, ubicado(h)) for h in hechos) if u
+        ])),
         ("__REELS__", j(reels)),
         ("__OPCIONES__", j(cont.get("opciones", {}))),
         ("__RECURSOS__", j(cont.get("recursos", []))),
