@@ -167,7 +167,11 @@
   .m-item b{display:block;font-weight:500;font-size:14.5px}
   .m-item p{margin:3px 0 0;font-size:13.5px;line-height:1.5;color:var(--tinta-2)}
   .m-item a{font-size:12.5px}
-  @media(max-width:700px){.m-lista{max-height:240px}}
+  @media(max-width:700px){
+    .m-lista{max-height:240px}
+    .mapa-wrap svg{height:auto;aspect-ratio:1000/460}
+    .m-tip{display:none}
+  }
   /* reels */
   .reels-cab{margin-top:52px;padding-top:20px;border-top:1px solid var(--linea);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .reels-cab h3{margin:0;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:400;line-height:1.15}
@@ -1058,19 +1062,52 @@
       vb();
     },{passive:false});
 
-    var arr=null;
+    // Un dedo arrastra, dos dedos pellizcan. Se lleva la cuenta de los
+    // dedos puestos porque en un mapa la gente espera pellizcar, y sin esto
+    // en el celular solo quedaban los botones.
+    var arr=null, dedos={}, pellizco=null;
+    function centro(a,b){ return {x:(a.x+b.x)/2, y:(a.y+b.y)/2}; }
+    function dist(a,b){ var dx=a.x-b.x, dy=a.y-b.y; return Math.sqrt(dx*dx+dy*dy)||1; }
+    function aMapa(cx,cy){
+      var r=svg.getBoundingClientRect();
+      return { x: VB.x+(cx-r.left)/r.width*VB.w, y: VB.y+(cy-r.top)/r.height*VB.h };
+    }
     svg.addEventListener('pointerdown',function(e){
-      arr={x:e.clientX,y:e.clientY,vx:VB.x,vy:VB.y}; svg.classList.add('arrastrando'); svg.setPointerCapture(e.pointerId);
+      dedos[e.pointerId]={x:e.clientX,y:e.clientY};
+      var ids=Object.keys(dedos);
+      svg.setPointerCapture(e.pointerId);
+      if(ids.length===2){
+        arr=null;
+        var a=dedos[ids[0]], b=dedos[ids[1]], c=centro(a,b);
+        pellizco={d:dist(a,b), z:W/VB.w, foco:aMapa(c.x,c.y)};
+      } else if(ids.length===1){
+        arr={x:e.clientX,y:e.clientY,vx:VB.x,vy:VB.y}; svg.classList.add('arrastrando');
+      }
     });
     svg.addEventListener('pointermove',function(e){
-      if(!arr) return;
-      var r=svg.getBoundingClientRect();
-      VB.x=Math.max(0,Math.min(W-VB.w, arr.vx-(e.clientX-arr.x)/r.width*VB.w));
-      VB.y=Math.max(0,Math.min(H-VB.h, arr.vy-(e.clientY-arr.y)/r.height*VB.h));
-      vb();
+      if(!(e.pointerId in dedos)) return;
+      dedos[e.pointerId]={x:e.clientX,y:e.clientY};
+      var ids=Object.keys(dedos), r=svg.getBoundingClientRect();
+      if(ids.length>=2 && pellizco){
+        var a=dedos[ids[0]], b=dedos[ids[1]];
+        var z=Math.max(1, Math.min(18, pellizco.z * (dist(a,b)/pellizco.d)));
+        var c=centro(a,b);
+        VB.w=W/z; VB.h=H/z;
+        VB.x=Math.max(0,Math.min(W-VB.w, pellizco.foco.x-(c.x-r.left)/r.width*VB.w));
+        VB.y=Math.max(0,Math.min(H-VB.h, pellizco.foco.y-(c.y-r.top)/r.height*VB.h));
+        vb();
+      } else if(arr){
+        VB.x=Math.max(0,Math.min(W-VB.w, arr.vx-(e.clientX-arr.x)/r.width*VB.w));
+        VB.y=Math.max(0,Math.min(H-VB.h, arr.vy-(e.clientY-arr.y)/r.height*VB.h));
+        vb();
+      }
     });
     ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
-      svg.addEventListener(ev,function(){arr=null;svg.classList.remove('arrastrando')});
+      svg.addEventListener(ev,function(e){
+        delete dedos[e.pointerId];
+        if(Object.keys(dedos).length<2) pellizco=null;
+        if(Object.keys(dedos).length===0){ arr=null; svg.classList.remove('arrastrando'); }
+      });
     });
 
     // Los arcos se trazan al entrar en pantalla, una sola vez, y no se traza
@@ -1078,15 +1115,17 @@
     function animar(){
       if(dibujado) return; dibujado=true;
       var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if(quieto) return;
       var arcos=[].slice.call(gArcos.children);
-      arcos.forEach(function(a){
-        var L=a.getTotalLength?a.getTotalLength():0;
-        if(!L) return;
-        a.style.strokeDasharray=L; a.style.strokeDashoffset=L;
-        a.style.transition='stroke-dashoffset .9s ease-out';
+      if(quieto){ arcos.forEach(function(a){a.style.opacity=''}); return; }
+      // Se encienden una tras otra en vez de dibujarse trazo a trazo. El
+      // trazo animado usaba guiones, y los guiones se calculan en unidades
+      // distintas cuando el grosor de linea no escala: en el celular las
+      // lineas quedaban cortadas a la mitad. La opacidad no tiene ese lio.
+      arcos.forEach(function(a,i){
+        a.style.opacity='0';
+        a.style.transition='opacity .5s ease-out';
+        setTimeout(function(){ a.style.opacity=''; }, 30*i);
       });
-      arcos.forEach(function(a,i){ setTimeout(function(){ a.style.strokeDashoffset=0; }, 40*i); });
     }
     if('IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){
