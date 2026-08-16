@@ -1,5 +1,5 @@
 {
-  "_como_usar": "Solo entran reels de cuentas publicas de quien HIZO la accion, nunca de hashtags. Un reel prueba quien lo publico, no que las imagenes sean de este terremoto. Ver regla D3 en directives/reglas-editoriales.md.",
+  "_como_usar": "Dos franjas. Tarjeta en el sitio: exige canal verificable contra la pagina de la propia organizacion. Reel: basta con que la cuenta sea publica y sea la de quien HIZO la accion. Un reel no es un aval y no lo verificamos campana por campana. Nunca entra un reel que muestre en pantalla una cuenta bancaria, ni una colecta personal (regla F), ni una cuenta que solo difunde lo que hizo otro (regla D3).",
   "_mas_facil": "Abre agregar-reels.html, pega los enlaces y copia el resultado aqui.",
   "reels": [
     {
@@ -71,6 +71,26 @@
       "url": "https://www.instagram.com/elmonobandido/p/DcCQoZ8gT_n/",
       "es": "El Mono Bandido explica la mecánica con la Cruz Roja: donas $80.000 en la página de la Cruz Roja y ellos te mandan la camiseta.",
       "en": "El Mono Bandido explains how it works with the Red Cross: you donate COP $80,000 on the Red Cross page and they send you the shirt."
+    },
+    {
+      "url": "https://www.instagram.com/powerclub_official/p/Db-tzMQlksP/",
+      "es": "La cadena de gimnasios pwr convirtió todas sus sedes en centros de acopio y citó a entrenar por la causa.",
+      "en": "The pwr gym chain turned all its clubs into collection points and called a training session for the cause."
+    },
+    {
+      "url": "https://www.instagram.com/kapital_llantas/reel/DcCa9XztHhn/",
+      "es": "Una llantera con tres sedes en Bogotá abrió sus locales para recibir donaciones mientras sigue trabajando normal.",
+      "en": "A tyre shop with three branches in Bogotá opened its premises to collect donations while carrying on with business."
+    },
+    {
+      "url": "https://www.instagram.com/ttropicaldeath/p/Db6BcncFQ2t/",
+      "es": "Una marca de ropa hizo una prenda con tres artistas y anuncia que la ganancia entera va para los afectados.",
+      "en": "A clothing brand made a garment with three artists and says the entire profit goes to those affected."
+    },
+    {
+      "url": "https://www.instagram.com/esenciamia.oficial/p/DcCSDTRGjU8/",
+      "es": "Una marca pequeña destina la mitad de lo que venda de una camisa al Centro de Acopio Florece.",
+      "en": "A small brand is giving half of what one shirt sells to the Florece collection centre."
     }
   ]
 }
