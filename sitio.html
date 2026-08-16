@@ -873,6 +873,10 @@
     var DEST=[4.71,-74.07];                          // Bogota, donde cae todo
     var VB={x:0,y:0,w:W,h:H};
     var sel=null, dibujado=false;
+    // Se decide arriba, antes de enganchar los puntos: si se declara mas
+    // abajo, cuando el bucle pregunta todavia vale undefined y no engancha
+    // ningun raton. Paso exactamente eso.
+    var hayCursor = !window.matchMedia || window.matchMedia('(hover: hover)').matches;
 
     function proy(lat,lon){
       return [ (lon+180)/360*W, (LAT0-lat)/(LAT0-LAT1)*H ];
@@ -901,41 +905,7 @@
     var gTierra=nodo('g'), gArcos=nodo('g'), gPtos=nodo('g'), gEti=nodo('g');
     svg.appendChild(gTierra); svg.appendChild(gArcos); svg.appendChild(gPtos); svg.appendChild(gEti);
 
-    var destino=proy(DEST[0],DEST[1]);
-    lugares.forEach(function(L){
-      var a=proy(L.xy[0],L.xy[1]);
-      if(Math.abs(a[0]-destino[0])<1 && Math.abs(a[1]-destino[1])<1) return;
-      var mx=(a[0]+destino[0])/2, my=(a[1]+destino[1])/2;
-      var dx=destino[0]-a[0], dy=destino[1]-a[1];
-      var len=Math.sqrt(dx*dx+dy*dy)||1;
-      var cx=mx - dy*0.16, cy=my + dx*0.16;
-      var pth=nodo('path','m-arco');
-      pth.setAttribute('d','M'+a[0].toFixed(1)+','+a[1].toFixed(1)+' Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+destino[0].toFixed(1)+','+destino[1].toFixed(1));
-      gArcos.appendChild(pth); L.arco=pth;
-    });
-
-    lugares.forEach(function(L){
-      var a=proy(L.xy[0],L.xy[1]);
-      var c=nodo('circle','m-pt');
-      c.setAttribute('cx',a[0].toFixed(1)); c.setAttribute('cy',a[1].toFixed(1));
-      L.r = Math.min(2+Math.sqrt(L.hechos.length)*0.9, 7);
-      c.setAttribute('r', L.r.toFixed(1));
-      c.addEventListener('click',function(e){e.stopPropagation();elegir(L)});
-      // Al pasar el cursor se asoma lo que paso ahi, sin tener que hacer clic.
-      // Solo en aparatos con cursor: en un telefono no existe el pasar por
-      // encima y el toque ya abre el panel completo.
-      if(hayCursor){
-        c.addEventListener('mouseenter',function(){ asomar(L); });
-        c.addEventListener('mouseleave',esconder);
-      }
-      gPtos.appendChild(c); L.punto=c; L.xyp=a;
-    });
-    var corazon=nodo('circle','m-pt destino');
-    corazon.setAttribute('cx',destino[0]); corazon.setAttribute('cy',destino[1]); corazon.setAttribute('r','5');
-    gPtos.appendChild(corazon);
-
     var tip=$('#m-tip'), sobre=null;
-    var hayCursor = !window.matchMedia || window.matchMedia('(hover: hover)').matches;
     function asomar(L){
       if(!tip) return;
       sobre=L;
@@ -969,6 +939,39 @@
       });
       svg.addEventListener('mouseleave',esconder);
     }
+
+    var destino=proy(DEST[0],DEST[1]);
+    lugares.forEach(function(L){
+      var a=proy(L.xy[0],L.xy[1]);
+      if(Math.abs(a[0]-destino[0])<1 && Math.abs(a[1]-destino[1])<1) return;
+      var mx=(a[0]+destino[0])/2, my=(a[1]+destino[1])/2;
+      var dx=destino[0]-a[0], dy=destino[1]-a[1];
+      var len=Math.sqrt(dx*dx+dy*dy)||1;
+      var cx=mx - dy*0.16, cy=my + dx*0.16;
+      var pth=nodo('path','m-arco');
+      pth.setAttribute('d','M'+a[0].toFixed(1)+','+a[1].toFixed(1)+' Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+destino[0].toFixed(1)+','+destino[1].toFixed(1));
+      gArcos.appendChild(pth); L.arco=pth;
+    });
+
+    lugares.forEach(function(L){
+      var a=proy(L.xy[0],L.xy[1]);
+      var c=nodo('circle','m-pt');
+      c.setAttribute('cx',a[0].toFixed(1)); c.setAttribute('cy',a[1].toFixed(1));
+      L.r = Math.min(2+Math.sqrt(L.hechos.length)*0.9, 7);
+      c.setAttribute('r', L.r.toFixed(1));
+      c.addEventListener('click',function(e){e.stopPropagation();elegir(L)});
+      // Al pasar el cursor se asoma lo que paso ahi, sin tener que hacer clic.
+      // Solo en aparatos con cursor: en un telefono no existe el pasar por
+      // encima y el toque ya abre el panel completo.
+      if(hayCursor){
+        c.addEventListener('mouseenter',function(){ asomar(L); });
+        c.addEventListener('mouseleave',esconder);
+      }
+      gPtos.appendChild(c); L.punto=c; L.xyp=a;
+    });
+    var corazon=nodo('circle','m-pt destino');
+    corazon.setAttribute('cx',destino[0]); corazon.setAttribute('cy',destino[1]); corazon.setAttribute('r','5');
+    gPtos.appendChild(corazon);
 
     function etiquetas(){
       gEti.innerHTML='';
