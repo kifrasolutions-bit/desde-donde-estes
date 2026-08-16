@@ -1,0 +1,21 @@
+{
+  "_como_usar": "Solo entran reels de cuentas publicas de quien HIZO la accion, nunca de hashtags. Un reel prueba quien lo publico, no que las imagenes sean de este terremoto. Ver regla D3 en directives/reglas-editoriales.md.",
+  "_mas_facil": "Abre agregar-reels.html, pega los enlaces y copia el resultado aqui.",
+  "reels": [
+    {
+      "url": "https://www.instagram.com/cruzrojacol/reel/DcEd7e0x2MA/",
+      "es": "Cruz Roja Colombiana: 26 toneladas de kits de alimento e higiene salen hacia los municipios más afectados.",
+      "en": "Colombian Red Cross: 26 tonnes of food and hygiene kits heading to the hardest-hit municipalities."
+    },
+    {
+      "url": "https://www.instagram.com/fundacionplan/reel/DcBt9N5DSdO/",
+      "es": "Fundación PLAN explica su respuesta por fases: alojamiento temporal, agua, apoyo psicológico y espacios seguros para la niñez.",
+      "en": "Fundación PLAN on its phased response: temporary shelter, water, psychological support and safe spaces for children."
+    },
+    {
+      "url": "https://www.instagram.com/arquidiocesisbq/reel/DcEVKuoRXyG/",
+      "es": "Arquidiócesis de Barranquilla convoca la Jornada Nacional de Oración del domingo 16 de agosto, con recolección de donaciones en las parroquias.",
+      "en": "Barranquilla Archdiocese calls the National Day of Prayer on Sunday August 16, collecting donations in parishes."
+    }
+  ]
+}

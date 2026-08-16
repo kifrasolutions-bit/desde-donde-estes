@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desde Donde Estés · Terremoto Colombia 2026</title>
+<meta name="description" content="Formas verificadas de ayudar tras el terremoto del 10 de agosto de 2026 en Colombia. Cada dato con su fuente.">
+<link rel="canonical" href="https://desdedondeestes.co/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desdedondeestes.co/">
+<meta property="og:site_name" content="Desde Donde Estés">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="Desde Donde Estés">
+<meta property="og:description" content="Hay un mundo de formas de ayudar a Colombia. Aquí están algunas, verificadas una por una. Faltan muchas: se construye entre todos.">
+<style>
+  :root{
+    --amarillo:#F2C230; --amarillo-claro:#FBE9AE; --amarillo-hondo:#8A6A0E; --amarillo-papel:#FDF6E2;
+    --azul:#12356B; --tinta:#16203A; --tinta-2:#4A5670; --tinta-3:#8896B2;
+    --rojo:#C4362B;
+    --papel:#FBF8F1; --papel-2:#F3EDE0; --tarjeta:#FFFDF7;
+    --linea:#E4DCCB; --linea-2:#CFC5AF;
+    --verde-fondo:#E8F2EC; --verde-linea:#B9D5C6; --verde-tarjeta:#F4FAF6;
+    --verde-hondo:#1F4A37; --verde:#2F6B4F; --verde-texto:#2A4A3A;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0}
+  body{background:var(--papel);color:var(--tinta);
+    font:17px/1.55 "Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--tinta);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:var(--linea-2)}
+  a:hover{color:var(--amarillo-hondo);text-decoration-color:var(--amarillo)}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--azul);outline-offset:3px}
+  ::selection{background:var(--amarillo-claro);color:var(--tinta)}
+  h1,h2,h3{margin:0;font-weight:400}
+  [hidden]{display:none!important}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* barra */
+  .barra{position:sticky;top:0;z-index:40;background:var(--papel);border-bottom:1px solid var(--linea)}
+  .barra .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:13px;padding-bottom:13px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px;flex:none}
+  .bandera{display:flex;flex-direction:column;width:20px;height:20px;flex:none}
+  .bandera i{display:block}
+  .bandera i:nth-child(1){height:50%;background:var(--amarillo)}
+  .bandera i:nth-child(2){height:25%;background:var(--azul)}
+  .bandera i:nth-child(3){height:25%;background:var(--rojo)}
+  .marca .w{font-family:var(--serif);font-size:19px;display:flex;gap:5px}
+  .marca .w i{font-style:normal}
+  .marca .w i:nth-child(1){color:var(--amarillo-hondo)}
+  .marca .w i:nth-child(2){color:var(--azul)}
+  .marca .w i:nth-child(3){color:var(--rojo)}
+  .relleno{flex:1}
+  .sw{display:flex;gap:9px;align-items:baseline;font-size:14px}
+  .sw button{border:0;background:transparent;padding:0 0 2px;cursor:pointer;color:var(--tinta-2);border-bottom:2px solid transparent}
+  .sw button[aria-pressed="true"]{color:var(--tinta)}
+  .sw.lang button[aria-pressed="true"]{border-bottom-color:var(--amarillo)}
+  .sw.loc button[aria-pressed="true"]{border-bottom-color:var(--azul)}
+  .sw .sep{color:var(--linea-2)}
+  .cta{font-size:14.5px;padding:7px 15px;background:var(--amarillo);color:var(--tinta);text-decoration:none;white-space:nowrap}
+  .cta:hover{color:var(--tinta)}
+
+  .frescura{background:var(--amarillo-claro);border-bottom:1px solid var(--linea)}
+  .frescura p{margin:0;padding:8px 24px;max-width:1200px;margin:0 auto;font-size:13.5px;color:var(--amarillo-hondo)}
+
+  section{border-bottom:1px solid var(--linea);scroll-margin-top:74px}
+  .banda{background:var(--papel-2)}
+  .enc{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;margin-bottom:30px}
+  .enc h2{font-family:var(--serif);font-size:clamp(27px,3.4vw,38px);line-height:1.12}
+  .enc p{margin:0;color:var(--tinta-2);font-size:15px}
+
+  /* apertura */
+  .top .wrap{padding-top:46px;padding-bottom:52px}
+  .kicker{margin:0 0 20px;font-size:14px;color:var(--tinta-2);letter-spacing:.03em}
+  .masthead{position:relative}
+  .mapa{position:absolute;right:0;top:-6%;width:min(52%,560px);opacity:.42;pointer-events:none}
+  .masthead h1{position:relative;font-family:var(--serif);font-size:clamp(58px,14vw,158px);line-height:.87;letter-spacing:-.03em}
+  .masthead h1 span{display:block}
+  .masthead h1 span:nth-child(1){color:var(--amarillo-hondo)}
+  .masthead h1 span:nth-child(2){color:var(--azul);margin-left:7%}
+  .masthead h1 span:nth-child(3){color:var(--rojo);margin-left:14%}
+  .bajo{margin-top:clamp(34px,6vw,66px);display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px)}
+  .cita{margin:0;flex:2 1 380px;font-family:var(--serif);font-size:clamp(22px,2.6vw,29px);line-height:1.38;border-left:3px solid var(--amarillo);padding-left:24px}
+  .cita .firma{margin-top:20px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15.5px;color:var(--tinta-2);line-height:1.5}
+  .acc{flex:1 1 300px;display:flex;flex-direction:column;justify-content:flex-end;gap:22px}
+  .acc .posib{margin:0;font-size:18px;line-height:1.6}
+  .acc .fila{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{padding:13px 20px;background:var(--tinta);color:var(--papel);text-decoration:none;font-size:15.5px;border:0;cursor:pointer;display:inline-block}
+  .btn:hover{color:var(--papel);background:#22304f}
+  .btn.am{background:var(--amarillo);color:var(--tinta)}
+  .btn.am:hover{background:#e8b724;color:var(--tinta)}
+  .btn.claro{background:transparent;border:1px solid var(--linea-2);color:var(--tinta)}
+  .enlace{font-size:15.5px;color:var(--tinta-2)}
+
+  /* cifras */
+  .cifras{display:flex;flex-wrap:wrap;gap:26px clamp(24px,4vw,52px)}
+  .cif{flex:1 1 210px;display:flex;flex-direction:column;gap:9px}
+  .cif .n{font-family:var(--serif);font-size:clamp(40px,5vw,60px);line-height:.92;letter-spacing:-.02em}
+  .cif .n small{font-size:.42em;letter-spacing:0}
+  .cif .t{font-size:15.5px;line-height:1.45}
+  .cif a{font-size:12.5px;color:var(--tinta-2)}
+
+  /* cadena */
+  .cadena .wrap{padding-top:52px;padding-bottom:56px}
+  .enc.ancho{align-items:flex-end;gap:16px 40px;margin-bottom:26px}
+  .enc.ancho h2{flex:1 1 340px;font-size:clamp(30px,4.4vw,50px);line-height:1.05;max-width:17ch}
+  .enc.ancho p{flex:1 1 280px;font-size:15.5px;max-width:44ch}
+  .filtros{display:flex;gap:20px;flex-wrap:wrap;font-size:14.5px;padding-bottom:12px}
+  .filtros button{border:0;background:transparent;padding:0 0 4px;cursor:pointer;color:var(--tinta-2);border-bottom:2px solid transparent}
+  .filtros button[aria-pressed="true"]{color:var(--tinta);border-bottom-color:var(--amarillo)}
+  .rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(274px,1fr));gap:16px}
+  .ficha{position:relative;border:1px solid var(--linea);background:var(--tarjeta);padding:22px 20px 14px;display:flex;flex-direction:column;gap:9px}
+  .ficha .cruz{position:absolute;color:var(--linea-2);font-size:11px;line-height:1}
+  .ficha .c1{top:4px;left:5px} .ficha .c2{top:4px;right:5px}
+  .ficha .c3{bottom:4px;left:5px} .ficha .c4{bottom:4px;right:5px}
+  .ficha h3{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;line-height:1.45}
+  .ficha .cifra{margin:0;font-family:var(--serif);font-size:22px;line-height:1.26}
+  .ficha .que{margin:0;font-size:15px;line-height:1.5;color:var(--tinta-2);flex:1}
+  .ficha .pie{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline;padding-top:9px;border-top:1px solid var(--linea);font-size:12.5px;color:var(--tinta-2)}
+  .ficha .pie a{color:var(--tinta-2)}
+  .masbox{padding-top:18px}
+
+  /* reels */
+  .reels{margin-top:48px;display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,32px)}
+  .reel{flex:1 1 220px;max-width:320px}
+  .reel .marco{position:relative;width:100%;aspect-ratio:4/5;background:var(--papel-2);border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .reel .marco iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .reel .esperando{font-size:13px;color:var(--tinta-2);padding:16px;text-align:center}
+  .reel .cap{margin:11px 0 0;font-size:14.5px;line-height:1.5;color:var(--tinta-2)}
+  .reel .abrir{font-size:13px}
+
+  /* fase */
+  .fase{position:relative;padding-top:26px}
+  .fase .riel{position:absolute;left:0;right:0;top:26px;height:2px;background:var(--linea)}
+  .fase .avance{position:absolute;left:0;top:26px;height:2px;background:var(--amarillo)}
+  .fase .pasos{position:relative;display:flex}
+  .fase .p{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:0 8px}
+  .fase .dot{width:13px;height:13px;border-radius:50%;border:2px solid var(--papel);margin-top:-6px;background:var(--linea-2)}
+  .fase .p.act .dot{background:var(--rojo)}
+  .fase .num{font-size:12.5px;color:var(--tinta-2);font-family:var(--serif)}
+  .fase .lbl{font-size:19px;font-family:var(--serif);line-height:1.2}
+  .fase .aqui{font-size:13px;color:var(--amarillo-hondo)}
+  .perdida{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:16px}
+  .pf{position:relative;border:1px solid var(--linea);background:var(--tarjeta);padding:20px 18px 16px;display:flex;flex-direction:column;gap:7px}
+  .pf .n{font-family:var(--serif);font-size:32px;line-height:1;color:var(--tinta-2)}
+  .pf .t{font-size:14.5px;line-height:1.45;color:var(--tinta-2);flex:1}
+  .pf .s{font-size:12.5px;color:var(--tinta-2);padding-top:8px;border-top:1px solid var(--linea)}
+  .nota{margin:26px 0 0;font-size:14px;line-height:1.6;color:var(--tinta-2);max-width:78ch}
+
+  /* sumar */
+  .sumar{background:var(--amarillo-papel)}
+  .sumar .wrap{padding-top:50px;padding-bottom:54px;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px)}
+  .sumar .izq{flex:1 1 300px}
+  .sumar h2{font-family:var(--serif);font-size:clamp(28px,3.8vw,44px);line-height:1.08;max-width:15ch;margin-bottom:12px}
+  .sumar .izq p{margin:0;color:var(--amarillo-hondo);font-size:15.5px;max-width:38ch}
+  .sumar .der{flex:1.4 1 340px}
+  .sumar .der .p1{margin:0 0 18px;font-size:17.5px;line-height:1.62}
+  .sumar .der .p2{margin:0 0 24px;font-size:14.5px;line-height:1.6;color:var(--tinta-2)}
+
+  /* puertas */
+  .puertas{background:var(--papel-2)}
+  .puertas .wrap{padding-top:52px;padding-bottom:58px}
+  .puertas .enc{gap:14px 40px;align-items:flex-end;margin-bottom:32px}
+  .puertas .enc h2{font-size:clamp(34px,5vw,62px);line-height:1}
+  .puertas .enc p{font-size:15.5px;max-width:42ch}
+  .ejes{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:12px;margin-bottom:20px}
+  .eje{width:100%;height:100%;text-align:left;border:1px solid var(--linea-2);background:var(--papel);color:var(--tinta);padding:18px 18px 16px;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+  .eje .mk{font-size:12px;color:var(--tinta-2);font-family:var(--serif)}
+  .eje .nm{font-size:20px;font-family:var(--serif)}
+  .eje .ds{font-size:13.5px;line-height:1.4;color:var(--tinta-2)}
+  .eje[aria-pressed="true"]{border-color:var(--tinta);background:var(--tinta);color:var(--papel)}
+  .eje[aria-pressed="true"] .mk{color:var(--amarillo)}
+  .eje[aria-pressed="true"] .ds{color:var(--linea)}
+  .panel{border:1px solid var(--tinta);padding:clamp(16px,2.6vw,26px);display:grid;grid-template-columns:repeat(auto-fill,minmax(292px,1fr));gap:16px}
+  .panel:empty{display:none}
+  .op{border:1px solid var(--linea);background:var(--papel);padding:18px 18px 14px;display:flex;flex-direction:column;gap:9px}
+  .op.aviso{border-color:var(--rojo)}
+  .op .tg{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--tinta-2)}
+  .op h3{font-family:var(--serif);font-size:21px;line-height:1.2}
+  .op .d{margin:0;font-size:15.5px;line-height:1.55;color:var(--tinta-2);flex:1}
+  .op .a{align-self:flex-start;font-size:15px;color:var(--tinta);text-decoration-color:var(--amarillo);text-decoration-thickness:2px}
+  .op .f{font-size:12.5px;color:var(--tinta-2);padding-top:9px;border-top:1px solid var(--linea);width:100%}
+
+  /* afectados */
+  .afectado{background:var(--verde-fondo);border-bottom:1px solid var(--verde-linea)}
+  .afectado .wrap{padding-top:50px;padding-bottom:54px}
+  .afectado .enc{gap:14px 40px;align-items:flex-end;margin-bottom:26px}
+  .afectado .enc h2{font-size:clamp(27px,3.6vw,42px);line-height:1.1;color:var(--verde-hondo);max-width:17ch}
+  .afectado .enc p{color:var(--verde);font-size:15.5px;max-width:42ch}
+  .recursos{display:grid;grid-template-columns:repeat(auto-fill,minmax(282px,1fr));gap:16px}
+  .re{border:1px solid var(--verde-linea);background:var(--verde-tarjeta);padding:19px 18px 15px;display:flex;flex-direction:column;gap:9px}
+  .re h3{font-family:var(--serif);font-size:20px;line-height:1.22;color:var(--verde-hondo)}
+  .re p{margin:0;font-size:15px;line-height:1.55;color:var(--verde-texto);flex:1}
+  .re a{align-self:flex-start;font-size:15px;color:var(--verde-hondo);text-decoration-color:var(--verde)}
+  .re .f{font-size:12.5px;color:#3B5B4C;padding-top:9px;border-top:1px solid #D7E7DE;width:100%}
+
+  /* brecha */
+  .brecha .wrap{padding:50px 24px}
+  .brecha h2{font-family:var(--serif);font-size:clamp(28px,4.2vw,46px);line-height:1.08;max-width:18ch;margin-bottom:10px}
+  .brecha .sub{margin:0 0 34px;color:var(--tinta-2);font-size:15.5px;max-width:56ch}
+  .medidor{display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,60px)}
+  .medidor .izq{flex:1 1 300px}
+  .barra-med{display:flex;height:14px;border:1px solid var(--linea-2)}
+  .barra-med i{display:block}
+  .barra-med i:nth-child(1){width:5%;background:var(--amarillo)}
+  .barra-med i:nth-child(2){width:95%;background:var(--papel)}
+  .leyenda{display:flex;justify-content:space-between;gap:16px;margin-top:10px;font-size:13px;color:var(--tinta-2);line-height:1.45}
+  .leyenda span:nth-child(1){max-width:20ch}
+  .leyenda span:nth-child(2){max-width:24ch;text-align:right}
+  .medidor .expl{flex:1.3 1 340px;margin:0;font-size:17.5px;line-height:1.62}
+
+  /* conciertos */
+  .conciertos .wrap{padding:50px 24px}
+  .cc{display:grid;grid-template-columns:repeat(auto-fill,minmax(298px,1fr));gap:16px}
+  .co{position:relative;border:1px solid var(--linea);background:var(--tarjeta);padding:22px 20px 16px;display:flex;flex-direction:column;gap:8px}
+  .co .fch{font-size:13.5px;color:var(--rojo);letter-spacing:.03em}
+  .co h3{font-family:var(--serif);font-size:24px;line-height:1.16}
+  .co .lug{font-size:14.5px;color:var(--tinta-2)}
+  .co .art{margin:0;font-size:14.8px;line-height:1.5;color:var(--tinta-2);flex:1}
+  .co .ya{font-size:12.5px;color:var(--tinta-2);border:1px solid var(--linea-2);padding:2px 8px;align-self:flex-start;white-space:nowrap}
+  .co .fin{padding-top:9px;border-top:1px solid var(--linea);display:flex;flex-direction:column;gap:3px}
+  .co .fin .dst{font-size:14.5px}
+  .co .fin .prc{font-size:13.5px;color:var(--tinta-2)}
+  .co.pasado{opacity:.55}
+
+  /* transparencia */
+  .transp{background:var(--papel-2);border-bottom:0}
+  .transp .wrap{padding-top:52px;padding-bottom:56px}
+  .destacadas{display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,60px);margin-bottom:38px}
+  .destacadas article{flex:1 1 320px;max-width:56ch}
+  .destacadas h3{font-family:var(--serif);font-size:24px;line-height:1.2;color:var(--amarillo-hondo);margin-bottom:12px}
+  .destacadas p{margin:0;font-size:16.5px;line-height:1.66;color:#3A4560}
+  .resto{border-top:1px solid var(--linea-2);max-width:80ch}
+  .resto details{border-bottom:1px solid var(--linea)}
+  .resto summary{cursor:pointer;padding:15px 0;font-size:16px;list-style:none}
+  .resto summary::-webkit-details-marker{display:none}
+  .resto summary::before{content:"+ ";color:var(--amarillo-hondo)}
+  .resto details[open] summary::before{content:"− "}
+  .resto p{margin:0 0 16px;font-size:15.5px;line-height:1.62;color:var(--tinta-2)}
+
+  /* pie */
+  .pie-sitio{background:var(--tinta);color:var(--papel-2)}
+  .pie-sitio .wrap{padding:46px 24px 62px;display:flex;flex-wrap:wrap;gap:clamp(26px,4vw,58px);align-items:flex-start}
+  .pie-sitio .col1{flex:1.4 1 320px;display:flex;flex-direction:column;gap:16px}
+  .pie-sitio .rayita{height:4px;width:104px;background:linear-gradient(90deg,var(--amarillo) 0 50%,var(--azul) 50% 75%,var(--rojo) 75% 100%)}
+  .pie-sitio p{margin:0;font-size:14.8px;line-height:1.62;color:#D8DBE4}
+  .pie-sitio a{color:var(--amarillo-claro);text-decoration-color:var(--amarillo-hondo)}
+  .pie-sitio a:hover{color:var(--amarillo);text-decoration-color:var(--amarillo)}
+  .pie-sitio .col2{flex:1 1 260px}
+  .pie-sitio h3{font-family:var(--serif);font-size:17px;color:var(--amarillo-claro);margin-bottom:10px}
+  .pie-sitio .fuentes{font-size:14px;line-height:1.9;color:#D8DBE4}
+
+  .pie-sitio .col1,.pie-sitio .col2{min-width:0}
+  .pie-sitio .fuentes{overflow-wrap:anywhere}
+  .pie-sitio .fuentes a,.pie-sitio .fuentes span{display:block;padding:2px 0}
+
+  @media(max-width:640px){
+    /* dedos, no punteros: los blancos de toque suben a 40px sin cambiar el
+       tamano visible de la letra */
+    .sw button{padding:9px 4px;font-size:13px}
+    .sw{gap:6px}
+    .sw.loc{order:3}
+    .cta{order:4;font-size:13.5px;margin-left:auto}
+    .filtros{gap:14px}
+    .filtros button{padding:6px 0 8px}
+    .barra .wrap{gap:10px 14px}
+    .cta{padding:10px 16px}
+    .masthead h1 span:nth-child(2){margin-left:5%}
+    .masthead h1 span:nth-child(3){margin-left:10%}
+    .mapa{width:70%;opacity:.28;top:auto;bottom:-4%}
+    .cita{padding-left:16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="barra"><div class="wrap">
+  <a class="marca" href="#top">
+    <span class="bandera"><i></i><i></i><i></i></span>
+    <span class="w"><i id="bk1">Desde</i><i id="bk2">Donde</i><i id="bk3">Estés</i></span>
+  </a>
+  <div class="relleno"></div>
+  <div class="sw lang" role="group">
+    <button id="b-es" aria-pressed="true">ES</button><span class="sep">·</span><button id="b-en" aria-pressed="false">EN</button>
+  </div>
+  <div class="sw loc" role="group">
+    <button data-modo="co" aria-pressed="true"></button><span class="sep">·</span><button data-modo="intl" aria-pressed="false"></button>
+  </div>
+  <a class="cta" href="#dar" data-i="cta"></a>
+</div></header>
+
+<div class="frescura"><p id="frescura"></p></div>
+
+<section class="top" id="top"><div class="wrap">
+  <p class="kicker" id="kicker"></p>
+  <div class="masthead">
+    <div class="mapa"><svg viewBox="127 249 55 46" style="display:block;width:100%;height:auto" role="img" aria-label="Colombia, el Caribe y los países vecinos">
+            <g fill="none" stroke="#16203A" stroke-width=".16" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M156.4,250.9L156.5,251.7L156.4,252.3L156.0,252.6L156.4,253.0L156.4,253.4L155.4,253.2L154.7,253.3L153.9,253.2L153.2,253.5L152.4,253.0L152.5,252.5L153.9,252.7L154.9,252.8L155.5,252.5L154.8,251.8L154.8,251.2L153.9,251.0L154.2,250.6L155.1,250.7Z"></path>
+              <path d="M156.4,253.4L156.4,253.0L156.0,252.6L156.4,252.3L156.5,251.7L156.4,250.9L156.5,250.6L157.7,250.6L158.5,251.0L158.9,251.0L159.2,251.5L160.0,251.5L159.9,252.0L160.6,252.0L161.3,252.6L160.7,253.2L160.0,252.9L159.4,252.9L158.9,252.9L158.6,253.1L158.1,253.2L157.9,252.9L157.4,253.1L156.8,254.1L156.4,253.9Z"></path>
+              <path d="M182.9,331.8L182.5,330.8L183.1,330.0L182.3,328.9L181.1,327.9L179.6,326.8L179.1,326.9L177.7,325.6L176.7,325.8L178.6,323.5L180.3,321.9L181.2,321.3L182.5,320.4L182.5,319.1L181.8,318.1L181.0,318.4L181.3,317.5L181.5,316.6L181.5,315.7L181.0,315.4L180.5,315.7L179.9,315.6L179.8,315.0L179.6,313.6L179.4,313.1L178.4,312.7L177.8,313.0L176.3,312.7L176.4,310.6L175.9,309.7L176.4,309.4L176.2,308.5L176.6,307.9L176.9,306.7L176.6,305.7L175.8,305.3L175.6,304.7L175.8,303.8L173.1,303.8L172.5,302.0L172.9,302.0L172.9,301.3L172.6,300.9L172.6,300.0L171.7,299.6L170.8,299.6L170.2,299.2L169.2,298.9L168.7,298.3L167.0,298.1L165.5,296.8L165.6,295.8L165.4,295.2L165.6,294.1L163.7,294.4L162.9,294.9L161.7,295.5L161.3,296.0L160.6,296.0L159.5,295.9L158.7,296.1L158.0,296.0L158.1,293.7L157.0,294.6L155.7,294.5L155.1,293.8L154.2,293.7L154.5,293.1L153.7,292.2L153.1,290.9L153.5,290.6L153.5,290.0L154.3,289.5L154.2,288.8L154.6,288.3L154.7,287.6L156.3,286.6L157.5,286.3L157.7,286.1L159.0,286.2L159.6,282.2L159.7,281.6L159.5,280.7L158.8,280.2L158.8,279.2L159.6,278.9L159.9,279.1L160.0,278.5L159.1,278.4L159.1,277.5L161.9,277.5L162.4,277.0L162.8,277.5L163.1,278.3L163.4,278.1L164.1,278.9L165.3,278.8L165.6,278.4L166.6,278.0L167.2,277.8L167.4,277.2L168.4,276.8L168.3,276.5L167.1,276.3L166.9,275.4L167.0,274.5L166.3,274.1L166.6,274.0L167.7,274.1L168.8,274.5L169.2,274.2L170.3,273.9L171.9,273.4L172.4,272.8L172.2,272.4L173.0,272.4L173.3,272.7L173.1,273.3L173.6,273.6L173.9,274.2L173.5,274.7L173.3,276.0L173.7,276.7L173.8,277.4L174.7,278.0L175.4,278.1L175.6,277.8L176.0,277.8L176.7,277.5L177.1,277.1L177.9,277.3L178.3,277.2L179.1,277.3L179.2,277.0L179.0,276.7L179.1,276.3L179.7,276.5L180.4,276.3L181.2,276.6L181.8,276.9L182.3,276.5L182.6,276.6L182.8,277.0L183.5,276.9L184.0,276.3L184.5,275.3L185.3,273.9L185.8,273.9L186.2,274.7L187.0,277.2L187.8,277.4L187.8,278.4L186.7,279.6L187.2,280.1L189.7,280.3L189.8,281.7L190.9,280.8L192.7,281.3L195.1,282.2L195.8,283.0L195.6,283.8L197.2,283.4L200.0,284.2L202.2,284.1L204.3,285.3L206.2,286.9L207.3,287.3L208.5,287.4L209.1,287.9L209.5,289.7L209.8,290.6L209.2,293.0L208.5,294.0L206.4,296.0L205.5,297.7L204.4,298.9L204.1,299.0L203.7,300.1L203.8,302.9L203.4,305.2L203.2,306.2L202.8,306.8L202.5,308.8L201.1,310.8L200.8,312.4L199.6,313.1L199.3,314.1L197.7,314.1L195.5,314.7L194.4,315.4L192.8,315.8L191.1,317.1L189.9,318.7L189.7,319.9L189.9,320.8L189.7,322.4L189.3,323.2L188.3,324.1L186.7,327.1L185.5,328.4L184.5,329.2L183.8,330.8Z"></path>
+              <path d="M159.0,286.2L157.7,286.1L157.5,286.3L156.3,286.6L154.7,287.6L154.6,288.3L154.2,288.8L154.3,289.5L153.5,290.0L153.5,290.6L153.1,290.9L153.7,292.2L154.5,293.1L154.2,293.7L155.1,293.8L155.7,294.5L157.0,294.6L158.1,293.7L158.0,296.0L158.7,296.1L159.5,295.9L160.8,298.2L160.5,298.7L160.4,299.8L160.4,301.1L159.8,301.8L160.0,302.4L159.7,302.9L160.3,304.1L159.4,305.8L159.0,306.5L158.3,306.9L156.9,306.0L156.7,305.4L153.9,303.9L151.3,302.3L150.2,301.3L149.6,300.1L149.8,299.7L148.6,297.7L147.1,295.0L145.8,292.1L145.2,291.4L144.7,290.4L143.6,289.4L142.6,288.8L143.1,288.2L142.4,286.8L142.8,285.8L144.0,284.9L144.1,285.5L143.7,285.8L143.8,286.3L144.4,286.2L144.9,286.4L145.5,287.1L146.4,286.5L146.6,285.6L147.5,284.3L149.3,283.7L150.8,282.2L151.3,281.3L151.1,280.2L151.5,280.0L152.4,280.7L152.9,281.4L153.6,281.8L154.4,283.3L155.5,283.5L156.3,283.1L156.8,283.3L157.7,283.2L158.8,283.9L157.8,285.4L158.3,285.4Z"></path>
+              <path d="M140.7,266.1L140.2,266.2L140.2,266.8L140.5,267.0L140.3,267.2L140.3,267.4L140.2,267.7L140.1,268.0L139.3,267.7L139.0,267.4L139.2,267.1L139.1,266.8L138.7,266.5L138.2,266.2L137.7,266.0L137.6,265.6L137.2,265.3L137.3,265.7L137.0,266.1L136.7,265.7L136.2,265.5L136.0,265.2L136.0,264.8L136.2,264.3L135.8,264.1L136.1,263.8L136.4,263.6L137.3,264.0L137.6,263.8L138.1,264.0L138.3,264.3L138.8,264.4L139.1,264.1L139.5,264.9L140.0,265.4Z"></path>
+              <path d="M139.1,264.1L138.8,264.4L138.3,264.3L138.1,264.0L137.6,263.8L137.3,264.0L136.4,263.6L136.1,263.8L135.6,263.4L135.0,262.8L134.7,262.3L134.0,261.8L133.3,261.1L133.5,260.9L133.7,261.1L133.8,261.0L134.3,261.0L134.5,260.6L134.7,260.6L134.6,259.9L135.0,259.9L135.3,259.9L135.6,259.5L136.0,259.8L136.2,259.6L136.4,259.4L136.9,259.0L137.0,258.7L137.1,258.7L137.3,258.3L137.4,258.3L137.7,258.5L138.0,258.6L138.3,258.4L138.7,258.4L139.2,258.2L139.4,258.0L139.8,258.0L139.7,258.2L139.6,258.5L139.8,259.1L139.5,259.6L139.3,260.2L139.3,260.8L139.3,261.2L139.4,261.9L139.2,262.0L139.0,262.6L139.1,263.0L138.8,263.4L138.9,263.8Z"></path>
+              <path d="M139.8,258.0L139.4,258.0L139.2,258.2L138.7,258.4L138.3,258.4L138.0,258.6L137.7,258.5L137.4,258.3L137.3,258.3L137.1,258.7L137.0,258.7L136.9,259.0L136.4,259.4L136.2,259.6L136.0,259.8L135.6,259.5L135.3,259.9L135.0,259.9L134.6,259.9L134.7,260.6L134.5,260.6L134.3,261.0L133.8,261.0L133.6,260.6L133.1,260.4L133.2,259.8L133.0,259.7L132.7,259.6L132.1,259.8L132.1,259.6L131.6,259.3L131.3,259.0L130.9,258.9L131.2,258.5L131.1,258.2L131.2,257.9L131.9,257.5L132.5,256.9L132.7,257.0L133.0,256.7L133.4,256.7L133.5,256.8L133.8,256.8L134.4,256.9L135.1,256.9L135.6,256.7L135.7,256.5L136.2,256.6L136.5,256.7L136.9,256.7L137.2,256.5L137.9,256.7L138.1,256.8L138.5,257.1L138.9,257.4L139.5,257.6Z"></path>
+              <path d="M178.3,277.2L177.9,277.3L177.1,277.1L176.7,277.5L176.0,277.8L175.6,277.8L175.4,278.1L174.7,278.0L173.8,277.4L173.7,276.7L173.3,276.0L173.5,274.7L173.9,274.2L173.6,273.6L173.1,273.3L173.3,272.7L173.0,272.4L172.2,272.4L171.2,271.3L171.6,270.9L171.6,270.3L172.5,270.0L172.9,269.8L172.4,269.2L172.5,268.7L173.6,267.8L174.6,268.4L175.5,269.3L175.5,270.1L176.1,270.1L176.8,270.8L177.4,271.3L177.2,272.6L176.3,273.0L176.4,273.3L176.1,274.1L176.7,275.1L177.2,275.1L177.4,275.9Z"></path>
+              <path d="M151.1,280.2L151.3,281.3L150.8,282.2L149.3,283.7L147.5,284.3L146.6,285.6L146.4,286.5L145.5,287.1L144.9,286.4L144.4,286.2L143.8,286.3L143.7,285.8L144.1,285.5L144.0,284.9L144.7,283.8L144.4,283.2L143.9,283.8L143.0,283.2L143.3,282.8L143.0,281.5L143.5,281.3L143.8,280.4L144.4,279.4L144.3,278.8L145.1,278.5L146.0,278.0L147.5,278.8L147.8,278.8L148.1,279.4L149.3,279.6L149.7,279.4L150.5,279.8Z"></path>
+              <path d="M147.9,252.8L148.9,252.9L149.6,253.3L149.9,253.7L148.9,253.7L148.4,254.0L147.6,253.7L146.8,253.2L147.0,252.8L147.6,252.7Z"></path>
+              <path d="M141.1,245.5L142.4,245.6L143.5,245.6L144.9,246.2L145.4,246.7L146.8,246.6L147.3,246.9L148.5,247.9L149.4,248.6L149.9,248.6L150.8,248.9L150.6,249.3L151.7,249.4L152.8,250.0L152.6,250.4L151.7,250.6L150.7,250.6L149.7,250.5L147.6,250.7L148.6,249.8L148.0,249.4L147.1,249.3L146.6,248.9L146.2,248.0L145.4,248.0L144.1,247.6L143.6,247.3L141.8,247.1L141.3,246.8L141.8,246.4L140.4,246.3L139.3,247.1L138.8,247.1L138.5,247.5L137.8,247.7L137.2,247.5L138.0,247.0L138.3,246.5L138.9,246.1L139.7,245.8L140.8,245.7Z"></path>
+              <path d="M170.9,264.3L171.7,264.1L172.0,264.2L171.9,265.3L170.7,265.4L170.5,265.3L170.9,264.9Z"></path>
+              <path d="M148.2,267.4L148.0,267.6L148.4,268.5L148.1,268.9L147.6,268.8L147.5,269.5L147.0,269.1L146.7,268.3L147.0,267.9L146.7,267.8L146.4,267.3L145.7,266.9L145.0,267.0L144.7,267.5L144.2,267.9L143.8,267.9L143.7,268.2L144.4,269.0L144.0,269.2L143.8,269.4L143.1,269.5L142.9,268.6L142.7,268.9L142.2,268.8L141.9,268.2L141.3,268.1L140.9,267.9L140.3,267.9L140.3,268.2L140.1,268.0L140.2,267.7L140.3,267.4L140.3,267.2L140.5,267.0L140.2,266.8L140.2,266.2L140.7,266.1L141.2,266.6L141.2,266.9L141.8,267.0L141.9,266.8L142.3,267.2L143.0,267.1L143.6,266.7L144.5,266.4L145.0,266.0L145.8,266.1L145.8,266.2L146.6,266.3L147.2,266.5L147.7,267.0Z"></path>
+              <path d="M172.2,272.4L172.4,272.8L171.9,273.4L170.3,273.9L169.2,274.2L168.8,274.5L167.7,274.1L166.6,274.0L166.3,274.1L167.0,274.5L166.9,275.4L167.1,276.3L168.3,276.5L168.4,276.8L167.4,277.2L167.2,277.8L166.6,278.0L165.6,278.4L165.3,278.8L164.1,278.9L163.4,278.1L162.9,276.7L162.5,276.2L162.0,275.9L162.7,275.2L162.7,274.8L162.3,274.4L162.0,273.4L162.1,272.4L162.4,271.9L162.7,271.1L162.2,270.9L161.3,271.0L160.3,271.0L159.7,271.1L158.7,269.9L157.9,269.7L156.0,269.8L155.7,269.3L155.3,269.2L155.3,268.9L155.4,268.4L155.3,267.8L155.0,267.4L154.8,266.8L154.1,266.7L154.5,265.8L154.6,264.8L155.1,264.2L155.6,263.8L156.0,263.1L156.9,262.8L156.9,263.2L156.0,263.3L156.5,264.0L156.5,264.8L155.8,265.6L156.4,266.8L157.0,266.7L157.3,265.6L156.9,265.1L156.8,264.0L158.6,263.4L158.4,262.7L158.9,262.3L159.4,263.3L160.5,263.3L161.4,264.1L161.4,264.6L162.7,264.6L164.3,264.5L165.1,265.1L166.2,265.3L167.0,264.9L167.0,264.5L168.8,264.4L170.6,264.4L169.3,264.8L169.8,265.5L171.0,265.6L172.1,266.3L172.3,267.5L173.1,267.5L173.6,267.8L172.5,268.7L172.4,269.2L172.9,269.8L172.5,270.0L171.6,270.3L171.6,270.9L171.2,271.3Z"></path>
+            </g>
+            <path d="M163.4,278.1L163.1,278.3L162.8,277.5L162.4,277.0L161.9,277.5L159.1,277.5L159.1,278.4L160.0,278.5L159.9,279.1L159.6,278.9L158.8,279.2L158.8,280.2L159.5,280.7L159.7,281.6L159.6,282.2L159.0,286.2L158.3,285.4L157.8,285.4L158.8,283.9L157.7,283.2L156.8,283.3L156.3,283.1L155.5,283.5L154.4,283.3L153.6,281.8L152.9,281.4L152.4,280.7L151.5,280.0L151.1,280.2L150.5,279.8L149.7,279.4L149.3,279.6L148.1,279.4L147.8,278.8L147.5,278.8L146.0,278.0L145.9,277.5L146.4,277.4L146.3,276.7L146.7,276.2L147.4,276.1L148.0,275.1L148.5,274.4L148.0,274.0L148.3,273.2L148.0,271.9L148.3,271.5L148.0,270.3L147.5,269.5L147.6,268.8L148.1,268.9L148.4,268.5L148.0,267.6L148.2,267.4L149.0,267.4L150.1,266.4L150.6,266.2L150.7,265.8L150.9,264.5L151.8,263.8L152.7,263.8L152.8,263.5L153.9,263.6L155.0,262.9L155.6,262.6L156.3,261.8L156.8,261.9L157.2,262.3L156.9,262.8L156.0,263.1L155.6,263.8L155.1,264.2L154.6,264.8L154.5,265.8L154.1,266.7L154.8,266.8L155.0,267.4L155.3,267.8L155.4,268.4L155.3,268.9L155.3,269.2L155.7,269.3L156.0,269.8L157.9,269.7L158.7,269.9L159.7,271.1L160.3,271.0L161.3,271.0L162.2,270.9L162.7,271.1L162.4,271.9L162.1,272.4L162.0,273.4L162.3,274.4L162.7,274.8L162.7,275.2L162.0,275.9L162.5,276.2L162.9,276.7Z" fill="none" stroke="#16203A" stroke-width=".38" stroke-linejoin="round"></path>
+            <g transform="translate(153.6,272.6) scale(.34)" fill="#C4362B">
+              <path d="M0,7.2C-7.4,1.6 -9.4,-3.2 -6.4,-6.2C-3.9,-8.7 -1.1,-7.4 0,-4.6C1.1,-7.4 3.9,-8.7 6.4,-6.2C9.4,-3.2 7.4,1.6 0,7.2Z"></path>
+            </g>
+          </svg></div>
+    <h1><span id="mk1">Desde</span><span id="mk2">Donde</span><span id="mk3">Estés</span></h1>
+  </div>
+  <div class="bajo">
+    <blockquote class="cita">
+      <span data-i="gracias"></span>
+      <div class="firma" data-i="firma"></div>
+    </blockquote>
+    <div class="acc">
+      <p class="posib" data-i="posib"></p>
+      <div class="fila">
+        <a class="btn" href="#dar" data-i="cta1"></a>
+        <a class="enlace" href="#cadena" data-i="cta2"></a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="banda"><div class="wrap" style="padding-top:44px;padding-bottom:46px">
+  <div class="enc"><h2 data-i="h_llev"></h2><p id="s_llev"></p></div>
+  <div class="cifras" id="cifras"></div>
+</div></section>
+
+<section class="cadena" id="cadena"><div class="wrap">
+  <div class="enc ancho"><h2 data-i="h_cad"></h2><p data-i="s_cad"></p></div>
+  <div class="filtros" id="filtros"></div>
+  <div class="rejilla" id="flujo"></div>
+  <div class="masbox"><button class="btn claro" id="masbtn"></button></div>
+  <div class="reels" id="reels"></div>
+</div></section>
+
+<section class="sumar" id="sumar"><div class="wrap">
+  <div class="izq">
+    <h2 data-i="h_sum"></h2>
+    <p data-i="s_sum"></p>
+  </div>
+  <div class="der">
+    <p class="p1" data-i="p_sum"></p>
+    <p class="p2" data-i="n_sum"></p>
+    <a class="btn am" id="sumbtn" href="#"></a>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="padding:50px 24px">
+  <div class="enc"><h2 data-i="h_hoy"></h2><p data-i="s_hoy"></p></div>
+  <div class="fase">
+    <div class="riel"></div><div class="avance" id="avance"></div>
+    <div class="pasos" id="pasos"></div>
+  </div>
+  <div class="perdida" id="perdida"></div>
+  <p class="nota" id="nota_hoy"></p>
+</div></section>
+
+<section class="puertas" id="dar"><div class="wrap">
+  <div class="enc"><h2 data-i="h_dar"></h2><p data-i="s_dar"></p></div>
+  <div class="ejes" id="ejes"></div>
+  <div class="panel" id="panel"></div>
+</div></section>
+
+<section class="afectado" id="afectado"><div class="wrap">
+  <div class="enc"><h2 data-i="h_afe"></h2><p data-i="s_afe"></p></div>
+  <div class="recursos" id="recursos"></div>
+</div></section>
+
+<section class="brecha"><div class="wrap">
+  <h2 data-i="h_bre"></h2>
+  <p class="sub" data-i="s_bre"></p>
+  <div class="medidor">
+    <div class="izq">
+      <div class="barra-med"><i></i><i></i></div>
+      <div class="leyenda" id="leyenda"></div>
+    </div>
+    <p class="expl" data-i="expl"></p>
+  </div>
+</div></section>
+
+<section class="conciertos"><div class="wrap">
+  <div class="enc"><h2 data-i="h_con"></h2><p data-i="s_con"></p></div>
+  <div class="cc" id="conciertos"></div>
+</div></section>
+
+<section class="transp"><div class="wrap">
+  <div class="enc"><h2 data-i="h_tra"></h2><p data-i="s_tra"></p></div>
+  <div class="destacadas" id="destacadas"></div>
+</div></section>
+
+<footer class="pie-sitio"><div class="wrap">
+  <div class="col1">
+    <div class="rayita"></div>
+    <p data-i="f1"></p>
+    <p id="f2"></p>
+    <p data-i="f3"></p>
+  </div>
+  <div class="col2">
+    <h3 data-i="f_src"></h3>
+    <p class="fuentes" id="srcs"></p>
+  </div>
+</div></footer>
+
+<script id="HECHOS" type="application/json">__HECHOS__</script>
+<script id="REELS" type="application/json">__REELS__</script>
+<script>
+(function(){
+  var H = JSON.parse(document.getElementById('HECHOS').textContent);
+  var R = JSON.parse(document.getElementById('REELS').textContent);
+  var CORREO = "desdedondeestes@outlook.com";
+  var VERIFICADO = "2026-08-15";
+  var TOTAL_HECHOS = __TOTAL__, TOTAL_FUENTES = __FUENTES__;
+  var OPC = __OPCIONES__;
+  var RECURSOS = __RECURSOS__;
+  var CONCIERTOS = __CONCIERTOS__;
+  var TRANSP = __TRANSPARENCIA__;
+  var FUENTES = __FUENTES_LISTA__;
+
+  var lang='es', modo='co', filtro='todos', tope=12;
+
+  var T = {
+   es:{
+    m_co:'Estoy en Colombia', m_intl:'Estoy fuera', cta:'Quiero ayudar',
+    mk1:'Desde', mk2:'Donde', mk3:'Estés',
+    kicker:'10 de agosto de 2026 · San José del Palmar, Chocó',
+    gracias:'En situaciones como esta, las máscaras y las diferencias desaparecen. Solo queda algo mucho más poderoso: <b>la solidaridad, el amor por el prójimo y las ganas de ayudar.</b>',
+    firma:'Gracias a todos los que están aportando, ayudando y acompañando de cualquier manera.',
+    posib:'Hoy hay <b>un mundo de formas de ayudar</b> a quienes más lo necesitan. Aquí están reunidas <b>algunas</b>, para que encuentres la tuya. Faltan muchas, y por eso esto se sigue construyendo entre todos.',
+    cta1:'Encontrar mi forma de ayudar →', cta2:'Ver quiénes se están uniendo',
+    e_llev:'Lo que llevamos entre todos', h_llev:'Esto no lo hizo nadie solo',
+    e_cad:'Quiénes somos "todos"', h_cad:'Un país del Golfo y una barbería de Boston',
+    s_cad:'No hay orden por tamaño. A propósito. Cada tarjeta lleva la fuente que la respalda.',
+    f_todos:'Todos', f_col:'Desde Colombia', f_ext:'Desde el exterior', f_gente:'Personas y comunidades',
+    mas:'Ver más', menos:'Ver menos',
+    e_sum:'Lo que falta aquí', h_sum:'Esta lista está incompleta, y no lo escondemos',
+    s_sum:'Este sitio se construyó rápido, a propósito: valía más salir a tiempo que salir completo.',
+    p_sum:'Seguro falta la fundación de tu barrio, la empresa que está mandando camiones, el grupo de amigos que armó una colecta, la marca que está donando lo que vende. No es que no cuenten: <b>es que todavía no los hemos encontrado.</b> Si sabes de alguien que está ayudando, o eres tú, cuéntanos y lo verificamos para sumarlo.',
+    n_sum:'Pedimos una sola cosa: un enlace o una fuente que podamos revisar. Nada entra sin eso, ni siquiera lo nuestro. Escribir no compromete a nadie ni cuesta nada.',
+    b_sum:'Contarnos cómo estás ayudando →',
+    asu:'Quiero sumar una forma de ayudar',
+    bsu:'Cuéntanos, en las palabras que quieras:\n\n1) Quién está ayudando (persona, negocio, fundación, colectivo)\n2) Qué está haciendo exactamente\n3) Un enlace o una fuente donde podamos verificarlo (nota de prensa, publicación de la propia cuenta, sitio web)\n4) Ciudad o zona\n\nGracias por tomarte el tiempo. Lo revisamos y, si se puede verificar, entra con su fuente.',
+    e_hoy:'Dónde estamos hoy', h_hoy:'El rescate termina. Empieza lo largo.',
+    s_hoy:'La atención del mundo dura semanas. La reconstrucción, años.',
+    fases:['Rescate','Atención humanitaria','Reconstrucción'],
+    e_dar:'Encuentra tu forma', h_dar:'¿Qué puedes dar?',
+    s_dar:'No todo se ayuda con plata. Toca lo que tengas y se despliegan las opciones verificadas.',
+    e_afe:'Si el terremoto te afectó', h_afe:'Esto es para ti, no para quien ayuda',
+    s_afe:'Servicios gratuitos verificados para quienes perdieron algo. Ninguno cobra.',
+    e_bre:'Lo que falta', h_bre:'Lo donado es histórico. Y no alcanza.',
+    s_bre:'Las dos cosas son ciertas al mismo tiempo, y por eso esto no puede parar cuando se vayan las cámaras.',
+    expl:'<b>Y está bien que no alcance.</b> La donación privada representa cerca del 5% del financiamiento proyectado de la reconstrucción. El resto sale del presupuesto público y de la cooperación internacional. Lo privado no es lo que más pesa: <b>es lo que llega primero</b>, mientras lo demás se tramita.',
+    e_con:'Lo que todavía puedes alcanzar', h_con:'Conciertos que aún no pasan',
+    s_con:'Casi todo lo demás en esta página ya ocurrió. Esto no.',
+    e_tra:'Cómo se hizo esto', h_tra:'Lo que puedes revisar y lo que no pudimos verificar',
+    s_tra:'La única razón para confiar en una lista es poder auditarla.',
+    f1:'<b>Este sitio no recibe dinero, no procesa pagos y no administra donaciones.</b> Solo enlaza a los canales oficiales de cada organización, y cada dato lleva su fuente y su fecha.',
+    f3:'Proyecto ciudadano independiente. Escríbenos a <a href="mailto:'+CORREO+'">'+CORREO+'</a> si quieres sumar una forma de ayudar, corregir un dato o pedir que retiremos algo.',
+    f_src:'Fuentes principales', pasado:'Ya pasó', desde:'Desde',
+    reelplay:'Ver el reel', reelsub:'Cargando desde Instagram', reelopen:'Abrir en Instagram',
+    stale:'Estos datos se verificaron el {d}, hace {n} días. Las cifras oficiales cambian rápido: confirma en la fuente antes de transferir.',
+    fresco:'Datos verificados el {d}. Cada cifra enlaza a su fuente.'
+   },
+   en:{
+    m_co:"I'm in Colombia", m_intl:"I'm abroad", cta:'I want to help',
+    mk1:'From', mk2:'Wherever', mk3:'You Are',
+    kicker:'August 10, 2026 · San José del Palmar, Chocó',
+    gracias:'In moments like this, the masks and the differences fall away. What is left is something far more powerful: <b>solidarity, love for one another, and the will to help.</b>',
+    firma:'Thank you to everyone who is giving, helping and standing alongside, in whatever way they can.',
+    posib:'There is <b>a whole world of ways to help</b> the people who need it most. <b>Some</b> of them are gathered here, so you can find yours. Many are missing, which is why this keeps being built by all of us.',
+    cta1:'Find my way to help →', cta2:'See who is stepping up',
+    e_llev:'What we have done together', h_llev:'No one did this alone',
+    e_cad:'Who "everyone" actually is', h_cad:'A Gulf state and a barbershop in Boston',
+    s_cad:'Nothing is ordered by size. On purpose. Every card carries the source that backs it.',
+    f_todos:'All', f_col:'From Colombia', f_ext:'From abroad', f_gente:'People and communities',
+    mas:'Show more', menos:'Show less',
+    e_sum:'What is missing here', h_sum:'This list is incomplete, and we are not hiding it',
+    s_sum:'This site was built fast, on purpose: getting it out in time mattered more than getting it complete.',
+    p_sum:'The foundation on your street is probably missing. So is the company sending trucks, the group of friends who ran a collection, the brand giving away what it sells. It is not that they do not count: <b>it is that we have not found them yet.</b> If you know someone who is helping, or it is you, tell us and we will verify it and add it.',
+    n_sum:'We ask for one thing only: a link or a source we can check. Nothing goes in without that, not even our own material. Writing to us commits you to nothing.',
+    b_sum:'Tell us how you are helping →',
+    asu:'I want to add a way of helping',
+    bsu:'Tell us, in whatever words you like:\n\n1) Who is helping (person, business, foundation, collective)\n2) What exactly they are doing\n3) A link or source where we can verify it (news article, a post from their own account, a website)\n4) City or area\n\nThank you for taking the time. We check it, and if it can be verified, it goes in with its source.',
+    e_hoy:'Where things stand today', h_hoy:'The rescue is ending. The long part begins.',
+    s_hoy:"The world's attention lasts weeks. Rebuilding takes years.",
+    fases:['Rescue','Humanitarian relief','Reconstruction'],
+    e_dar:'Find your way in', h_dar:'What can you give?',
+    s_dar:'Not everything is helped with money. Tap what you have and the verified options open up.',
+    e_afe:'If the earthquake affected you', h_afe:'This part is for you, not for the helpers',
+    s_afe:'Verified free services for people who lost something. None of them charge.',
+    e_bre:'What is still missing', h_bre:'What has been given is historic. And it is not enough.',
+    s_bre:'Both things are true at once, and that is exactly why this cannot stop when the cameras leave.',
+    expl:'<b>And it is fine that it is not enough.</b> Private donations are expected to cover around 5% of the financing for reconstruction. The rest comes from the public budget and international cooperation. Private giving is not the biggest share: <b>it is the share that arrives first</b>, while everything else is still being processed.',
+    e_con:'What you can still catch', h_con:'Concerts that have not happened yet',
+    s_con:'Almost everything else on this page already happened. These have not.',
+    e_tra:'How this was made', h_tra:'What you can check, and what we could not verify',
+    s_tra:'The only reason to trust a list is being able to audit it.',
+    f1:'<b>This site takes no money, processes no payments and manages no donations.</b> It only links to each organisation\\u2019s official channels, and every figure carries its source and its date. Amounts we write ourselves are converted to US dollars at COP $3,128.65 per dollar, the Banco de la República rate for 15 August 2026. Figures quoted from news sources are left exactly as those sources published them.',
+    f3:'Independent citizen project. Write to <a href="mailto:'+CORREO+'">'+CORREO+'</a> to add a way of helping, correct a figure, or ask us to take something down.',
+    f_src:'Main sources', pasado:'Already happened', desde:'From',
+    reelplay:'Play the reel', reelsub:'Loading from Instagram', reelopen:'Open on Instagram',
+    stale:'This data was verified on {d}, {n} days ago. Official figures change fast: check the source before transferring.',
+    fresco:'Verified on {d}. Every figure links to its source.'
+   }
+  };
+  var CIFRAS=[
+   {n:'$201.637',u:'millones',n_en:'US$64',u_en:'million',
+    es:'donaron las empresas colombianas vía ANDI. La cifra más alta registrada para una emergencia en el país.',
+    en:'given by Colombian businesses through ANDI (COP $201.6 billion). The highest figure ever recorded for an emergency in the country.',
+    f:'El Heraldo · 14 ago',u2:'https://www.elheraldo.co/economia/2026/08/14/las-donaciones-de-los-empresarios-de-colombia-superaron-cifra-historica-de-200-mil-millones/'},
+   {n:'USD 1.300',u:'millones',n_en:'USD $1.3',u_en:'billion',
+    es:'en ofertas de ayuda internacional, de 20 países y organismos multilaterales.',
+    en:'in offers of international aid, from 20 countries and multilateral bodies.',
+    f:'Portafolio · 12 ago',u2:'https://www.portafolio.co/internacional/colombia-recibio-ofertas-por-us-1-300-millones-de-ayuda-internacional-por-terremoto-estas-se-conocen-por-ahora-500222'},
+   {n:'354',u:'',n_en:'354',u_en:'',
+    es:'personas rescatadas con vida de los escombros.',en:'people pulled out of the rubble alive.',
+    f:'UNGRD · 15 ago',u2:'https://www.eluniversal.com.co/colombia/2026/08/14/actualizan-cifras-del-terremoto-en-colombia-288-muertos-y-4018-heridos/'},
+   {n:'178',u:'toneladas',n_en:'178',u_en:'tonnes',
+    es:'de ayuda recogió Medellín, más $1.813 millones.',en:'of aid collected in Medellín, plus about US$580,000 (COP $1.8 billion).',
+    f:'El Colombiano · 14 ago',u2:'https://www.elcolombiano.com/inicio/ayudas-banco-de-alimentos-desastre-terremoto-medellin-AG39958459'}
+  ];
+
+  var CTX=[['288','fallecidos','dead'],['202','desaparecidos','missing'],['4.018','heridos','injured'],
+   ['145.601','personas afectadas','people affected'],['448','municipios','municipalities'],
+   ['12.504','viviendas destruidas','homes destroyed'],['80.744','viviendas averiadas','homes damaged']];
+
+
+  var EJES=[
+   {k:'oficio',mk:'01',nm:'Mi oficio',nm_en:'My profession',ds:'Lo que sabes hacer. Algunas desde cualquier país',ds_en:'What you know how to do. Some of it from anywhere'},
+   {k:'dinero',mk:'02',nm:'Dinero',nm_en:'Money',ds:'18 organizaciones colombianas verificadas',ds_en:'18 Colombian organisations, verified one by one'},
+   {k:'tiempo',mk:'03',nm:'Mi tiempo',nm_en:'My time',ds:'Voluntariado, con o sin experiencia',ds_en:'Volunteering, with or without experience'},
+   {k:'cosas',mk:'04',nm:'Cosas',nm_en:'Things',ds:'Qué llevar, dónde y qué no sirve',ds_en:'What to bring, where, and what does not help'},
+   {k:'comprando',mk:'05',nm:'Comprando',nm_en:'By buying',ds:'Marcas y negocios que donan lo que venden',ds_en:'Brands and shops giving away what they sell'},
+   {k:'voz',mk:'06',nm:'Mi voz',nm_en:'My voice',ds:'Difundir lo verificado y frenar lo falso',ds_en:'Spread what is verified, stop what is false'}
+  ];
+
+  var CTX=[['288','fallecidos','dead'],['4.018','heridos','injured'],
+   ['145.601','personas afectadas','people affected'],['80.744','viviendas averiadas','homes damaged']];
+
+  // arranca abierto en oficio a proposito: si lo primero que se ve es plata,
+  // quien no tiene plata ya se sintio inutil en el primer segundo
+  var abierto='oficio';
+
+  function $(s){return document.querySelector(s)}
+  function el(tag,cls,html){var n=document.createElement(tag);if(cls)n.className=cls;if(html!=null)n.innerHTML=html;return n}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function L(o,k){return lang==='en'&&o[k+'_en']?o[k+'_en']:(lang==='en'&&o[k+'En']?o[k+'En']:o[k])}
+  function cruces(n){['c1','c2','c3','c4'].forEach(function(c){n.appendChild(el('span','cruz '+c,'+'))});return n}
+
+  function fdate(iso){
+    var d=new Date(iso+'T12:00:00');
+    var m_es=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+    var m_en=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return lang==='es' ? d.getDate()+' de '+m_es[d.getMonth()] : m_en[d.getMonth()]+' '+d.getDate();
+  }
+  // La base trae "cuando" en formatos mezclados: ISO, "15 de agosto de 2026",
+  // "anunciado el 13...". Se normaliza a algo corto y legible, sin inventar
+  // fechas: lo que no se entiende, se deja como vino.
+  function cuandoCorto(v){
+    if(!v) return '';
+    v=String(v).trim();
+    var iso=v.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if(iso) return fdate(v);
+    var esp=v.match(/(\d{1,2})\s+de\s+([a-zA-ZáéíóúÁÉÍÓÚ]+)/);
+    if(esp){
+      var meses={enero:0,febrero:1,marzo:2,abril:3,mayo:4,junio:5,julio:6,agosto:7,septiembre:8,setiembre:8,octubre:9,noviembre:10,diciembre:11};
+      var mi=meses[esp[2].toLowerCase()];
+      if(mi!=null) return fdate('2026-'+String(mi+1).padStart(2,'0')+'-'+String(esp[1]).padStart(2,'0'));
+    }
+    return v.length>26 ? '' : v;
+  }
+
+  function frescura(){
+    var hoy=new Date(), v=new Date(VERIFICADO+'T12:00:00');
+    var dias=Math.floor((hoy-v)/86400000);
+    var s = dias>=7 ? T[lang].stale.replace('{d}',fdate(VERIFICADO)).replace('{n}',dias)
+                    : T[lang].fresco.replace('{d}',fdate(VERIFICADO));
+    $('#frescura').textContent=s;
+  }
+
+  function pintaCifras(){
+    var box=$('#cifras');box.innerHTML='';
+    CIFRAS.forEach(function(c,i){
+      var d=el('div','cif');
+      var color=[ 'var(--amarillo-hondo)','var(--azul)','var(--rojo)','var(--amarillo-hondo)' ][i%4];
+      var n=el('div','n',esc(L(c,'n'))+(L(c,'u')?' <small>'+esc(L(c,'u'))+'</small>':''));
+      n.style.color=color; d.appendChild(n);
+      d.appendChild(el('div','t',esc(c[lang])));
+      var a=el('a',null,esc(c.f)); a.href=c.u2; a.target='_blank'; a.rel='noopener';
+      d.appendChild(a);
+      box.appendChild(d);
+    });
+    $('#s_llev').textContent = lang==='es'
+      ? 'Cifras de lo que ya se hizo. Cada una enlaza a su fuente.'
+      : 'Figures for what has already been done. Each one links to its source.';
+  }
+
+  function pintaFiltros(){
+    var box=$('#filtros');box.innerHTML='';
+    [['todos','f_todos'],['col','f_col'],['ext','f_ext'],['gente','f_gente']].forEach(function(f){
+      var b=el('button',null,esc(T[lang][f[1]]));
+      b.setAttribute('aria-pressed',filtro===f[0]?'true':'false');
+      b.addEventListener('click',function(){filtro=f[0];tope=12;pintaFiltros();pintaFlujo()});
+      box.appendChild(b);
+    });
+  }
+  function pasaFiltro(x){
+    if(filtro==='col')return x.origen==='colombia';
+    if(filtro==='ext')return x.origen==='exterior';
+    if(filtro==='gente')return x.tipo==='persona'||x.tipo==='comunidad';
+    return true;
+  }
+
+  function pintaFlujo(){
+    var g=$('#flujo');g.innerHTML='';
+    var lista=H.filter(pasaFiltro);
+    if(modo==='intl'){
+      lista=lista.slice().sort(function(a,b){
+        var A=a.origen==='exterior'?0:1,B=b.origen==='exterior'?0:1;return A-B;});
+    }
+    lista.slice(0,tope).forEach(function(x,i){
+      var c=cruces(el('div','ficha'));
+      c.appendChild(el('h3',null,esc(x.quien)));
+      if(x.cifra){
+        var cf=el('p','cifra',esc(x.cifra));
+        cf.style.color = x.origen==='exterior'?'var(--azul)':(x.tipo==='persona'||x.tipo==='comunidad'?'var(--rojo)':'var(--amarillo-hondo)');
+        c.appendChild(cf);
+      }
+      c.appendChild(el('p','que',esc(x.que_hizo)));
+      var pie=el('div','pie');
+      var trozos=[esc(x.origen==='exterior'?T[lang].f_ext:T[lang].f_col)];
+      var f=cuandoCorto(x.cuando); if(f) trozos.push(esc(f));
+      trozos.push('<a href="'+esc(x.fuente_url)+'" target="_blank" rel="noopener">'+esc(x.fuente_nombre)+'</a>');
+      trozos.forEach(function(s,k){
+        if(k)pie.appendChild(el('span',null,'·'));
+        pie.appendChild(el('span',null,s));
+      });
+      c.appendChild(pie);
+      g.appendChild(c);
+    });
+    var b=$('#masbtn');
+    if(lista.length>tope){b.hidden=false;b.textContent=T[lang].mas+' ('+(lista.length-tope)+')'}
+    else if(tope>12){b.hidden=false;b.textContent=T[lang].menos}
+    else b.hidden=true;
+  }
+
+  function reelCode(u){
+    var m=String(u).match(/instagram\.com\/(?:[A-Za-z0-9_.]+\/)?(reel|reels|p|tv)\/([A-Za-z0-9_-]+)/);
+    return m?{kind:m[1]==='reels'?'reel':m[1],code:m[2]}:null;
+  }
+  function pintaReels(){
+    var box=$('#reels');box.innerHTML='';
+    (R.reels||[]).forEach(function(item){
+      var c=reelCode(item.url); if(!c) return;
+      var url='https://www.instagram.com/'+c.kind+'/'+c.code+'/';
+      var w=el('div','reel');
+      var marco=el('div','marco');
+      marco.appendChild(el('div','esperando',esc(T[lang].reelsub)));
+      w.appendChild(marco);
+      // La portada la trae el propio iframe de Instagram: no guardamos ni
+      // generamos imagenes de nadie. Se carga cuando la tarjeta esta por
+      // entrar en pantalla, asi que quien nunca baja hasta aca no le carga
+      // codigo a Meta.
+      function cargar(){
+        if(marco.dataset.cargado)return; marco.dataset.cargado='1';
+        var f=document.createElement('iframe');
+        f.src=url+'embed/'; f.loading='lazy'; f.allowFullscreen=true;
+        f.setAttribute('scrolling','no'); f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+        f.title=item[lang]||item.es||'Instagram';
+        marco.innerHTML=''; marco.appendChild(f);
+      }
+      if('IntersectionObserver' in window){
+        var io=new IntersectionObserver(function(es){
+          es.forEach(function(e){if(e.isIntersecting){io.disconnect();cargar()}});
+        },{rootMargin:'300px'});
+        io.observe(w);
+      } else { cargar(); }
+      w.appendChild(el('p','cap',esc(item[lang]||item.es||'')));
+      var a=el('a','abrir',esc(T[lang].reelopen)+' →');
+      a.href=url;a.target='_blank';a.rel='noopener';
+      w.appendChild(a);
+      box.appendChild(w);
+    });
+  }
+
+  function pintaHoy(){
+    var pasos=$('#pasos');pasos.innerHTML='';
+    var act=1; // atencion humanitaria
+    T[lang].fases.forEach(function(f,i){
+      var d=el('div','p'+(i===act?' act':''));
+      d.appendChild(el('span','dot'));
+      d.appendChild(el('span','num','0'+(i+1)));
+      d.appendChild(el('span','lbl',esc(f)));
+      if(i===act)d.appendChild(el('span','aqui',esc(T[lang].aqui)));
+      pasos.appendChild(d);
+    });
+    $('#avance').style.width='50%';
+    var p=$('#perdida');p.innerHTML='';
+    CTX.forEach(function(x){
+      var d=cruces(el('div','pf'));
+      d.appendChild(el('span','n',x[0]));
+      d.appendChild(el('span','t',esc(lang==='es'?x[1]:x[2])));
+      d.appendChild(el('span','s','UNGRD · 15 ago'));
+      p.appendChild(d);
+    });
+    $('#nota_hoy').innerHTML = lang==='es'
+      ? 'Balance de la UNGRD con corte al 15 de agosto de 2026. El epicentro fue San José del Palmar, en el Chocó, un departamento con 30,8% de pobreza multidimensional frente a un promedio nacional de 9,9%, <a href="https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf" target="_blank" rel="noopener">según el DANE</a>.'
+      : 'Figures from Colombia’s national disaster agency (UNGRD) as of August 15, 2026. The epicentre was San José del Palmar, in Chocó, a department where 30.8% of people live in multidimensional poverty against a national average of 9.9%, <a href="https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf" target="_blank" rel="noopener">per the national statistics office</a>.';
+  }
+
+  function pintaEjes(){
+    var box=$('#ejes');box.innerHTML='';
+    EJES.forEach(function(e){
+      var b=el('button','eje');
+      b.setAttribute('aria-pressed',abierto===e.k?'true':'false');
+      b.appendChild(el('span','mk',e.mk));
+      b.appendChild(el('span','nm',esc(L(e,'nm'))));
+      b.appendChild(el('span','ds',esc(L(e,'ds'))));
+      b.addEventListener('click',function(ev){
+        abierto = (abierto===e.k) ? null : e.k;
+        pintaEjes();pintaPanel();
+        if(ev.isTrusted&&abierto)$('#panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+      });
+      box.appendChild(b);
+    });
+  }
+  function pintaPanel(){
+    var p=$('#panel');p.innerHTML='';
+    if(!abierto)return;
+    var d=OPC[abierto];
+    var lista=(d.o||[]).slice();
+    if(modo==='intl'){lista.sort(function(a,b){
+      var A=(a.tag==='mundo'||a.siempre)?0:1,B=(b.tag==='mundo'||b.siempre)?0:1;return A-B;})}
+    lista.forEach(function(o){
+      var c=el('article','op'+(o.aviso?' aviso':''));
+      c.appendChild(el('span','tg',esc(o.tag==='mundo'
+        ?(lang==='es'?'Desde cualquier país':'From anywhere in the world')
+        :(lang==='es'?'Presencial en Colombia':'In person, in Colombia'))));
+      c.appendChild(el('h3',null,esc(L(o,'n'))));
+      c.appendChild(el('p','d',esc(L(o,'d'))));
+      var a=el('a','a',esc(L(o,'a')));
+      if(o.url){a.href=o.url;a.target='_blank';a.rel='noopener'}
+      else if(o.correo){a.href='mailto:'+CORREO+'?subject='+encodeURIComponent(T[lang].asu)+'&body='+encodeURIComponent(T[lang].bsu)}
+      else if(o.copiar){
+        a.href='#sumar';
+        a.addEventListener('click',function(ev){
+          if(!ev.isTrusted)return;
+          ev.preventDefault();
+          var u=location.href.split('#')[0];
+          if(navigator.clipboard&&navigator.clipboard.writeText){
+            navigator.clipboard.writeText(u).then(function(){a.textContent=lang==='es'?'Enlace copiado ✓':'Link copied ✓'},function(){a.textContent=u});
+          } else { a.textContent=u; }
+        });
+      }
+      c.appendChild(a);
+      c.appendChild(el('span','f',esc(o.f)));
+      p.appendChild(c);
+    });
+  }
+
+  function pintaRecursos(){
+    var box=$('#recursos');box.innerHTML='';
+    RECURSOS.forEach(function(r){
+      var c=el('article','re');
+      c.appendChild(el('h3',null,esc(L(r,'n'))));
+      c.appendChild(el('p',null,esc(L(r,'d'))));
+      var a=el('a',null,esc(L(r,'a')));
+      if(r.url){a.href=r.url;a.target='_blank';a.rel='noopener'}
+      c.appendChild(a);
+      c.appendChild(el('span','f',esc(r.f||'')));
+      box.appendChild(c);
+    });
+  }
+
+  function pintaConciertos(){
+    var box=$('#conciertos');box.innerHTML='';
+    var hoy=new Date();
+    CONCIERTOS.forEach(function(k){
+      var paso = k.iso ? (new Date(k.iso+'T23:59:00') < hoy) : false;
+      var c=cruces(el('article','co'+(paso?' pasado':'')));
+      c.appendChild(el('span','fch',esc(L(k,'f'))));
+      c.appendChild(el('h3',null,esc(k.nm)));
+      c.appendChild(el('span','lug',esc(L(k,'lug'))));
+      c.appendChild(el('p','art',esc(L(k,'art'))));
+      if(paso)c.appendChild(el('span','ya',esc(T[lang].pasado)));
+      var fin=el('div','fin');
+      fin.appendChild(el('span','dst',esc(L(k,'destino'))));
+      if(L(k,'precio'))fin.appendChild(el('span','prc',esc(L(k,'precio'))));
+      c.appendChild(fin);
+      box.appendChild(c);
+    });
+  }
+
+  function pintaTransp(){
+    var d=$('#destacadas');d.innerHTML='';
+    TRANSP.forEach(function(x){
+      var a=el('article');
+      a.appendChild(el('h3',null,esc(L(x,'q'))));
+      a.appendChild(el('p',null,esc(L(x,'a'))));
+      d.appendChild(a);
+    });
+    // Cada fuente es [titulo, url]. Van como enlaces, no como texto pegado:
+    // volcar la URL cruda era justo lo contrario de lo que promete el sitio.
+    var s=$('#srcs');s.innerHTML='';
+    FUENTES.forEach(function(f,i){
+      var nombre=Array.isArray(f)?f[0]:(f&&f.n?f.n:String(f));
+      var url=Array.isArray(f)?f[1]:(f&&f.u?f.u:null);
+      if(url){
+        var a=el('a',null,esc(nombre)); a.href=url; a.target='_blank'; a.rel='noopener';
+        s.appendChild(a);
+      } else { s.appendChild(el('span',null,esc(nombre))); }
+    });
+    $('#f2').textContent = lang==='es'
+      ? TOTAL_HECHOS+' hechos verificados, de '+TOTAL_FUENTES+' fuentes distintas. Todo el código y todos los datos son públicos y auditables.'
+      : TOTAL_HECHOS+' verified facts, from '+TOTAL_FUENTES+' different sources. All the code and all the data are public and auditable.';
+  }
+
+  function aplicaModo(){
+    document.querySelectorAll('[data-modo]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-modo')===modo?'true':'false');
+    });
+    pintaPanel();pintaFlujo();
+  }
+
+  function aplica(){
+    document.documentElement.lang=lang;
+    Object.keys(T[lang]).forEach(function(k){
+      var n=document.querySelector('[data-i="'+k+'"]');
+      if(n) n.innerHTML=T[lang][k];
+    });
+    document.querySelectorAll('[data-modo]').forEach(function(b){
+      b.textContent=T[lang]['m_'+b.getAttribute('data-modo')];
+    });
+    $('#kicker').textContent=T[lang].kicker;
+    [['#mk1','mk1'],['#mk2','mk2'],['#mk3','mk3'],['#bk1','mk1'],['#bk2','mk2'],['#bk3','mk3']].forEach(function(par){
+      var n=document.querySelector(par[0]); if(n) n.textContent=T[lang][par[1]];
+    });
+    var sb=$('#sumbtn');
+    sb.textContent=T[lang].b_sum;
+    sb.href='mailto:'+CORREO+'?subject='+encodeURIComponent(T[lang].asu)+'&body='+encodeURIComponent(T[lang].bsu);
+    $('#b-es').setAttribute('aria-pressed',lang==='es'?'true':'false');
+    $('#b-en').setAttribute('aria-pressed',lang==='en'?'true':'false');
+    document.title = lang==='es' ? 'Desde Donde Estés · Terremoto Colombia 2026' : 'From Wherever You Are · Colombia Earthquake 2026';
+    var ley=$('#leyenda');ley.innerHTML='';
+    ley.appendChild(el('span',null,lang==='es'
+      ? '$201.637 millones donados por empresas colombianas vía ANDI'
+      : 'about US$64 million given by Colombian businesses through ANDI'));
+    ley.appendChild(el('span',null,lang==='es'
+      ? '$20 billones: costo estimado de la reconstrucción · BTG Pactual'
+      : 'about US$6.4 billion: estimated cost of rebuilding · BTG Pactual'));
+    frescura();pintaCifras();pintaFiltros();pintaFlujo();pintaReels();
+    pintaHoy();pintaEjes();pintaPanel();pintaRecursos();pintaConciertos();pintaTransp();
+  }
+
+  $('#b-es').addEventListener('click',function(){lang='es';aplica()});
+  $('#b-en').addEventListener('click',function(){lang='en';aplica()});
+  document.querySelectorAll('[data-modo]').forEach(function(b){
+    b.addEventListener('click',function(){modo=b.getAttribute('data-modo');aplicaModo()});
+  });
+  $('#masbtn').addEventListener('click',function(){
+    var lista=H.filter(pasaFiltro);
+    tope = tope>=lista.length ? 12 : tope+12;
+    pintaFlujo();
+  });
+
+  // Ubicacion por zona horaria, leida en el propio navegador. No sale ni un
+  // dato del dispositivo: sin cookies, sin IP, sin terceros. Si no se puede
+  // saber, se asume "fuera de Colombia", que es la version que funciona
+  // desde cualquier parte.
+  try{
+    var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');
+    if(tz.indexOf('Bogota')===-1) modo='intl';
+  }catch(e){ modo='intl'; }
+  if((navigator.language||'').slice(0,2)!=='es') lang='en';
+
+  aplica();aplicaModo();
+})();
+</script>
+</body>
+</html>
