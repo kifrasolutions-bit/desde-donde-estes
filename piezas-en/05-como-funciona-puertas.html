@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px}
+body{background:#FBF8F1;color:#16203A;position:relative;overflow:hidden;
+ font:26px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.franja{position:absolute;top:0;left:0;right:0;height:12px;
+ background:linear-gradient(90deg,#F2C230 0 50%,#12356B 50% 75%,#C4362B 75% 100%)}
+.marco{position:absolute;left:78px;right:78px;top:108px;bottom:104px;display:flex;flex-direction:column}
+.ceja{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#8A6A0E;font-weight:700}
+.ceja i{font-style:normal;color:#B9AC8E;margin-right:14px}
+h2{font-family:Georgia,serif;font-weight:400;font-size:76px;line-height:1.06;letter-spacing:-.02em;
+ margin-top:30px;color:#16203A}
+h2 em{font-style:normal;color:#12356B}
+h2 .r{color:#C4362B}
+p{font-size:33px;line-height:1.55;color:#2C3550}
+.folio{position:absolute;right:78px;bottom:46px;font-size:20px;letter-spacing:.16em;color:#B9AC8E}
+.pie-url{position:absolute;left:78px;bottom:44px;font-size:22px;letter-spacing:.06em;color:#8A6A0E;font-weight:700}
+.regla{height:3px;background:#E4DCCB;margin:34px 0}
+.crece{flex:1}
+.centro .marco{justify-content:center}
+.barra{margin-top:56px}
+
+/* portada */
+.mapa{position:absolute;right:-120px;top:150px;width:900px;opacity:.16}
+.mk{font-family:Georgia,serif;font-weight:400;font-size:150px;line-height:.94;letter-spacing:-.035em}
+.mk span{display:block}
+.mk .a{color:#8A6A0E}.mk .b{color:#12356B;margin-left:7%}.mk .c{color:#C4362B;margin-left:14%}
+.gancho{font-size:36px;line-height:1.42;margin-top:auto}
+.gancho b{color:#8A6A0E}
+
+/* cifras */
+.gigante{font-family:Georgia,serif;font-size:230px;line-height:.86;color:#C4362B;letter-spacing:-.04em}
+.gigante small{font-size:74px;color:#16203A;letter-spacing:-.02em}
+.rej{display:grid;grid-template-columns:1fr 1fr;gap:46px 52px;margin-top:14px}
+.rej div{border-top:3px solid #E4DCCB;padding-top:14px}
+.rej b{display:block;font-family:Georgia,serif;font-size:70px;line-height:1;color:#12356B;font-weight:400}
+.rej span{font-size:26px;color:#4A5670;display:block;margin-top:8px}
+.nota{font-size:22px;line-height:1.45;color:#6B7488;margin-top:auto}
+
+/* citas */
+.cita{font-family:Georgia,serif;font-size:56px;line-height:1.24;color:#12356B;letter-spacing:-.015em}
+.barra{border-left:8px solid #F2C230;padding-left:34px}
+
+/* listas */
+ul{list-style:none}
+.puertas li{display:flex;gap:26px;align-items:baseline;border-top:3px solid #E4DCCB;padding:22px 0}
+.puertas li:last-child{border-bottom:3px solid #E4DCCB}
+.puertas i{font-style:normal;font-family:Georgia,serif;font-size:30px;color:#B9AC8E;width:52px;flex:none}
+.puertas b{font-family:Georgia,serif;font-weight:400;font-size:46px;line-height:1.15;color:#16203A;display:block;letter-spacing:-.015em}
+.puertas span{font-size:26px;line-height:1.35;color:#4A5670;display:block;margin-top:8px}
+
+.pasos li{display:flex;gap:30px;margin-top:44px}
+.pasos i{font-style:normal;font-family:Georgia,serif;font-size:62px;color:#C4362B;line-height:1;width:56px;flex:none}
+.pasos b{font-family:Georgia,serif;font-weight:400;font-size:44px;display:block;letter-spacing:-.015em}
+.pasos span{font-size:28px;line-height:1.45;color:#4A5670;display:block;margin-top:8px}
+
+.datos{margin-top:46px}
+.datos div{display:flex;align-items:baseline;gap:34px;border-top:3px solid #E4DCCB;padding:26px 0}
+.datos div:last-child{border-bottom:3px solid #E4DCCB}
+.datos div b{font-family:Georgia,serif;font-weight:400;font-size:92px;color:#12356B;line-height:1;
+ width:230px;flex:none;letter-spacing:-.03em}
+.datos div span{font-size:30px;color:#4A5670}
+
+/* cierre */
+.cierre{display:flex;flex-direction:column;height:100%;text-align:left}
+.url-grande{font-family:Georgia,serif;font-size:82px;color:#12356B;letter-spacing:-.03em;margin:auto 0 0}
+.correo{font-size:26px;color:#4A5670;margin-top:38px}
+.correo b{color:#8A6A0E}
+</style></head>
+<body class=""><div class="franja"></div>
+<div class="marco">
+<div class="ceja"><i>04</i>How it works</div>
+<h2>You come in through what you do have.</h2>
+<ul class="puertas" style="margin-top:32px">
+ <li><i>01</i><div><b>Your profession</b><span>What you know how to do. Some of it from anywhere</span></div></li>
+ <li><i>02</i><div><b>Money</b><span>18 Colombian organisations, verified one by one</span></div></li>
+ <li><i>03</i><div><b>Your time</b><span>Volunteering, with or without experience</span></div></li>
+ <li><i>04</i><div><b>Things</b><span>What to bring, where, and what does not help</span></div></li>
+ <li><i>05</i><div><b>By buying</b><span>Shops giving away what they sell</span></div></li>
+ <li><i>06</i><div><b>Your voice</b><span>Spread what is verified, stop what is false</span></div></li>
+</ul>
+</div>
+<div class="pie-url">desdedondeestes.co</div><div class="folio">05 / 09</div></body></html>
