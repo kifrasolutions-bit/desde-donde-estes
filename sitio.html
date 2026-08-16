@@ -148,7 +148,7 @@
   .m-pt{fill:var(--azul);cursor:pointer}
   .m-pt.on{fill:var(--rojo)}
   .m-pt.destino{fill:var(--amarillo-hondo)}
-  .m-eti{font-size:9px;fill:var(--tinta-2);pointer-events:none;paint-order:stroke;stroke:var(--papel-2);stroke-width:2.5px}
+  .m-eti{fill:var(--tinta-2);pointer-events:none;paint-order:stroke;stroke:var(--papel-2)}
   .m-ctrl{position:absolute;right:10px;bottom:10px;display:flex;gap:6px}
   .m-ctrl button{width:34px;height:34px;border:1px solid var(--linea-2);background:var(--papel);color:var(--tinta);font-size:16px;line-height:1;cursor:pointer}
   .m-ctrl button:hover{background:var(--papel-2)}
@@ -872,7 +872,16 @@
       return [ (lon+180)/360*W, (LAT0-lat)/(LAT0-LAT1)*H ];
     }
     function nodo(n,cls){ var e=document.createElementNS(NS,n); if(cls)e.setAttribute('class',cls); return e; }
-    function vb(){ svg.setAttribute('viewBox', VB.x+' '+VB.y+' '+VB.w+' '+VB.h); etiquetas(); }
+    function vb(){
+      svg.setAttribute('viewBox', VB.x+' '+VB.y+' '+VB.w+' '+VB.h);
+      // Puntos y letras se miden en pantalla, no en el mapa: al acercarse el
+      // mapa se abre pero los puntos siguen del mismo tamano. Sin esto, con
+      // zoom 4 un punto se ve cuatro veces mas gordo y tapa medio pais.
+      var z=W/VB.w;
+      lugares.forEach(function(L){ if(L.punto) L.punto.setAttribute('r',(L.r/z).toFixed(2)); });
+      if(corazon) corazon.setAttribute('r',(5/z).toFixed(2));
+      etiquetas();
+    }
 
     var porLugar={};
     (H_MAPA||[]).forEach(function(x){
@@ -903,25 +912,36 @@
       var a=proy(L.xy[0],L.xy[1]);
       var c=nodo('circle','m-pt');
       c.setAttribute('cx',a[0].toFixed(1)); c.setAttribute('cy',a[1].toFixed(1));
-      c.setAttribute('r', Math.min(2+Math.sqrt(L.hechos.length)*0.9, 7).toFixed(1));
+      L.r = Math.min(2+Math.sqrt(L.hechos.length)*0.9, 7);
+      c.setAttribute('r', L.r.toFixed(1));
       c.addEventListener('click',function(e){e.stopPropagation();elegir(L)});
       gPtos.appendChild(c); L.punto=c; L.xyp=a;
     });
-    var d=nodo('circle','m-pt destino');
-    d.setAttribute('cx',destino[0]); d.setAttribute('cy',destino[1]); d.setAttribute('r','5');
-    gPtos.appendChild(d);
+    var corazon=nodo('circle','m-pt destino');
+    corazon.setAttribute('cx',destino[0]); corazon.setAttribute('cy',destino[1]); corazon.setAttribute('r','5');
+    gPtos.appendChild(corazon);
 
     function etiquetas(){
       gEti.innerHTML='';
       var z=W/VB.w;
       if(z<1.6) return;
-      lugares.forEach(function(L){
+      var alto=11/z, puestas=[];
+      // Los que mas hechos tienen ganan el sitio: si dos nombres se pisan, se
+      // dibuja el de mas peso y el otro espera a que te acerques mas.
+      lugares.slice().sort(function(a,b){return b.hechos.length-a.hechos.length}).forEach(function(L){
         if(z<3.2 && L.hechos.length<3) return;
         var x=L.xyp[0], y=L.xyp[1];
         if(x<VB.x||x>VB.x+VB.w||y<VB.y||y>VB.y+VB.h) return;
+        var ancho=L.lugar.length*5.2/z, cx=x+6/z, cy=y+3.5/z;
+        var choca=puestas.some(function(c){
+          return !(cx>c.x2 || cx+ancho<c.x1 || cy-alto>c.y2 || cy+alto*0.3<c.y1);
+        });
+        if(choca) return;
+        puestas.push({x1:cx, x2:cx+ancho, y1:cy-alto, y2:cy+alto*0.3});
         var e=nodo('text','m-eti');
-        e.setAttribute('x',(x+6/z).toFixed(1)); e.setAttribute('y',(y+3/z).toFixed(1));
-        e.setAttribute('font-size',(9/z).toFixed(2));
+        e.setAttribute('x',cx.toFixed(2)); e.setAttribute('y',cy.toFixed(2));
+        e.setAttribute('font-size',(9.5/z).toFixed(2));
+        e.setAttribute('stroke-width',(2.6/z).toFixed(2));
         e.textContent=L.lugar;
         gEti.appendChild(e);
       });
@@ -1045,10 +1065,15 @@
           var polys = g.type==='Polygon'?[g.arcs]:g.arcs;
           polys.forEach(function(poly){
             poly.forEach(function(ids){
-              var pts=anillo(ids), s='';
+              // Un pais que cruza el meridiano 180, como Rusia o Fiyi, salta
+              // de +180 a -180 y sin cortar el trazo queda una raya cruzando
+              // el mapa entero. Al detectar el salto se empieza otro trazo.
+              var pts=anillo(ids), s='', prev=null;
               for(var i=0;i<pts.length;i++){
-                var q=proy(pts[i][1], pts[i][0]);
-                s += (i?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1);
+                var lon=pts[i][0], q=proy(pts[i][1], lon);
+                if(prev!==null && Math.abs(lon-prev)>180){ if(s) dPath.push(s); s=''; }
+                s += (s?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1);
+                prev=lon;
               }
               if(s) dPath.push(s+'Z');
             });
