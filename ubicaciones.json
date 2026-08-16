@@ -1,0 +1,1856 @@
+{
+ "_nota": "De donde sale la ayuda de cada hecho, para el mapa. Va aparte de hechos.json a proposito: es un dato derivado, se corrige a mano sin tocar la base, y se ve de un vistazo que coordenada estamos usando. Si un hecho no esta aqui, no dibuja punto: preferimos un mapa con menos puntos que uno con un pais inventado.",
+ "_coordenadas": "Centroides publicos de ciudades y paises. No son datos de la emergencia.",
+ "coordenadas": {
+  "Colombia": [
+   4.57,
+   -74.3
+  ],
+  "Bogotá": [
+   4.71,
+   -74.07
+  ],
+  "Medellín": [
+   6.25,
+   -75.56
+  ],
+  "Cali": [
+   3.44,
+   -76.52
+  ],
+  "Barranquilla": [
+   10.96,
+   -74.8
+  ],
+  "Cartagena": [
+   10.39,
+   -75.51
+  ],
+  "Bucaramanga": [
+   7.12,
+   -73.13
+  ],
+  "Pereira": [
+   4.81,
+   -75.69
+  ],
+  "Manizales": [
+   5.07,
+   -75.52
+  ],
+  "Armenia": [
+   4.53,
+   -75.68
+  ],
+  "Santa Marta": [
+   11.24,
+   -74.2
+  ],
+  "Ibagué": [
+   4.44,
+   -75.24
+  ],
+  "Neiva": [
+   2.93,
+   -75.29
+  ],
+  "Quibdó": [
+   5.69,
+   -76.66
+  ],
+  "Buenaventura": [
+   3.88,
+   -77.03
+  ],
+  "Timbiquí": [
+   2.77,
+   -77.67
+  ],
+  "Sabaneta": [
+   6.15,
+   -75.62
+  ],
+  "Envigado": [
+   6.17,
+   -75.59
+  ],
+  "Itagüí": [
+   6.18,
+   -75.6
+  ],
+  "Dosquebradas": [
+   4.83,
+   -75.67
+  ],
+  "Andalucía": [
+   4.17,
+   -76.16
+  ],
+  "Antioquia": [
+   6.55,
+   -75.83
+  ],
+  "Cauca": [
+   2.5,
+   -76.82
+  ],
+  "Valle del Cauca": [
+   3.8,
+   -76.53
+  ],
+  "Cundinamarca": [
+   4.77,
+   -74.3
+  ],
+  "Risaralda": [
+   5.31,
+   -75.99
+  ],
+  "Quindío": [
+   4.46,
+   -75.67
+  ],
+  "Boyacá": [
+   5.45,
+   -73.36
+  ],
+  "Estados Unidos": [
+   39.83,
+   -98.58
+  ],
+  "Miami": [
+   25.76,
+   -80.19
+  ],
+  "Nueva York": [
+   40.71,
+   -74.01
+  ],
+  "Boston": [
+   42.36,
+   -71.06
+  ],
+  "Revere": [
+   42.41,
+   -71.01
+  ],
+  "Washington D. C.": [
+   38.9,
+   -77.04
+  ],
+  "Fairfax": [
+   38.85,
+   -77.31
+  ],
+  "Greensboro": [
+   36.07,
+   -79.79
+  ],
+  "Santa Bárbara": [
+   34.42,
+   -119.7
+  ],
+  "San Francisco": [
+   37.77,
+   -122.42
+  ],
+  "Los Ángeles": [
+   34.05,
+   -118.24
+  ],
+  "Texas": [
+   31.0,
+   -99.0
+  ],
+  "Connecticut": [
+   41.6,
+   -72.7
+  ],
+  "Canadá": [
+   56.13,
+   -106.35
+  ],
+  "Toronto": [
+   43.65,
+   -79.38
+  ],
+  "México": [
+   23.63,
+   -102.55
+  ],
+  "Ciudad de México": [
+   19.43,
+   -99.13
+  ],
+  "Monterrey": [
+   25.69,
+   -100.32
+  ],
+  "España": [
+   40.46,
+   -3.75
+  ],
+  "Madrid": [
+   40.42,
+   -3.7
+  ],
+  "Barcelona": [
+   41.39,
+   2.17
+  ],
+  "Santiago de Compostela": [
+   42.88,
+   -8.54
+  ],
+  "Reino Unido": [
+   55.38,
+   -3.44
+  ],
+  "Londres": [
+   51.51,
+   -0.13
+  ],
+  "Oxford": [
+   51.75,
+   -1.26
+  ],
+  "Italia": [
+   41.87,
+   12.57
+  ],
+  "Roma": [
+   41.9,
+   12.5
+  ],
+  "Suiza": [
+   46.82,
+   8.23
+  ],
+  "Berna": [
+   46.95,
+   7.45
+  ],
+  "Ginebra": [
+   46.2,
+   6.14
+  ],
+  "Noruega": [
+   60.47,
+   8.47
+  ],
+  "Oslo": [
+   59.91,
+   10.75
+  ],
+  "Suecia": [
+   60.13,
+   18.64
+  ],
+  "Estocolmo": [
+   59.33,
+   18.07
+  ],
+  "Bélgica": [
+   50.5,
+   4.47
+  ],
+  "Bruselas": [
+   50.85,
+   4.35
+  ],
+  "Ciudad del Vaticano": [
+   41.9,
+   12.45
+  ],
+  "Chile": [
+   -35.68,
+   -71.54
+  ],
+  "Santiago": [
+   -33.45,
+   -70.67
+  ],
+  "Perú": [
+   -9.19,
+   -75.02
+  ],
+  "Lima": [
+   -12.05,
+   -77.04
+  ],
+  "Ecuador": [
+   -1.83,
+   -78.18
+  ],
+  "Guayaquil": [
+   -2.19,
+   -79.89
+  ],
+  "Argentina": [
+   -38.42,
+   -63.62
+  ],
+  "Brasil": [
+   -14.24,
+   -51.93
+  ],
+  "São Paulo": [
+   -23.55,
+   -46.63
+  ],
+  "Panamá": [
+   8.54,
+   -80.78
+  ],
+  "La Chorrera": [
+   8.88,
+   -79.78
+  ],
+  "Venezuela": [
+   6.42,
+   -66.59
+  ],
+  "Caracas": [
+   10.49,
+   -66.88
+  ],
+  "El Salvador": [
+   13.79,
+   -88.9
+  ],
+  "China": [
+   35.86,
+   104.2
+  ],
+  "India": [
+   20.59,
+   78.96
+  ],
+  "Emiratos Árabes Unidos": [
+   23.42,
+   53.85
+  ],
+  "Rusia": [
+   61.52,
+   105.32
+  ],
+  "Krasnodar": [
+   45.04,
+   38.98
+  ],
+  "Alemania": [
+   51.17,
+   10.45
+  ],
+  "Australia": [
+   -25.27,
+   133.78
+  ],
+  "Melbourne": [
+   -37.81,
+   144.96
+  ]
+ },
+ "origen": {
+  "AAPA Latam con SPRB, Puerto Industrial Aguadulce, TCBuen de APM Terminals, Compas Cascajal y Grupo Ventura": [
+   "Colombia",
+   "Colombia"
+  ],
+  "ACIVA-RP y ORIVAC": [
+   "Valle del Cauca",
+   "Colombia"
+  ],
+  "ANDI": [
+   "Medellín",
+   "Colombia"
+  ],
+  "ANDI y campaña Empresas Unidas por Colombia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Accion contra el Hambre": [
+   "España",
+   "España"
+  ],
+  "Acerías Paz del Río": [
+   "Boyacá",
+   "Colombia"
+  ],
+  "Acerías Paz del Río, Ultracem, Cemex y Cerámica San Lorenzo": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Afidro (Asociación de Laboratorios Farmacéuticos de Investigación y Desarrollo)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "AfroUdeA (Universidad de Antioquia)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Afrus (Diego Rodríguez Lizcano)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Agencia Nacional de Infraestructura (ANI) y concesionarios viales": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Air Europa, Iberia y World2Fly": [
+   "España",
+   "España"
+  ],
+  "Aldeas Infantiles SOS": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Alejandro Riaño - The Juanpis Live Show": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "All Hands and Hearts": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Alma Air, Ambulancias Aéreas de Colombia y Terpel": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Alquería": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "América de Cali y Deportivo Cali": [
+   "Cali",
+   "Colombia"
+  ],
+  "Andrea Rico": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Andrea Valdiri": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Andrés Cepeda, Grupo Niche, ChocQuibTown, Sebastián Yatra, Silvestre Dangond, Manuel Medrano, Beéle y Juliana": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Andrés Mancera (restaurante Típicas Colombianas, Guayaquil)": [
+   "Guayaquil",
+   "Ecuador"
+  ],
+  "Andrés Solomón, músico caleño": [
+   "Cali",
+   "Colombia"
+  ],
+  "Arial 12": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Arquidiocesis de Barranquilla - Pastoral Social Caritas": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Arquidiócesis de Los Ángeles": [
+   "Los Ángeles",
+   "Estados Unidos"
+  ],
+  "Artefacto Social Olla Rodante": [
+   "Cali",
+   "Colombia"
+  ],
+  "Asobancaria y los bancos afiliados": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Asociación Amigos de Colombia de San Antonio y comunidad colombiana de El Paso": [
+   "Texas",
+   "Estados Unidos"
+  ],
+  "Asociación Colombiana de Sociedades Científicas (ACSC) y S.C.A.R.E.": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Asociación Nacional de Profesionales de la Salud (ASSOSALUD) con la ACSC": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Asociación de Galerías de Arte Colombianas (AGAC)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Atlético Bucaramanga": [
+   "Bucaramanga",
+   "Colombia"
+  ],
+  "Atlético Nacional": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Avianca": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "BBVA": [
+   "España",
+   "España"
+  ],
+  "BBVA Colombia": [
+   "España",
+   "España"
+  ],
+  "Banco Interamericano de Desarrollo (Grupo BID)": [
+   "Washington D. C.",
+   "Estados Unidos"
+  ],
+  "Banco Mundial": [
+   "Washington D. C.",
+   "Estados Unidos"
+  ],
+  "Banco de Alimentos de Bogotá": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Banco de Alimentos de Buenaventura y Colegio Seminario Bagno Regio": [
+   "Buenaventura",
+   "Colombia"
+  ],
+  "Barriles Carnivore": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Bavaria": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Becton Dickinson": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Blessd": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Blessd (Fundación Sueños de Barrio)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Boston Scientific": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Boston Scientific y Becton Dickinson": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Brigada Topos Azteca": [
+   "Ciudad de México",
+   "México"
+  ],
+  "Brigada de fisioterapeutas liderada por Susana María Ramírez Sánchez": [
+   "Cali",
+   "Colombia"
+  ],
+  "Brigada de salud gestionada por AAPA ante la Fundación Ciudad de Refugio": [
+   "Colombia",
+   "Colombia"
+  ],
+  "CAF - Banco de Desarrollo de América Latina y el Caribe": [
+   "Caracas",
+   "Venezuela"
+  ],
+  "CEDECOL (Confederacion Evangelica de Colombia)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "CEIPA (sede Sabaneta)": [
+   "Sabaneta",
+   "Colombia"
+  ],
+  "CNTI (Comision Nacional de Territorios Indigenas)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "CONMEBOL y Federación Colombiana de Fútbol (FCF)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "CONNPEC (Confederacion Nacional de los Pueblos de la Gran Nacion Embera)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "CRIC, Guardia Indigena, Proceso de Mujeres CRIC y Universidad Autonoma Indigena e Intercultural (UAIIN)": [
+   "Cauca",
+   "Colombia"
+  ],
+  "CRIR (Consejo Regional Indigena de Risaralda) y ORIQUIN": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Camacol Bogotá y Cundinamarca": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Camacol regional Bogotá y Cundinamarca": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Camilla Gonzales": [
+   "Toronto",
+   "Canadá"
+  ],
+  "Can Love": [
+   "Envigado",
+   "Colombia"
+  ],
+  "Canal Trece": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Caritas Colombiana (Secretariado de Pastoral Social)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Carlos Vives": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Casa del Carnaval / Museo del Carnaval de Barranquilla": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Cemex": [
+   "Monterrey",
+   "México"
+  ],
+  "Cencosud": [
+   "Santiago",
+   "Chile"
+  ],
+  "Cencosud (Jumbo, Metro y Easy)": [
+   "Santiago",
+   "Chile"
+  ],
+  "Centro Deportivo Luz Mery Tristán": [
+   "Cali",
+   "Colombia"
+  ],
+  "Cerámica San Lorenzo": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Chef José Andrés / World Central Kitchen": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Children Change Colombia": [
+   "Londres",
+   "Reino Unido"
+  ],
+  "China": [
+   "China",
+   "China"
+  ],
+  "Choripana": [
+   "Cali",
+   "Colombia"
+  ],
+  "Ciudadela Petronio Álvarez": [
+   "Cali",
+   "Colombia"
+  ],
+  "Claro Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Claro Colombia (America Movil)": [
+   "Ciudad de México",
+   "México"
+  ],
+  "Clínica Comfamiliar Risaralda": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Colchones Happy Sleep": [
+   "Armenia",
+   "Colombia"
+  ],
+  "Colombia Florece · nueve marcas": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Colombian American Police Association (C.A.P.A.) y Colombianos en New York": [
+   "Nueva York",
+   "Estados Unidos"
+  ],
+  "Colombianos Unidos en Connecticut": [
+   "Connecticut",
+   "Estados Unidos"
+  ],
+  "Colombianos en Melbourne": [
+   "Melbourne",
+   "Australia"
+  ],
+  "Comfama (caja de compensación de Antioquia)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Comfamiliar Risaralda": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Comfenalco Tolima": [
+   "Ibagué",
+   "Colombia"
+  ],
+  "Comite Universitario Afro de la Universidad del Tolima": [
+   "Ibagué",
+   "Colombia"
+  ],
+  "Comité de Cafeteros del Quindío": [
+   "Armenia",
+   "Colombia"
+  ],
+  "Comité de Emergencia (alianza de ocho ONG españolas)": [
+   "España",
+   "España"
+  ],
+  "Community Center Services Organization (CCSO)": [
+   "Nueva York",
+   "Estados Unidos"
+  ],
+  "Conciencia Afro y Parcería (Madrid)": [
+   "Madrid",
+   "España"
+  ],
+  "Concierto 'Colombia, Medellín te quiere'": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Concierto 'Colombia: Voces por la Vida'": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Concierto benéfico 'Unidos por los nuestros' (Marc Anthony, Chayanne, Ricardo Montaner, Feid, Silvestre Dangond)": [
+   "Miami",
+   "Estados Unidos"
+  ],
+  "Confederación Nacional de los Pueblos de la Gran Nación Emberá (CONNPEC)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Consejo Gremial Nacional y Asociación de Bancos de Alimentos de Colombia (ABACO)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Consejo Municipal de Juventudes de Itagüí y AfroDhamiri": [
+   "Itagüí",
+   "Colombia"
+  ],
+  "Consulado de Colombia en Madrid": [
+   "Madrid",
+   "España"
+  ],
+  "Coopebombas": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Corferias e Instituto Distrital de Protección y Bienestar Animal (IDPYBA)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Corporacion Manos Visibles": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Corporacion Organizacion El Minuto de Dios": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Corporación Colombiana de Teatro (sala Seki Sano)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Corporación Universitaria Empresarial Alexander von Humboldt": [
+   "Armenia",
+   "Colombia"
+  ],
+  "Cruz Roja Colombiana": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Cuerpo Oficial de Bomberos de Bogota": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Cuerpo Oficial de Bomberos de Pereira": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Cuerpo de Bomberos de Medellin": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Cámara de Comercio de Armenia y del Quindío": [
+   "Armenia",
+   "Colombia"
+  ],
+  "Cámara de Comercio de Bogotá": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Cámara de Comercio de Cali": [
+   "Cali",
+   "Colombia"
+  ],
+  "Cámara de Comercio de Pereira": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Cámara de Comercio de Santa Marta para el Magdalena, Confecámaras y Comité Intergremial del Magdalena": [
+   "Santa Marta",
+   "Colombia"
+  ],
+  "Cáritas Española": [
+   "Madrid",
+   "España"
+  ],
+  "Dayro Moreno (Once Caldas)": [
+   "Manizales",
+   "Colombia"
+  ],
+  "De Mar y Río (ganadores del Petronio Álvarez 2024)": [
+   "Cali",
+   "Colombia"
+  ],
+  "Deblex HUB (Doral, Miami) y Paulina Estrada": [
+   "Miami",
+   "Estados Unidos"
+  ],
+  "Deblex HUB y Defensores de la Patria en el Exterior (Paulina Estrada)": [
+   "Miami",
+   "Estados Unidos"
+  ],
+  "Defensa Civil Colombiana": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Desenlace Macramé": [
+   "Colombia",
+   "Colombia"
+  ],
+  "DiDi": [
+   "China",
+   "China"
+  ],
+  "DiDi Colombia": [
+   "China",
+   "China"
+  ],
+  "Direct Relief": [
+   "Santa Bárbara",
+   "Estados Unidos"
+  ],
+  "Distrito de Barranquilla (bomberos, Defensa Civil, Cruz Roja, Policia y Ejercito)": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Ecopetrol": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Ecuador": [
+   "Ecuador",
+   "Ecuador"
+  ],
+  "Ejercito Nacional - Comando de Ingenieros y Batallon N.o 80": [
+   "Colombia",
+   "Colombia"
+  ],
+  "El Choripana (Cali)": [
+   "Cali",
+   "Colombia"
+  ],
+  "El Mono Bandido": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "El Salvador": [
+   "El Salvador",
+   "El Salvador"
+  ],
+  "Emerson Cuesta Becerra, barbero chocoano en Ibagué": [
+   "Ibagué",
+   "Colombia"
+  ],
+  "Emiratos Árabes Unidos": [
+   "Emiratos Árabes Unidos",
+   "Emiratos Árabes Unidos"
+  ],
+  "Emprende y Conecta": [
+   "Revere",
+   "Estados Unidos"
+  ],
+  "Equipo de Busqueda y Rescate Urbano del Condado de Fairfax (VA-TF1 / USA-01)": [
+   "Fairfax",
+   "Estados Unidos"
+  ],
+  "España": [
+   "España",
+   "España"
+  ],
+  "Estaciones de bomberos de Bogotá (campaña #ChocóTeNecesita)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Estados Unidos": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Estados Unidos (USAID / equipos USAR)": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Esther Ordóñez y la Junta de Acción Comunal de Chiminangos II, Cali": [
+   "Cali",
+   "Colombia"
+  ],
+  "Estudio Orgánico": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Facultad de Educacion, Universidad de los Andes": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Familia Santo Domingo": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fedegán y el Fondo Nacional del Ganado": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja (IFRC, Ginebra)": [
+   "Ginebra",
+   "Suiza"
+  ],
+  "Federación Internacional de la Cruz Roja (IFRC) y Cruz Roja Colombiana": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Federación Nacional de Cafeteros": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Federación Nacional de Cafeteros (FNC)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fedetranscarga (Arnulfo Cuervo Aguilera)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fedetranscarga (Federación de Empresarios del Transporte de Carga)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Feid (Fundación Good Kidz)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Felipe Ríos Ramírez": [
+   "Santiago de Compostela",
+   "España"
+  ],
+  "Fenalco (Federación Nacional de Comerciantes)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fenalco Bogotá-Cundinamarca y sus centros comerciales afiliados": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Ferrero": [
+   "Italia",
+   "Italia"
+  ],
+  "Festival Buen Comienzo (Plaza Mayor, Medellín)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Festival de Música del Pacífico Petronio Álvarez": [
+   "Cali",
+   "Colombia"
+  ],
+  "Fonda The Ranch AXM": [
+   "Armenia",
+   "Colombia"
+  ],
+  "Fonseca": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Francy": [
+   "Dosquebradas",
+   "Colombia"
+  ],
+  "Franklin Santana": [
+   "Nueva York",
+   "Estados Unidos"
+  ],
+  "Freddy Guarín y San Francisco FC (Panamá)": [
+   "La Chorrera",
+   "Panamá"
+  ],
+  "Fuerza Aeroespacial Colombiana (FAC)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fundacion Universitaria Juan N. Corpas y Minuto de Dios": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fundacion Universitaria Konrad Lorenz": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fundación Arturo Calle y familia Calle": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fundación Arturo Calle · contrapartida": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fundación Bancolombia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Fundación FC Barcelona": [
+   "Barcelona",
+   "España"
+  ],
+  "Fundación Gastronomía Social (Cristina Botero Orozco)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fundación Gastronomía Social Colombia y World Central Kitchen": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fundación Gastronomía Social Colombiana": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Fundación Luis Díaz": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Fundación Madrina": [
+   "Madrid",
+   "España"
+  ],
+  "Fundación Santo Domingo": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Fundación Solidaridad por Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Fundación Universitaria Konrad Lorenz": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "G8 de universidades de Antioquia (UdeA, CES, EAFIT, EIA, U. de Medellin, UNAL, UPB, Lasallista)": [
+   "Antioquia",
+   "Colombia"
+  ],
+  "Germán Ortiz, rescatista voluntario en Quibdó": [
+   "Quibdó",
+   "Colombia"
+  ],
+  "Giro de Rigo (campaña Pedaleamos para ayudar)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Global Empowerment Mission (GEM)": [
+   "Miami",
+   "Estados Unidos"
+  ],
+  "Global Empowerment Mission (Michael Capponi)": [
+   "Miami",
+   "Estados Unidos"
+  ],
+  "Gobernacion de Antioquia con Cruz Roja y Defensa Civil": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Gobierno de España (AECID) y Fundación Reina Sofía": [
+   "Madrid",
+   "España"
+  ],
+  "Gobierno de Italia": [
+   "Roma",
+   "Italia"
+  ],
+  "Gobierno de Noruega": [
+   "Oslo",
+   "Noruega"
+  ],
+  "Gobierno de Suecia": [
+   "Estocolmo",
+   "Suecia"
+  ],
+  "Gobierno de Suiza": [
+   "Berna",
+   "Suiza"
+  ],
+  "Gremio de ladrilleras de Antioquia": [
+   "Antioquia",
+   "Colombia"
+  ],
+  "Gremio de las ladrilleras de Antioquia": [
+   "Antioquia",
+   "Colombia"
+  ],
+  "Grupo Argos": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Grupo Argos, Fundación Grupo Argos y Celsia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Grupo Aval (Banco de Bogotá, Banco de Occidente, Banco Popular, AV Villas y dale!)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Grupo Banco Mundial": [
+   "Washington D. C.",
+   "Estados Unidos"
+  ],
+  "Grupo canino K9/BRAE del Cuerpo Oficial de Bomberos de Bogota": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Grupo Éxito y Fundación Éxito": [
+   "Envigado",
+   "Colombia"
+  ],
+  "Habitantes de Buenaventura (barrio Rockefeller)": [
+   "Buenaventura",
+   "Colombia"
+  ],
+  "Helistar": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Herbert González": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Homecenter Sodimac Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Hoteles Spiwak": [
+   "Cali",
+   "Colombia"
+  ],
+  "Hugo Rodallega (capitán de Independiente Santa Fe)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Independiente Santa Fe": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "India": [
+   "India",
+   "India"
+  ],
+  "J Balvin": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Jhon Arias (jugador de la Selección Colombia, Palmeiras)": [
+   "São Paulo",
+   "Brasil"
+  ],
+  "Jhon Córdoba (jugador de la Selección Colombia, Krasnodar)": [
+   "Krasnodar",
+   "Rusia"
+  ],
+  "Jhonny Rivera": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Johana Arroyave": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "John Londono y la Asociación de Policías Colombianos Estadounidenses": [
+   "Nueva York",
+   "Estados Unidos"
+  ],
+  "José Andrés": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Juan Camilo Garzón y el equipo de Senza Create (plataforma Gravitas)": [
+   "Risaralda",
+   "Colombia"
+  ],
+  "Juan David Berrío, colectivo Mojiganga y fundación Vuya": [
+   "Quibdó",
+   "Colombia"
+  ],
+  "Juan Manuel Estévez y Estefanía Useche": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Juan Pablo (13 años)": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Juanes": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Junior de Barranquilla": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Justice for Colombia (Londres)": [
+   "Londres",
+   "Reino Unido"
+  ],
+  "KFC Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Karol G (Fundación Con Cora)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "LAIKA": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "LATAM Airlines Peru": [
+   "Lima",
+   "Perú"
+  ],
+  "LATAM Airlines Perú (programa Avión Solidario)": [
+   "Lima",
+   "Perú"
+  ],
+  "La Bruja Riso (El Poblado, Medellín)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "La Cobra (streamer futbolero argentino)": [
+   "Argentina",
+   "Argentina"
+  ],
+  "La Cobra, streamer argentino": [
+   "Argentina",
+   "Argentina"
+  ],
+  "La Esquina (parque gastronómico latinoamericano de Footscray, Melbourne)": [
+   "Melbourne",
+   "Australia"
+  ],
+  "Ladrilleras de Antioquia": [
+   "Antioquia",
+   "Colombia"
+  ],
+  "Libertario Coffee Roasters": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Lideresas del barrio San Vicente, Quibdo": [
+   "Quibdó",
+   "Colombia"
+  ],
+  "Liga Colombiana de Radioaficionados y Liga de Radioaficionados de Bogota": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Liga Radio Quindío y Nair Ríos (HK6JSP)": [
+   "Quindío",
+   "Colombia"
+  ],
+  "Los Primos Barbershop (East Boston) y Breiner Scarpeta": [
+   "Boston",
+   "Estados Unidos"
+  ],
+  "Luis Díaz y Geraldine Ponce (Fundación Luis Díaz)": [
+   "Alemania",
+   "Alemania"
+  ],
+  "Maglione": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Maluma (Fundación El Arte de los Sueños)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Manos Unidas (España)": [
+   "Madrid",
+   "España"
+  ],
+  "Manos Visibles": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Medicos del Mundo": [
+   "España",
+   "España"
+  ],
+  "Mercado Libre": [
+   "Argentina",
+   "Argentina"
+  ],
+  "Mesa Departamental de Organizaciones Indigenas del Choco": [
+   "Quibdó",
+   "Colombia"
+  ],
+  "Metalli Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Miguel Bosé": [
+   "España",
+   "España"
+  ],
+  "Millonarios FC": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Ministerio del Deporte de Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Monseñor Hernán Astudillo (Toronto)": [
+   "Toronto",
+   "Canadá"
+  ],
+  "Movistar Arena (Bogotá)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Movistar Arena, Tuboleta, Breakfast Live, Thunder Production y Venues & Snacks": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Museo de Arte Moderno de Medellín (MAMM)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "México": [
+   "México",
+   "México"
+  ],
+  "México (Fuerza Aérea Mexicana)": [
+   "México",
+   "México"
+  ],
+  "Naciones Unidas (Fondo CERF)": [
+   "Nueva York",
+   "Estados Unidos"
+  ],
+  "Natalia Campo (Delicious Empanadas, Toronto)": [
+   "Toronto",
+   "Canadá"
+  ],
+  "Nestle": [
+   "Suiza",
+   "Suiza"
+  ],
+  "Nidia Góngora, cantadora de Timbiquí": [
+   "Timbiquí",
+   "Colombia"
+  ],
+  "Niña anónima de Sabaneta": [
+   "Sabaneta",
+   "Colombia"
+  ],
+  "Noruega": [
+   "Noruega",
+   "Noruega"
+  ],
+  "ONIC (Organizacion Nacional Indigena de Colombia)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Offcorss": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Olla comunitaria de vendedores ambulantes de Manizales": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Only Home": [
+   "Quindío",
+   "Colombia"
+  ],
+  "Organizacion Indigena de Antioquia (OIA)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Oxfam GB": [
+   "Oxford",
+   "Reino Unido"
+  ],
+  "Oxfam Intermon": [
+   "Barcelona",
+   "España"
+  ],
+  "POA (sindicato británico de funcionarios de prisiones)": [
+   "Reino Unido",
+   "Reino Unido"
+  ],
+  "Panadería La Central": [
+   "Andalucía",
+   "Colombia"
+  ],
+  "Papa León XIV y la Santa Sede": [
+   "Ciudad del Vaticano",
+   "Ciudad del Vaticano"
+  ],
+  "Pastor Wilmer, Iglesia Bautista de Buenaventura": [
+   "Buenaventura",
+   "Colombia"
+  ],
+  "Patrulla Aerea Civil Colombiana (PAC)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Patrulla Aérea Civil Colombiana con Terpel y Fundación TAAP": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Paulina Vega, Paola Turbay, Vanessa Alexandra Mendoza y Taliana Vargas": [
+   "Colombia",
+   "Colombia"
+  ],
+  "PepsiCo": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Perú": [
+   "Perú",
+   "Perú"
+  ],
+  "Pirlo": [
+   "Cali",
+   "Colombia"
+  ],
+  "Plantel de Once Caldas (Dayro Moreno, Jefry Zapata y Juan Pablo Patiño)": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Policia Metropolitana de Cali": [
+   "Cali",
+   "Colombia"
+  ],
+  "Policia Nacional - grupo Ponalsar": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Pontificia Universidad Javeriana": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Postobón": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Puntos Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Pérez-Llorca Gómez-Pinzón": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Radamel Falcao García": [
+   "La Chorrera",
+   "Panamá"
+  ],
+  "Radio Nacional de Colombia (RTVC / Inravisión)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Rappi Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Restaurante El Barco (Boston)": [
+   "Boston",
+   "Estados Unidos"
+  ],
+  "Restaurante El Paso (Andrés Román)": [
+   "Cali",
+   "Colombia"
+  ],
+  "Restaurante El Paso (Cali), de Andrés Román": [
+   "Cali",
+   "Colombia"
+  ],
+  "Restaurante El Peñol (Boston)": [
+   "Boston",
+   "Estados Unidos"
+  ],
+  "Restaurantes Belisario, Pergamino, El Correo, Olivia y Clap Burgers": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Restó CABA (Joaquín Rodríguez y Gisele Yiseth Zea)": [
+   "Cali",
+   "Colombia"
+  ],
+  "Ryan Castro": [
+   "Medellín",
+   "Colombia"
+  ],
+  "SATENA y Karma Cine": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Samaritan's Purse": [
+   "Greensboro",
+   "Estados Unidos"
+  ],
+  "Sankofa Danzafro y La Pascasia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Santa Sede (Dicasterio para el Servicio de la Caridad)": [
+   "Ciudad del Vaticano",
+   "Ciudad del Vaticano"
+  ],
+  "Santa Sede (Vaticano)": [
+   "Ciudad del Vaticano",
+   "Ciudad del Vaticano"
+  ],
+  "Santiago Jiménez Londoño (Cuidar a Colombia)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Save the Children": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Sistema Coca-Cola (Coca-Cola y Coca-Cola FEMSA)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Sistema nacional de equipos USAR de Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Sociedad Antioquena de Ingenieros y Arquitectos (SAI) y Asociacion de Ingenieros Estructurales (AIE)": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Sociedad Colombiana de Arquitectos, regional Valle del Cauca": [
+   "Cali",
+   "Colombia"
+  ],
+  "Sociedad Colombiana de Ingenieros con Camacol, Sociedad Colombiana de Arquitectos, ACIES, CEER y AIS": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Sociedad Portuaria Regional de Buenaventura": [
+   "Buenaventura",
+   "Colombia"
+  ],
+  "Sociedad de Ingenieros y Arquitectos de Bolívar (SIAB)": [
+   "Cartagena",
+   "Colombia"
+  ],
+  "Sofia Garces": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Soreil": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Starlink": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Starlink (SpaceX)": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Studio F (STF Group)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Suecia": [
+   "Suecia",
+   "Suecia"
+  ],
+  "Suiza": [
+   "Suiza",
+   "Suiza"
+  ],
+  "TECHO": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Taliana Vargas": [
+   "Cali",
+   "Colombia"
+  ],
+  "Teatro Metropolitano de Medellín": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Teatro Nacional": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Teatro de Garaje": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Tecnoglass": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Teleantioquia, Telemedellín, El Colombiano, RCN, Caracol Radio y Estrella Estéreo": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Telecafé y UDGTV Canal 44": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Telecaribe": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Telemaratón '#ColombiaSeLevanta'": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Terpel": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "The Juanpis Live Show (Alejandro Riaño)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "The Kitchen Brothers": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Tiendas Ara": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Tiendas Ara · las vueltas": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Tiendas D1 / Fundación Santo Domingo": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Tiendas D1 y Fundación Santo Domingo": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Tigo Colombia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Tigo Colombia (Millicom)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "UNAD (Universidad Nacional Abierta y a Distancia)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Uber": [
+   "San Francisco",
+   "Estados Unidos"
+  ],
+  "Uber Colombia": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "Ultracem y Cemex": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Un Tenedor Dorado y restaurante Domingo (chef Catalina Vélez)": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Uniagraria": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Unicef UK": [
+   "Londres",
+   "Reino Unido"
+  ],
+  "Universidad Catolica de Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Universidad EAFIT": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Universidad Icesi": [
+   "Cali",
+   "Colombia"
+  ],
+  "Universidad Jorge Tadeo Lozano": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Universidad Libre": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Universidad Nacional de Colombia": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Universidad Nacional de Colombia (UNAL)": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Universidad Nacional de Colombia sede Manizales": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Universidad Nacional de Colombia, sede Manizales": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Universidad Surcolombiana": [
+   "Neiva",
+   "Colombia"
+  ],
+  "Universidad de Antioquia": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Universidad de Cundinamarca": [
+   "Cundinamarca",
+   "Colombia"
+  ],
+  "Universidad de los Andes": [
+   "Bogotá",
+   "Colombia"
+  ],
+  "Universidad del Atlantico": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Universidad del Atlántico": [
+   "Barranquilla",
+   "Colombia"
+  ],
+  "Universidad del Magdalena": [
+   "Santa Marta",
+   "Colombia"
+  ],
+  "Unión Europea": [
+   "Bruselas",
+   "Bélgica"
+  ],
+  "Vallenatón por Colombia (Daniel Calderón, Nelson Velásquez, Jorge Celedón)": [
+   "Envigado",
+   "Colombia"
+  ],
+  "Vecinos del barrio Florez Buenaños, Quibdó (Irma Murillo Valderrama)": [
+   "Quibdó",
+   "Colombia"
+  ],
+  "Vendedores ambulantes de Manizales (olla comunitaria)": [
+   "Manizales",
+   "Colombia"
+  ],
+  "Vendedores ambulantes de helados": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Ventolini": [
+   "Cali",
+   "Colombia"
+  ],
+  "WOM Colombia": [
+   "Colombia",
+   "Colombia"
+  ],
+  "WestCol": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Westcol, Hamilton, Dareska, Soley, Osmar Pérez, Carabin3, Chanty, Leandro, Pelicanger, El Muñe y Rey de la City": [
+   "Medellín",
+   "Colombia"
+  ],
+  "Willy García (Fundación Yo Tengo Fe)": [
+   "Cali",
+   "Colombia"
+  ],
+  "World Central Kitchen y Cámara de Comercio de Buenaventura": [
+   "Estados Unidos",
+   "Estados Unidos"
+  ],
+  "World Central Kitchen y Fundación Gastronomía Social": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Wálmer Pacheco (capitán del Deportivo Pereira)": [
+   "Pereira",
+   "Colombia"
+  ],
+  "Xielo Skydive": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Yango": [
+   "Emiratos Árabes Unidos",
+   "Emiratos Árabes Unidos"
+  ],
+  "Yango Colombia": [
+   "Emiratos Árabes Unidos",
+   "Emiratos Árabes Unidos"
+  ],
+  "Yape (Perú)": [
+   "Lima",
+   "Perú"
+  ],
+  "Zierra Leona": [
+   "Valle del Cauca",
+   "Colombia"
+  ],
+  "encontrados.co": [
+   "Colombia",
+   "Colombia"
+  ],
+  "Óscar Conde, desarrollador de software (Colombia te busca)": [
+   "Colombia",
+   "Colombia"
+  ]
+ }
+}
