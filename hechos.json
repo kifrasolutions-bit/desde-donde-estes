@@ -1,7 +1,7 @@
 {
  "_regla": "Cada hecho lleva fuente enlazada y cita textual que lo sostiene. Ver directives/reglas-editoriales.md. Nada entra sin verificar.",
  "verificado_el": "2026-08-16",
- "total": 417,
+ "total": 418,
  "hechos": [
   {
    "quien": "Blessd",
@@ -6674,6 +6674,22 @@
    "cita": "Te ofrecemos acompañamiento psicológico virtual, seguro y gratuito para afrontar el impacto de los sismos",
    "confianza": "alta",
    "dominio": "salud-transporte"
+  },
+  {
+   "quien": "Colombia Florece · nueve marcas",
+   "tipo": "empresa",
+   "origen": "colombia",
+   "pais": null,
+   "que_hizo": "Nueve marcas pequeñas se juntaron para que la gente done directamente a la Cruz Roja y sortear tres kits entre quienes muestren su aporte. Declaran que ninguna recibe ni administra el dinero.",
+   "cifra": "nueve marcas, tres kits",
+   "cuando": "2026-08-15",
+   "categoria": "dinero",
+   "zona": "Zonas afectadas por el terremoto",
+   "fuente_url": "https://www.instagram.com/taloons.co/p/DcEMiGwkTRm/",
+   "fuente_nombre": "Publicación de las marcas participantes",
+   "cita": "las marcas participantes NO reciben ni administran el dinero de las donaciones",
+   "confianza": "alta",
+   "dominio": "consumo-cultura"
   }
  ],
  "descartados": [
