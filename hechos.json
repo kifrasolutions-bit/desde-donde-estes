@@ -1,7 +1,7 @@
 {
  "_regla": "Cada hecho lleva fuente enlazada y cita textual que lo sostiene. Ver directives/reglas-editoriales.md. Nada entra sin verificar.",
  "verificado_el": "2026-08-16",
- "total": 415,
+ "total": 417,
  "hechos": [
   {
    "quien": "Blessd",
@@ -6642,6 +6642,38 @@
    "cita": "por cada peso donado, la Fundación y el Grupo Empresarial Arturo Calle aportan otro tanto",
    "confianza": "media",
    "dominio": "empresas-co"
+  },
+  {
+   "quien": "Fundación Motorrad Angels",
+   "tipo": "organismo",
+   "origen": "mixto",
+   "pais": null,
+   "que_hizo": "Fundación de motociclistas que responde a crisis en varios países y está operando en Colombia tras el sismo. Global Empowerment Mission la nombra entre sus aliados de esta operación, y con el club Ruta 40 arman kits para llevar al Chocó.",
+   "cifra": "meta de 150 kits",
+   "cuando": "2026-08-13",
+   "categoria": "logistica",
+   "zona": "Chocó",
+   "fuente_url": "https://www.instagram.com/globalempowermentmission/reel/DcEPKIbpqh8/",
+   "fuente_nombre": "Global Empowerment Mission, que la nombra como aliada",
+   "cita": "Special thanks to our partners: @motorradangels",
+   "confianza": "media",
+   "dominio": "socorro-voluntariado"
+  },
+  {
+   "quien": "PRAXIS Grupos Operativos Psicosociales",
+   "tipo": "comunidad",
+   "origen": "mixto",
+   "pais": null,
+   "que_hizo": "Red regional de psicólogas y psicólogos que abrió acompañamiento y primeros auxilios psicológicos gratuitos y virtuales para las personas afectadas por el sismo, como ya lo había hecho tras los terremotos de Venezuela en junio.",
+   "cifra": "gratuito y virtual",
+   "cuando": "2026-08-15",
+   "categoria": "salud",
+   "zona": "Todo el país y el exterior",
+   "fuente_url": "https://www.instagram.com/praxis.go/",
+   "fuente_nombre": "Publicación de la propia red",
+   "cita": "Te ofrecemos acompañamiento psicológico virtual, seguro y gratuito para afrontar el impacto de los sismos",
+   "confianza": "alta",
+   "dominio": "salud-transporte"
   }
  ],
  "descartados": [
