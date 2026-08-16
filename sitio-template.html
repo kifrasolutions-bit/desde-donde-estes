@@ -533,8 +533,8 @@
     posib:'Hoy hay <b>un mundo de formas de ayudar</b> a quienes más lo necesitan. Aquí están reunidas <b>algunas</b>, para que encuentres la tuya. Faltan muchas, y por eso esto se sigue construyendo entre todos.',
     cta1:'Encontrar mi forma de ayudar →', cta2:'Ver quiénes se están uniendo',
     e_llev:'Lo que llevamos entre todos', h_llev:'Así es como vamos',
-    h_map:'De dónde viene', s_map:'Cada línea es un hecho verificado, con su fuente. Todas del mismo grosor: aquí no hay ayudas grandes y pequeñas. Arrastra, acércate y toca un punto.',
-    m_ayuda:'Arrastra para mover · rueda o pellizca para acercar · toca un punto', m_todos:'Ver todo el mapa',
+    h_map:'Mira de dónde está llegando', s_map:'Cada línea es alguien: un país entero, una fábrica, una barbería, una señora tejiendo en su casa. Todas pesan igual. Acércate hasta Colombia y mira quién está poniendo el hombro desde cada ciudad.',
+    m_ayuda:'Arrastra, pellizca para acercar, toca un punto', m_todos:'Ver todo el mapa',
     m_hechos:'hechos', m_desde:'Desde', m_uno:'hecho',
     e_cad:'Quiénes somos "todos"', h_cad:'Quiénes se están uniendo',
     s_cad:'Un país del Golfo y una barbería de Boston. No hay orden por tamaño, a propósito, y cada tarjeta lleva la fuente que la respalda.',
@@ -578,8 +578,8 @@
     posib:'There is <b>a whole world of ways to help</b> the people who need it most. <b>Some</b> of them are gathered here, so you can find yours. Many are missing, which is why this keeps being built by all of us.',
     cta1:'Find my way to help →', cta2:'See who is stepping up',
     e_llev:'What we have done together', h_llev:'This is how far we have come',
-    h_map:'Where it comes from', s_map:'Every line is a verified fact, with its source. All the same weight: there are no big and small kinds of help here. Drag, zoom in and tap a point.',
-    m_ayuda:'Drag to move · scroll or pinch to zoom · tap a point', m_todos:'See the whole map',
+    h_map:'Look where it is coming from', s_map:'Every line is someone: a whole country, a factory, a barbershop, a woman knitting at home. They all weigh the same. Zoom into Colombia and see who is pitching in from each city.',
+    m_ayuda:'Drag, pinch to zoom, tap a point', m_todos:'See the whole map',
     m_hechos:'facts', m_desde:'From', m_uno:'fact',
     e_cad:'Who "everyone" actually is', h_cad:'Who is stepping up',
     s_cad:'A Gulf state and a barbershop in Boston. Nothing is ordered by size, on purpose, and every card carries the source that backs it.',
@@ -876,6 +876,9 @@
     var W=1000, H=460, LAT0=84, LAT1=-56;           // se recorta la Antartida
     var DEST=[4.71,-74.07];                          // Bogota, donde cae todo
     var VB={x:0,y:0,w:W,h:H};
+    // Hasta 70 aumentos: con 18 el mapa se frenaba justo cuando empezaba lo
+    // interesante, que es entrar a Colombia y ver de que ciudad sale cada cosa.
+    var TOPE=70;
     var sel=null, dibujado=false;
     // Se decide arriba, antes de enganchar los puntos: si se declara mas
     // abajo, cuando el bucle pregunta todavia vale undefined y no engancha
@@ -986,6 +989,7 @@
       // dibuja el de mas peso y el otro espera a que te acerques mas.
       lugares.slice().sort(function(a,b){return b.hechos.length-a.hechos.length}).forEach(function(L){
         if(z<3.2 && L.hechos.length<3) return;
+        if(z<8 && L.hechos.length<2 && L.pais==='Colombia') return;
         var x=L.xyp[0], y=L.xyp[1];
         if(x<VB.x||x>VB.x+VB.w||y<VB.y||y>VB.y+VB.h) return;
         var ancho=L.lugar.length*5.2/z, cx=x+6/z, cy=y+3.5/z;
@@ -1045,7 +1049,7 @@
     }
     function zoom(f){
       var cx=VB.x+VB.w/2, cy=VB.y+VB.h/2;
-      acercar(cx,cy,Math.max(1, Math.min(18, (W/VB.w)*f)));
+      acercar(cx,cy,Math.max(1, Math.min(TOPE, (W/VB.w)*f)));
     }
     $('#m-mas').onclick=function(){zoom(1.6)};
     $('#m-menos').onclick=function(){zoom(1/1.6)};
@@ -1055,7 +1059,7 @@
       e.preventDefault();
       var r=svg.getBoundingClientRect();
       var px=VB.x+(e.clientX-r.left)/r.width*VB.w, py=VB.y+(e.clientY-r.top)/r.height*VB.h;
-      var z=Math.max(1,Math.min(18,(W/VB.w)*(e.deltaY<0?1.2:1/1.2)));
+      var z=Math.max(1,Math.min(TOPE,(W/VB.w)*(e.deltaY<0?1.2:1/1.2)));
       VB.w=W/z; VB.h=H/z;
       VB.x=Math.max(0,Math.min(W-VB.w, px-(e.clientX-r.left)/r.width*VB.w));
       VB.y=Math.max(0,Math.min(H-VB.h, py-(e.clientY-r.top)/r.height*VB.h));
@@ -1090,7 +1094,7 @@
       var ids=Object.keys(dedos), r=svg.getBoundingClientRect();
       if(ids.length>=2 && pellizco){
         var a=dedos[ids[0]], b=dedos[ids[1]];
-        var z=Math.max(1, Math.min(18, pellizco.z * (dist(a,b)/pellizco.d)));
+        var z=Math.max(1, Math.min(TOPE, pellizco.z * (dist(a,b)/pellizco.d)));
         var c=centro(a,b);
         VB.w=W/z; VB.h=H/z;
         VB.x=Math.max(0,Math.min(W-VB.w, pellizco.foco.x-(c.x-r.left)/r.width*VB.w));
