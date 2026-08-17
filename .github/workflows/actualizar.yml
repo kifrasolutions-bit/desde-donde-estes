@@ -15,6 +15,8 @@ on:
       - "contenido.json"
       - "reels.json"
       - "cifras.json"
+      - "textos.json"
+      - "cifras.py"
       - "sitio-template.html"
       - "construir_sitio.py"
       - "update.py"
