@@ -14,6 +14,7 @@ on:
       - "hechos.json"
       - "contenido.json"
       - "reels.json"
+      - "cifras.json"
       - "sitio-template.html"
       - "construir_sitio.py"
       - "update.py"
