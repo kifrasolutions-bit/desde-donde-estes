@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Inyecta cifras.json dentro de sitio-template.html.
+"""Inyecta cifras.json y textos.json dentro de sitio-template.html.
 
-Las cifras que cambian a diario, la fecha de verificacion y unos pocos textos
-que se retocan seguido viven en cifras.json y no dentro de los 90 KB de la
-plantilla. Asi una actualizacion diaria es editar un JSON pequeno.
+Las cifras que cambian a diario, la fecha de verificacion y los textos que se
+retocan seguido viven en esos dos JSON y no dentro de los 90 KB de la
+plantilla. Asi una actualizacion diaria es editar un archivo pequeno.
 
 Si un patron no aparece exactamente una vez, se detiene. Vale mas no construir
 que construir mal y publicar una cifra a medias.
 """
 import json
 import re
+from pathlib import Path
 
 
 def aplicar(tpl, c):
@@ -46,7 +47,12 @@ def aplicar(tpl, c):
         if n != 1:
             raise SystemExit("El pie con fecha de corte aparece %d veces." % n)
 
-    for viejo, nuevo_txt in c.get("textos", []):
+    pares = list(c.get("textos", []))
+    ruta = Path(__file__).parent / "textos.json"
+    if ruta.exists():
+        pares += json.loads(ruta.read_text(encoding="utf-8")).get("pares", [])
+
+    for viejo, nuevo_txt in pares:
         if tpl.count(viejo) != 1:
             raise SystemExit("El texto a cambiar no aparece 1 vez: " + viejo[:60])
         tpl = tpl.replace(viejo, nuevo_txt)
