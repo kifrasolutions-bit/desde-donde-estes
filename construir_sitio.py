@@ -7,6 +7,7 @@ Fuentes de entrada:
   hechos.json          los 385 hechos verificados (base completa)
   contenido.json       opciones, recursos, conciertos, transparencia y fuentes
   reels.json           los reels de Instagram, si hay
+  cifras.json          las cifras que cambian a diario y unos textos sueltos
 
 La seleccion del flujo NO vive en un archivo aparte: se calcula aqui a partir
 de FLUJO_ORDEN. El criterio es variedad de escala, no ranking. Un pais del Golfo
@@ -17,6 +18,8 @@ Uso:  python3 construir_sitio.py
 """
 import json
 from pathlib import Path
+
+import cifras
 
 A = Path(__file__).parent
 
@@ -106,6 +109,7 @@ def main():
         return json.dumps(o, ensure_ascii=False)
 
     tpl = (A / "sitio-template.html").read_text(encoding="utf-8")
+    tpl = cifras.aplicar(tpl, leer("cifras.json") or {})
     reemplazos = [
         ("__HECHOS__", j(flujo)),
         # El mapa usa TODOS los hechos ubicados, no solo los del flujo curado:
@@ -115,7 +119,7 @@ def main():
         ("__HECHOS_MAPA__", j([
             {
                 "quien": h["quien"],
-                "que_hizo": (h["que_hizo"][:170].rsplit(" ", 1)[0] + "\u2026")
+                "que_hizo": (h["que_hizo"][:170].rsplit(" ", 1)[0] + "…")
                             if len(h["que_hizo"]) > 175 else h["que_hizo"],
                 "fuente_url": h["fuente_url"],
                 "fuente_nombre": h["fuente_nombre"],
