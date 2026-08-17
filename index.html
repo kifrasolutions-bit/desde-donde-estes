@@ -465,17 +465,6 @@
   <div class="recursos" id="recursos"></div>
 </div></section>
 
-<section class="brecha"><div class="wrap">
-  <h2 data-i="h_bre"></h2>
-  <p class="sub" data-i="s_bre"></p>
-  <div class="medidor">
-    <div class="izq">
-      <div class="barra-med"><i></i><i></i></div>
-      <div class="leyenda" id="leyenda"></div>
-    </div>
-    <p class="expl" data-i="expl"></p>
-  </div>
-</div></section>
 
 <section class="conciertos"><div class="wrap">
   <div class="enc"><h2 data-i="h_con"></h2><p data-i="s_con"></p></div>
@@ -1348,7 +1337,7 @@
     // Las dos cifras del medidor van enlazadas a su fuente, como cualquier
     // otro dato del sitio: la del ANDI a El Heraldo, y la de la reconstruccion
     // a La Republica, que publica la estimacion inicial de BTG Pactual.
-    var ley=$('#leyenda');ley.innerHTML='';
+    var ley=$('#leyenda')||el('div');ley.innerHTML='';
     var U_ANDI='https://www.elheraldo.co/economia/2026/08/14/las-donaciones-de-los-empresarios-de-colombia-superaron-cifra-historica-de-200-mil-millones/';
     var U_REC='https://www.larepublica.co/especiales/catastrofe-nacional/la-reconstruccion-por-el-terremoto-costaria-us-6-350-millones-lo-que-equivale-a-1-del-pib-4457501';
     ley.appendChild(el('span',null,lang==='es'
