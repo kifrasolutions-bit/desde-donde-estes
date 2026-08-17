@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Inyecta cifras.json y textos.json dentro de sitio-template.html.
 
-Las cifras que cambian a diario, la fecha de verificacion y los textos que se
-retocan seguido viven en esos dos JSON y no dentro de los 90 KB de la
-plantilla. Asi una actualizacion diaria es editar un archivo pequeno.
+Las cifras que cambian, la fecha de verificacion y los textos que se retocan
+seguido viven en esos dos JSON y no dentro de los 90 KB de la plantilla. Asi
+una actualizacion es editar un archivo pequeno.
 
 Si un patron no aparece exactamente una vez, se detiene. Vale mas no construir
 que construir mal y publicar una cifra a medias.
@@ -11,6 +11,33 @@ que construir mal y publicar una cifra a medias.
 import json
 import re
 from pathlib import Path
+
+
+def quitar_medidor(tpl):
+    """Saca del sitio la banda de cifras agregadas.
+
+    Se retiro el 17 de agosto de 2026 por decision del autor. Razon: cualquier
+    marcador invita a compararse contra un total, y el total de la
+    reconstruccion no lo conoce nadie, asi que la comparacion siempre da
+    desanimo. Ademas el mapa y la cadena de hechos, treinta pixeles mas abajo,
+    ya muestran lo mismo con nombre propio y fuente, que es la regla C2: el
+    colectivo se demuestra, no se afirma.
+
+    Para volver a encenderla, basta con poner cifras en "medidor" dentro de
+    cifras.json.
+    """
+    patron = r'\n<section class="banda">.*?data-i="h_llev".*?</section>\n'
+    tpl, n = re.subn(patron, "\n", tpl, flags=re.S)
+    if n != 1:
+        raise SystemExit("La banda del medidor aparece %d veces, se esperaba 1." % n)
+
+    # pintaCifras se queda, pero sin nada que pintar. El guardia evita que
+    # reviente al no encontrar los elementos que acabamos de sacar.
+    viejo = "  function pintaCifras(){\n    var box=$('#cifras');box.innerHTML='';"
+    if tpl.count(viejo) != 1:
+        raise SystemExit("No se pudo poner el guardia en pintaCifras.")
+    tpl = tpl.replace(viejo, "  function pintaCifras(){\n    var box=$('#cifras');\n    if(!box) return;\n    box.innerHTML='';")
+    return tpl
 
 
 def aplicar(tpl, c):
@@ -21,6 +48,9 @@ def aplicar(tpl, c):
                      'var VERIFICADO = "%s";' % c["verificado"], tpl)
     if n != 1:
         raise SystemExit("VERIFICADO aparece %d veces, se esperaba 1." % n)
+
+    if not c.get("medidor"):
+        tpl = quitar_medidor(tpl)
 
     nuevo = "var CIFRAS=" + j(c["medidor"]) + ";"
     tpl, n = re.subn(r"var CIFRAS=\[.*?\];", lambda m: nuevo, tpl, flags=re.S)
@@ -36,12 +66,13 @@ def aplicar(tpl, c):
 
     # Los pies con fecha de corte viven en un ternario es/en. Se reemplaza el
     # bloque entero, no cada rama por separado.
-    for patron, es, en in [
-        (r"'Lo que ya se hizo, con corte al[^']*'\s*\n\s*:\s*'[^']*';",
-         c["corte_es"], c["corte_en"]),
-        (r"'Balance de la UNGRD con corte al.*?\n\s*:\s*'.*?';",
-         c["pie_ctx_es"], c["pie_ctx_en"]),
-    ]:
+    pies = [(r"'Balance de la UNGRD con corte al.*?\n\s*:\s*'.*?';",
+             c["pie_ctx_es"], c["pie_ctx_en"])]
+    if c.get("medidor"):
+        pies.insert(0, (r"'Lo que ya se hizo, con corte al[^']*'\s*\n\s*:\s*'[^']*';",
+                        c["corte_es"], c["corte_en"]))
+
+    for patron, es, en in pies:
         rep = j(es) + "\n      : " + j(en) + ";"
         tpl, n = re.subn(patron, lambda m: rep, tpl, flags=re.S)
         if n != 1:

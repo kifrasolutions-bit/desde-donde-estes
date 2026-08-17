@@ -1,16 +1,9 @@
 {
-  "_nota": "Cifras que cambian a diario. Las inyecta cifras.py en sitio-template.html al construir. Cada una lleva fuente y hora de corte. Rige la regla A10: para una cifra oficial se va a la entidad, no al medio. Los textos que se retocan seguido estan en textos.json.",
+  "_nota": "Cifras que cambian y textos con fecha. Las inyecta cifras.py en sitio-template.html al construir. Cada una lleva fuente y hora de corte. Rige la regla A10: para una cifra oficial se va a la entidad, no al medio. Si 'medidor' esta vacio, la banda de cifras agregadas no se dibuja: se retiro el 17 de agosto de 2026 y para reactivarla basta con poner cifras aqui.",
   "verificado": "2026-08-17",
-  "corte_es": "Lo que ya se ha hecho. Cada cifra enlaza a su fuente.",
-  "corte_en": "What has already been done. Each figure links to its source.",
   "pie_ctx_es": "Balance de la UNGRD con corte al 16 de agosto de 2026, 6:30 p. m., publicado en su cuenta oficial. El epicentro fue San José del Palmar, en el Chocó, un departamento con 30,8% de pobreza multidimensional frente a un promedio nacional de 9,9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">según el DANE</a>.",
   "pie_ctx_en": "Figures from Colombia’s national disaster agency (UNGRD), as of 6:30 p.m. on 16 August 2026, published on its official account. The epicentre was San José del Palmar, in Chocó, a department where 30.8% of people live in multidimensional poverty against a national average of 9.9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">per the national statistics office</a>.",
-  "medidor": [
-    {"n": "355", "u": "", "n_en": "355", "u_en": "", "es": "personas sacadas con vida de los escombros.", "en": "people pulled out of the rubble alive.", "f": "UNGRD · corte 16 ago 6:30 p. m.", "u2": "https://x.com/UNGRD/status/2089149314509492613"},
-    {"n": "$450.000", "u": "millones", "n_en": "US$144", "u_en": "million", "es": "reunieron las empresas colombianas. Es la cifra más alta registrada para una emergencia en el país.", "en": "raised by Colombian businesses (COP $450 billion). The highest figure ever recorded for an emergency in the country.", "f": "El Heraldo · 17 ago", "u2": "https://www.elheraldo.co/economia/2026/08/17/mas-de-450-mil-millones-han-donado-los-empresarios-tras-terremoto-en-colombia/"},
-    {"n": "496", "u": "", "n_en": "496", "u_en": "", "es": "animales rescatados por los organismos de socorro.", "en": "animals rescued by the emergency services.", "f": "UNGRD · corte 16 ago 6:30 p. m.", "u2": "https://x.com/UNGRD/status/2089149314509492613"},
-    {"n": "$6.000", "u": "millones", "n_en": "US$1.9", "u_en": "million", "es": "y 31 toneladas reunió Medellín en una sola noche, canalizados por Presentes.", "en": "(COP $6 billion) and 31 tonnes raised in Medellín in a single night, channelled through Presentes.", "f": "Alcaldía de Medellín · 16 ago", "u2": "https://www.medellin.gov.co/es/sala-de-prensa/noticias/medellin-responde-con-solidaridad-6-000-millones-y-31-toneladas-de-alimentos-para-los-afectados-por-el-terremoto"}
-  ],
+  "medidor": [],
   "contexto": [
     ["185.996", "personas afectadas", "people affected"],
     ["127.608", "viviendas averiadas", "homes damaged"],
