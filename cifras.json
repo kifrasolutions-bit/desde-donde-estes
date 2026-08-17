@@ -1,5 +1,5 @@
 {
-  "_nota": "Cifras que cambian a diario. Las inyecta construir_sitio.py en sitio-template.html. Cada una lleva fuente y hora de corte. Rige la regla A10.",
+  "_nota": "Cifras que cambian a diario. Las inyecta cifras.py en sitio-template.html al construir. Cada una lleva fuente y hora de corte. Rige la regla A10: para una cifra oficial se va a la entidad, no al medio. Los textos que se retocan seguido estan en textos.json.",
   "verificado": "2026-08-17",
   "corte_es": "Lo que ya se ha hecho. Cada cifra enlaza a su fuente.",
   "corte_en": "What has already been done. Each figure links to its source.",
