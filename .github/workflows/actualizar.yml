@@ -19,6 +19,8 @@ on:
       - "cifras.py"
       - "sitio-template.html"
       - "construir_sitio.py"
+      - "extras.py"
+      - "extras/**"
       - "update.py"
 
 permissions:
