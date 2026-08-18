@@ -1,0 +1,20 @@
+{
+ "_nota": "Altas de la revision diaria del 18 de agosto de 2026. Se fusionan sobre contenido.json al construir, sin tocarlo. Existe porque contenido.json pesa 69 KB y el conector de GitHub se cae sobre los 8 KB, asi que las altas diarias no se podian subir. Lo aplica construir_sitio.py. 'anadir' se agrega al final de cada seccion; 'cambios' son pares [viejo, nuevo] que deben aparecer exactamente una vez o la construccion se detiene.",
+ "anadir": {
+  "opciones": {
+   "dinero": [
+    {"n": "Give To Colombia · desde Estados Unidos", "n_en": "Give To Colombia · from the United States", "d": "Organización estadounidense exenta de impuestos que canaliza donaciones hacia Colombia. Su campaña por el sismo, Colombia Se Levanta, la hace con Presentes Corporación, que es quien está en terreno y ya aparece en esta lista. Recibe tarjeta, PayPal y cheque, y manda recibo de donación para deducir impuestos en Estados Unidos. Solo reciben dinero: no aceptan ropa, medicinas ni especie. Si estás en Colombia, el mismo aporte va en pesos por la página de Presentes.", "d_en": "A US tax-exempt organisation that channels donations to Colombia. Its earthquake campaign, Colombia Se Levanta, runs with Presentes Corporación, the partner on the ground, already listed here. Takes card, PayPal and cheque, and issues a receipt for US tax deduction. Money only: no clothes, medicine or goods. If you are in Colombia, the same contribution goes in pesos through the Presentes page.", "tag": "mundo", "url": "https://givetocolombia.org/colombia-selevanta/", "a": "Ir a donar →", "a_en": "Go to donate →", "f": "Give To Colombia, página de la campaña · verificado el 18 de agosto de 2026"}
+   ]
+  },
+  "recursos": [
+   {"n": "Si tu casa se cayó y estás en Pereira o Dosquebradas", "n_en": "If your home collapsed and you are in Pereira or Dosquebradas", "d": "Be Studio, un estudio de arquitectura, rediseña gratis una vivienda que se cayó: planos, distribución nueva y planeación técnica para volver a construir. Cubre Pereira, Dosquebradas y sus zonas rurales. Eligen un caso por convocatoria, según el nivel de afectación. No incluye la construcción ni los materiales, que se gestionan aparte con la comunidad una vez el diseño esté listo. Se postula por mensaje directo contando el caso.", "d_en": "Be Studio, an architecture practice, will redesign a collapsed home for free: floor plans, a new layout and technical planning to rebuild. It covers Pereira, Dosquebradas and their rural areas. They pick one case per round, based on how badly the home was hit. It does not include the building work or the materials, which are arranged separately with the community once the design is ready. Apply by direct message describing the case.", "url": "https://www.instagram.com/bestudio_/", "a": "Escribirles →", "a_en": "Message them →", "f": "Be Studio, publicación del 17 de agosto en su cuenta · verificación parcial: no tienen página propia del programa · 18 de agosto de 2026"}
+  ],
+  "conciertos": [
+   {"iso": "2026-08-21", "f": "Vie 21 ago · Bogotá", "f_en": "Fri 21 Aug · Bogotá", "nm": "Levantemos a Colombia", "lug": "Estadio El Campín · 7:30 p. m.", "lug_en": "Estadio El Campín · 7:30 p. m.", "art": "Falcao García, Mario Yepes, Fredy Guarín, Teófilo Gutiérrez y más por confirmar", "art_en": "Falcao García, Mario Yepes, Fredy Guarín, Teófilo Gutiérrez and more to be confirmed", "precio": "Desde $25.000 · Tuboleta · desde 7 años", "precio_en": "From about US$6 (COP $25,000) · Tuboleta · ages 7 and up"}
+  ]
+ },
+ "cambios": [
+  ["Para saber cómo pagar, comenta COLOMBIA en su publicación.", "Ya publicaron llave para aportar desde antes de ir; los datos están en su cuenta."],
+  ["To find out how to pay, comment COLOMBIA on their post.", "They have now published a transfer key so you can contribute before you go; the details are on their account."]
+ ]
+}
