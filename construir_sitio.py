@@ -6,6 +6,7 @@ Fuentes de entrada:
   sitio-template.html  la plantilla con marcadores __X__
   hechos.json          los 385 hechos verificados (base completa)
   contenido.json       opciones, recursos, conciertos, transparencia y fuentes
+  extras/*.json        las altas de cada dia, que se fusionan sobre contenido.json
   reels.json           los reels de Instagram, si hay
   cifras.json          las cifras que cambian a diario y unos textos sueltos
 
@@ -20,6 +21,7 @@ import json
 from pathlib import Path
 
 import cifras
+import extras
 
 A = Path(__file__).parent
 
@@ -102,7 +104,8 @@ def main():
     if not flujo:
         raise SystemExit("El flujo salio vacio. Revisa hechos.json y FLUJO_ORDEN.")
 
-    cont = leer("contenido.json", {})
+    # extras/ trae las altas del dia; ver extras.py para el porque.
+    cont = extras.aplicar(leer("contenido.json", {}))
     reels = leer("reels.json", {"reels": []})
 
     def j(o):
