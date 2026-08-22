@@ -1,0 +1,58 @@
+{
+ "_nota": "Altas de la revision del 22 de agosto de 2026. IFRC y Americares salieron del escaneo web, las dos con verificacion completa contra la pagina de la propia organizacion, y van a Dinero: la Cruz Roja Colombiana ya esta publicada con su portal en pesos y el IFRC no la reemplaza, es la puerta para quien no tiene cuenta en Colombia y quiere que el dinero llegue a la misma organizacion. Los tres camiones al Choco y la Carrera de la Solidaridad quedaron preparados el 20 de agosto y nunca se subieron. La Carrera va sin campo destino por la A5: su pagina propia confirma fecha, lugar y que el 100% va a los programas de la fundacion pero no menciona el terremoto, y quien si lo dice es la cuenta de la misma fundacion. El 40% en 21K lo publico esa cuenta el 22 de agosto.",
+ "anadir": {
+  "opciones": {
+   "dinero": [
+    {
+     "n": "IFRC · llamamiento por Colombia",
+     "n_en": "IFRC · Colombia emergency appeal",
+     "d": "La Federación Internacional de Sociedades de la Cruz Roja abrió un llamamiento de emergencia de 25 millones de francos suizos por este terremoto. Donas al IFRC y el IFRC le pasa los recursos a la Cruz Roja Colombiana, que es la que está en terreno, y responde por cómo se usan. La operación arranca por Chocó, Risaralda, Caldas y Valle del Cauca, y está planeada para 24.000 personas a lo largo de 24 meses: refugio y dinero en efectivo para familias, equipos médicos móviles, agua y saneamiento, y búsqueda de familiares separados. La página cobra en diecisiete monedas, entre ellas dólar, euro, libra, dólar canadiense, dólar australiano y peso mexicano.",
+     "d_en": "The International Federation of Red Cross and Red Crescent Societies has opened a CHF 25 million emergency appeal for this earthquake. You donate to the IFRC, which passes the funds to the Colombian Red Cross, the organisation actually on the ground, and accounts for how they are spent. The operation starts in Chocó, Risaralda, Caldas and Valle del Cauca, and is planned to reach 24,000 people over 24 months: shelter and cash grants for families, mobile health teams, water and sanitation, and restoring family links. The page takes seventeen currencies, including US dollars, euros, pounds, Canadian and Australian dollars and Mexican pesos.",
+     "tag": "mundo",
+     "url": "https://donate.redcrossredcrescent.org/ifrc/colombia-earthquake/",
+     "a": "Ir al llamamiento →",
+     "a_en": "Go to the appeal →",
+     "f": "ifrc.org, página de la emergencia Colombia: Earthquake 2026 y llamamiento MDRCO036 del 13 de agosto de 2026, revisados el 22 de agosto de 2026"
+    },
+    {
+     "n": "Americares",
+     "n_en": "Americares",
+     "d": "Organización estadounidense de salud que ya tenía equipo en Bogotá y en Barranquilla antes del sismo. La mañana siguiente llegaron a Cali a mirar qué hacía falta, y están mandando medicamentos, insumos médicos, kits de higiene y apoyo de agua y saneamiento a los centros de salud que siguen funcionando. Vale saber antes de dar: su propia página de donación dice que el aporte financia la respuesta en Colombia y en otras zonas de crisis, así que no es un fondo exclusivo de este terremoto. El certificado de donación solo sirve ante el fisco de Estados Unidos.",
+     "d_en": "A US health relief organisation that already had staff in Bogotá and Barranquilla before the quake. The morning after, its team reached Cali to see what was needed, and it is sending medicines, medical supplies, hygiene kits and water and sanitation support to the health centres still standing. Worth knowing before you give: its own donation page says the gift funds its response in Colombia and in other crisis zones, so it is not a fund exclusive to this earthquake. The tax receipt only applies in the United States.",
+     "tag": "mundo",
+     "url": "https://www.americares.org/crisis-alerts/colombia-earthquake-august-2026/",
+     "a": "Ver su respuesta →",
+     "a_en": "See their response →",
+     "f": "americares.org, alerta de crisis Colombia Earthquake, August 2026, actualizada el 21 de agosto de 2026 y revisada el 22 de agosto de 2026"
+    }
+   ],
+   "cosas": [
+    {
+     "n": "Tres camiones al Chocó · cinco puntos en Bogotá",
+     "n_en": "Three trucks to Chocó · five drop-off points in Bogotá",
+     "d": "Recogen en Bogotá para llenar tres camiones con destino al Chocó: kits de aseo, mercado, elementos de cocina, alimento para animales, medicamentos, ropa y elementos de cuidado para bebés, y material de construcción. Los puntos son Chocopan (Carrera 59A #129-30 y Carrera 98A #73-03), Seven Bogotá (Avenida Ciudad de Cali #88-81), Ciudad Montes (Carrera 34 #11-41 sur) y Latink Tattoo (Carrera 13 #67-24, segundo piso). No publican horario ni hasta cuándo reciben: escríbeles antes de ir.",
+     "d_en": "A collection in Bogotá to fill three trucks bound for Chocó: hygiene kits, food, kitchen items, pet food, medicine, clothes and baby care items, and building materials. Drop-off points are Chocopan (Carrera 59A #129-30 and Carrera 98A #73-03), Seven Bogotá (Avenida Ciudad de Cali #88-81), Ciudad Montes (Carrera 34 #11-41 sur) and Latink Tattoo (Carrera 13 #67-24, second floor). They publish no opening hours and no closing date: write to them before going.",
+     "tag": "col",
+     "url": "https://www.instagram.com/p/DcOuDLDRT1s/",
+     "a": "Ver la convocatoria →",
+     "a_en": "See the call →",
+     "f": "Publicación de quien organiza, del 19 de agosto de 2026 · verificación parcial: los cinco puntos son negocios de terceros que no lo publican · revisada el 22 de agosto de 2026"
+    }
+   ]
+  },
+  "conciertos": [
+   {
+    "iso": "2026-08-30",
+    "f": "Dom 30 ago · Bogotá",
+    "f_en": "Sun Aug 30 · Bogotá",
+    "nm": "Carrera de la Solidaridad",
+    "lug": "Estadio Nemesio Camacho El Campín",
+    "lug_en": "Estadio Nemesio Camacho El Campín",
+    "art": "3K, 5K, 10K y 21K · inscripciones en caminatadelasolidaridad.com",
+    "art_en": "3K, 5K, 10K and 21K · registration at caminatadelasolidaridad.com",
+    "precio": "40% en la distancia de 21K con el código 21KM",
+    "precio_en": "40% off the 21K distancia with code 21KM"
+   }
+  ]
+ }
+}
