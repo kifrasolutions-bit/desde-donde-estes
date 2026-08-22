@@ -39,20 +39,6 @@
      "f": "Publicación de quien organiza, del 19 de agosto de 2026 · verificación parcial: los cinco puntos son negocios de terceros que no lo publican · revisada el 22 de agosto de 2026"
     }
    ]
-  },
-  "conciertos": [
-   {
-    "iso": "2026-08-30",
-    "f": "Dom 30 ago · Bogotá",
-    "f_en": "Sun Aug 30 · Bogotá",
-    "nm": "Carrera de la Solidaridad",
-    "lug": "Estadio Nemesio Camacho El Campín",
-    "lug_en": "Estadio Nemesio Camacho El Campín",
-    "art": "3K, 5K, 10K y 21K · inscripciones en caminatadelasolidaridad.com",
-    "art_en": "3K, 5K, 10K and 21K · registration at caminatadelasolidaridad.com",
-    "precio": "40% en la distancia de 21K con el código 21KM",
-    "precio_en": "40% off the 21K distancia with code 21KM"
-   }
-  ]
+  }
  }
 }
