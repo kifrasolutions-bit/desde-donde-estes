@@ -15,7 +15,7 @@
   ["b_sum:'Tell us how you are helping →',", "b_sum:'Tell us who is missing →',"],
   ["e_hoy:'Dónde estamos hoy', h_hoy:'El rescate termina. Empieza lo largo.',", "e_hoy:'Para quién es esto', h_hoy:'Para quién es esto',"],
   ["e_hoy:'Where things stand today', h_hoy:'The rescue is ending. The long part begins.',", "e_hoy:'Whom this is for', h_hoy:'Whom this is for',"],
-  ["s_hoy:'La atención del mundo dura semanas. La reconstrucción, años.',", "s_hoy:'292.043 personas en 472 municipios. Esa es la gente por la que se está moviendo todo lo demás. Los medios se van en semanas; la reconstrucción toma años, y esta página va a seguir aquí.',"],
-  ["s_hoy:\"The world's attention lasts weeks. Rebuilding takes years.\",", "s_hoy:'292,043 people across 472 municipalities. These are the people everything else is moving for. The media leave in weeks; rebuilding takes years, and this page will still be here.',"]
+  ["s_hoy:'La atención del mundo dura semanas. La reconstrucción, años.',", "s_hoy:'314.751 personas en 481 municipios. Esa es la gente por la que se está moviendo todo lo demás. Los medios se van en semanas; la reconstrucción toma años, y esta página va a seguir aquí.',"],
+  ["s_hoy:\"The world's attention lasts weeks. Rebuilding takes years.\",", "s_hoy:'314,751 people across 481 municipalities. These are the people everything else is moving for. The media leave in weeks; rebuilding takes years, and this page will still be here.',"]
  ]
 }
