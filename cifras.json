@@ -1,14 +1,14 @@
 {
   "_nota": "Cifras que cambian y textos con fecha. Las inyecta cifras.py en sitio-template.html al construir. Cada una lleva fuente y hora de corte. Rige la regla A10: para una cifra oficial se va a la entidad, no al medio. Si 'medidor' esta vacio, la banda de cifras agregadas no se dibuja: se retiro el 17 de agosto de 2026 y para reactivarla basta con poner cifras aqui.",
-  "verificado": "2026-08-18",
-  "pie_ctx_es": "Balance de la UNGRD con corte al 18 de agosto de 2026, 6:30 a. m., publicado en su cuenta oficial. El epicentro fue San José del Palmar, en el Chocó, un departamento con 30,8% de pobreza multidimensional frente a un promedio nacional de 9,9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">según el DANE</a>.",
-  "pie_ctx_en": "Figures from Colombia’s national disaster agency (UNGRD), as of 6:30 a.m. on 18 August 2026, published on its official account. The epicentre was San José del Palmar, in Chocó, a department where 30.8% of people live in multidimensional poverty against a national average of 9.9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">per the national statistics office</a>.",
+  "verificado": "2026-08-22",
+  "pie_ctx_es": "Balance de la UNGRD con corte al 22 de agosto de 2026, 6:30 a. m., publicado en su cuenta oficial. El epicentro fue San José del Palmar, en el Chocó, un departamento con 30,8% de pobreza multidimensional frente a un promedio nacional de 9,9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">según el DANE</a>.",
+  "pie_ctx_en": "Figures from Colombia’s national disaster agency (UNGRD), as of 6:30 a.m. on 22 August 2026, published on its official account. The epicentre was San José del Palmar, in Chocó, a department where 30.8% of people live in multidimensional poverty against a national average of 9.9%, <a href=\"https://www.dane.gov.co/files/operaciones/PM/bol-PMultidimensional-2025.pdf\" target=\"_blank\" rel=\"noopener\">per the national statistics office</a>.",
   "medidor": [],
   "contexto": [
-    ["292.043", "personas afectadas", "people affected"],
-    ["134.342", "viviendas averiadas", "homes damaged"],
-    ["4.548", "heridos", "injured"],
-    ["304", "fallecidos", "dead"]
+    ["314.751", "personas afectadas", "people affected"],
+    ["176.890", "viviendas averiadas", "homes damaged"],
+    ["4.600", "heridos", "injured"],
+    ["329", "fallecidos", "dead"]
   ],
   "textos": []
 }
